@@ -32,12 +32,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func addDoneButtonOnKeyboard() {
         
+        // Make the toolbar
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
         doneToolbar.barStyle = UIBarStyle.Default
         
+        // Make the buttons
         let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: #selector(ViewController.doneButtonAction))
         
+        // Put them together
         var items = [UIBarButtonItem]()
         items.append(flexSpace)
         items.append(done)
@@ -45,13 +48,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         doneToolbar.items = items
         doneToolbar.sizeToFit()
         
+        // Assign to totalBillField
         totalBillField.inputAccessoryView = doneToolbar
         
     }
     
     func doneButtonAction()
     {
-        self.totalBillField.resignFirstResponder()
+        totalBillField.resignFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,6 +84,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func isNumeric(a: String) -> Bool {
         return Double(a) != nil
+    }
+    
+    // ACTIONS:
+    
+    // Close keyboard when you tap
+    @IBAction func backgroundTap(sender: UITapGestureRecognizer) {
+        totalBillField.resignFirstResponder()
     }
     
 }

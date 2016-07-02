@@ -120,10 +120,14 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="hm5-a2-MkU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fxs-P3-Jad"/>
                             <constraint firstItem="hm5-a2-MkU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cwc-vB-MZQ"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="c5X-hf-2DW" appends="YES" id="oo4-WB-CqO"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="eighteenTipAmount" destination="0kM-Lr-ddq" id="tjo-7w-sNf"/>
@@ -133,6 +137,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="c5X-hf-2DW">
+                    <connections>
+                        <action selector="backgroundTap:" destination="BYZ-38-t0r" id="0Q7-Ar-ai0"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>

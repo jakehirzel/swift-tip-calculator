@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var fifteenTipAmount: UILabel!
     @IBOutlet weak var eighteenTipAmount: UILabel!
     @IBOutlet weak var twentyTipAmount: UILabel!
+    @IBOutlet weak var keyboardToolbar: UIToolbar!
+    
     
     let possibleTipPercentages = [0.15, 0.18, 0.20]
     
@@ -25,6 +27,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Set total input as delegate
         totalBillField.delegate = self
         
+        // Add done button to number pad
+        addDoneButtonOnKeyboard()
+        
+    }
+    
+    func addDoneButtonOnKeyboard() {
+        totalBillField.inputAccessoryView = keyboardToolbar
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,5 +53,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         eighteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[1])
         twentyTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[2])
     }
+    
+    // MARK: Actions
+    @IBAction func keyboardToolbarDone(sender: UIBarButtonItem) {
+        self.totalBillField.resignFirstResponder()
+    }
+    
 }
 

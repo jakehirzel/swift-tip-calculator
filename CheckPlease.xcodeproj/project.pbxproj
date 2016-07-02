@@ -390,6 +390,7 @@
 				238BFE431D2813FE00C8B6E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		238BFE441D2813FE00C8B6E8 /* Build configuration list for PBXNativeTarget "CheckPleaseTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +399,7 @@
 				238BFE461D2813FE00C8B6E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

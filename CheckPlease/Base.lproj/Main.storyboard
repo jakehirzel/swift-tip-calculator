@@ -135,53 +135,5 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Qwc-jd-ZIX">
-            <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="I6J-eo-JmI" customClass="ViewController" customModule="CheckPlease" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ljU-dQ-gQa"/>
-                        <viewControllerLayoutGuide type="bottom" id="anm-YG-6dR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="us9-1X-IV3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qBC-ge-2Uh" userLabel="Keyboard Toolbar">
-                                <rect key="frame" x="0.0" y="23" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" id="d0T-Yj-AMQ">
-                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="YVv-JI-JEl">
-                                            <rect key="frame" x="20" y="7" width="474" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4gz-ab-WnV"/>
-                                    <barButtonItem systemItem="done" id="vdJ-VT-Ta6">
-                                        <connections>
-                                            <action selector="keyboardToolbarDone:" destination="I6J-eo-JmI" id="exm-m8-mdb"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="90"/>
-                    <connections>
-                        <outlet property="keyboardToolbar" destination="qBC-ge-2Uh" id="0AC-oH-Kwf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WaL-2M-cga" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="435" y="784"/>
-        </scene>
     </scenes>
 </document>

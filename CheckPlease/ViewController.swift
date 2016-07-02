@@ -15,8 +15,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var fifteenTipAmount: UILabel!
     @IBOutlet weak var eighteenTipAmount: UILabel!
     @IBOutlet weak var twentyTipAmount: UILabel!
-    @IBOutlet weak var keyboardToolbar: UIToolbar!
-    
     
     let possibleTipPercentages = [0.15, 0.18, 0.20]
     
@@ -33,7 +31,27 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func addDoneButtonOnKeyboard() {
-        totalBillField.inputAccessoryView = keyboardToolbar
+        
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
+        doneToolbar.barStyle = UIBarStyle.Default
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: #selector(ViewController.doneButtonAction))
+        
+        var items = [UIBarButtonItem]()
+        items.append(flexSpace)
+        items.append(done)
+        
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        totalBillField.inputAccessoryView = doneToolbar
+        
+    }
+    
+    func doneButtonAction()
+    {
+        self.totalBillField.resignFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,15 +66,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        let totalBillAmount = Double(textField.text!)!
-        fifteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[0])
-        eighteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[1])
-        twentyTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[2])
+        if isNumeric(textField.text!) {
+            let totalBillAmount = Double(textField.text!)!
+            fifteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[0])
+            eighteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[1])
+            twentyTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[2])
+        }
+        else {
+            textField.resignFirstResponder()
+            textField.text = nil
+        }
     }
     
-    // MARK: Actions
-    @IBAction func keyboardToolbarDone(sender: UIBarButtonItem) {
-        self.totalBillField.resignFirstResponder()
+    func isNumeric(a: String) -> Bool {
+        return Double(a) != nil
     }
     
 }

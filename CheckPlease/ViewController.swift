@@ -40,10 +40,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(textField: UITextField) {
         let totalBillAmount = Double(textField.text!)!
-        for tipPct in possibleTipPercentages {
-            let tipAmount = totalBillAmount * tipPct
-            fifteenTipAmount.text = String(format: "%.2f", tipAmount)
-        }
+        fifteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[0])
+        eighteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[1])
+        twentyTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[2])
     }
 }
 

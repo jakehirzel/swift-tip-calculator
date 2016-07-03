@@ -5,19 +5,22 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--CheckPlease-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CheckPlease_WatchKit_App" customModuleProvider="target">
+                <controller identifier="CheckPlease" title="CheckPlease" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CheckPlease_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="1" alignment="center" verticalAlignment="center" text="$0.00" textAlignment="center" id="VsU-MM-wwh">
-                            <fontDescription key="font" type="boldSystem" pointSize="18"/>
+                        <label width="1" alignment="left" verticalAlignment="center" text="Total:" textAlignment="center" id="FJZ-k7-Qc3">
+                            <fontDescription key="font" type="system" weight="black" pointSize="16"/>
                         </label>
-                        <slider width="1" alignment="center" verticalAlignment="center" continuous="YES" maximum="500" steps="1000" id="oHc-kx-vgg">
+                        <picker width="1" height="37" alignment="center" verticalAlignment="center" focusStyle="stack" indicatorMode="shownWhileFocused" id="OgI-xT-qjB">
                             <connections>
-                                <action selector="sliderAction:" destination="AgC-eL-Hgc" id="wif-dR-phm"/>
+                                <action selector="pickerAction:" destination="AgC-eL-Hgc" id="xIx-XT-7wg"/>
                             </connections>
-                        </slider>
+                        </picker>
+                        <label width="1" alignment="left" verticalAlignment="center" text="Tip:" textAlignment="center" id="ejA-wF-wHc">
+                            <fontDescription key="font" type="system" weight="black" pointSize="16"/>
+                        </label>
                         <label width="1" alignment="center" verticalAlignment="center" text="15% - $0.00" textAlignment="center" id="RIb-5p-K8Y"/>
                         <label width="1" alignment="center" verticalAlignment="center" text="18% - $0.00" textAlignment="center" id="c4W-zq-vLY"/>
                         <label width="1" alignment="center" verticalAlignment="center" text="20% - $0.00" textAlignment="center" id="A6b-ac-v6j"/>
@@ -25,12 +28,13 @@
                     <connections>
                         <outlet property="eighteenPercent" destination="c4W-zq-vLY" id="Gti-Pm-AfK"/>
                         <outlet property="fifteenPercent" destination="RIb-5p-K8Y" id="vjK-r6-jFB"/>
-                        <outlet property="totalBill" destination="VsU-MM-wwh" id="DDg-Js-llb"/>
-                        <outlet property="totalBillSlider" destination="oHc-kx-vgg" id="eGw-Zc-VS8"/>
+                        <outlet property="totalBillPicker" destination="OgI-xT-qjB" id="bul-y0-aXr"/>
                         <outlet property="twentyPercent" destination="A6b-ac-v6j" id="i5u-dA-gfe"/>
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="312" y="197.75"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.015686274509803921" green="0.87058823529411766" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
 </document>

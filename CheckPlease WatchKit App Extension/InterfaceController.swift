@@ -13,21 +13,39 @@ import Foundation
 class InterfaceController: WKInterfaceController {
     
     // MARK: Properties
-    @IBOutlet var totalBill: WKInterfaceLabel!
-    @IBOutlet var totalBillSlider: WKInterfaceSlider!
+    @IBOutlet var totalBillPicker: WKInterfacePicker!
     @IBOutlet var fifteenPercent: WKInterfaceLabel!
     @IBOutlet var eighteenPercent: WKInterfaceLabel!
     @IBOutlet var twentyPercent: WKInterfaceLabel!
+    
+    var totalAmounts: [Float] = []
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        totalBillPicker.focus()
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        // Populate totalAmounts array
+        var i = 0
+        while i < 499 {
+            totalAmounts.append(Float(i))
+            i += 1
+        }
+        
+        let pickerItems: [WKPickerItem] = totalAmounts.map {
+            let pickerItem = WKPickerItem()
+            pickerItem.title = String(format: "$%.2f", $0)
+            return pickerItem
+        }
+        
+        totalBillPicker.setItems(pickerItems)
+        
     }
 
     override func didDeactivate() {
@@ -37,24 +55,21 @@ class InterfaceController: WKInterfaceController {
     
     // MARK: Actions
     
-    @IBAction func sliderAction(value: Float) {
-        
-        // Convert float to $0.00 format
-        let formattedTotal = String(format: "$%.2f", value)
-        
-        // Set to totalBill
-        totalBill.setText("\(formattedTotal)")
+    @IBAction func pickerAction(value: Int) {
         
         // Figure out tips and convert floats to $0.00 format
-        let formattedFifteen = String(format: "15%% - $%.2f", value * 0.15)
-        let formattedEighteen = String(format: "18%% - $%.2f", value * 0.18)
-        let formattedTwenty = String(format: "20%% - $%.2f", value * 0.20)
-        
+        let formattedFifteen = String(format: "15%% - $%.2f", totalAmounts[value] * 0.15)
+        let formattedEighteen = String(format: "18%% - $%.2f", totalAmounts[value] * 0.18)
+        let formattedTwenty = String(format: "20%% - $%.2f", totalAmounts[value] * 0.20)
+
         // Set tips to labels
         fifteenPercent.setText("\(formattedFifteen)")
         eighteenPercent.setText("\(formattedEighteen)")
         twentyPercent.setText("\(formattedTwenty)")
         
+        // Add whimsical haptic feedback
+        WKInterfaceDevice.currentDevice().playHaptic(.DirectionDown)
+
     }
     
 }

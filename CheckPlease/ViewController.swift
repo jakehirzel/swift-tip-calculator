@@ -55,8 +55,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    func doneButtonAction()
-    {
+    func doneButtonAction() {
         totalBillField.resignFirstResponder()
     }
 
@@ -66,33 +65,49 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: UITextFieldDelegate
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        textField.text = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString:string)
+        
         guard let totalBillAmount = Double(textField.text!) else {
             textField.resignFirstResponder()
             textField.text = nil
-            return
+            return false
         }
         
         fifteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[0])
         eighteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[1])
         twentyTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[2])
+        
+        return true
+    }
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        return false
     }
     
-    func isNumeric(a: String) -> Bool {
-        return Double(a) != nil
-    }
-    
-    // ACTIONS:
-    
-    // Close keyboard when you tap
-    @IBAction func backgroundTap(sender: UITapGestureRecognizer) {
-        totalBillField.resignFirstResponder()
-    }
-    
+//    func textFieldDidEndEditing(textField: UITextField) {
+//        guard let totalBillAmount = Double(textField.text!) else {
+//            textField.resignFirstResponder()
+//            textField.text = nil
+//            return
+//        }
+//        
+//        fifteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[0])
+//        eighteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[1])
+//        twentyTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[2])
+//    }
+//    
+//    func isNumeric(a: String) -> Bool {
+//        return Double(a) != nil
+//    }
+//
+//    // ACTIONS:
+//    
+//    // Close keyboard when you tap
+//    @IBAction func backgroundTap(sender: UITapGestureRecognizer) {
+//        totalBillField.resignFirstResponder()
+//    }
+
 }
 

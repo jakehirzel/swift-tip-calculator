@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		235CDC1C1D29794300E15F15 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235CDC1A1D29794300E15F15 /* Interface.storyboard */; };
+		235CDC1E1D29794300E15F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235CDC1D1D29794300E15F15 /* Assets.xcassets */; };
+		235CDC251D29794300E15F15 /* CheckPlease WatchKit App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 235CDC241D29794300E15F15 /* CheckPlease WatchKit App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		235CDC2A1D29794300E15F15 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC291D29794300E15F15 /* InterfaceController.swift */; };
+		235CDC2C1D29794300E15F15 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC2B1D29794300E15F15 /* ExtensionDelegate.swift */; };
+		235CDC2E1D29794300E15F15 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC2D1D29794300E15F15 /* ComplicationController.swift */; };
+		235CDC301D29794300E15F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235CDC2F1D29794300E15F15 /* Assets.xcassets */; };
+		235CDC341D29794300E15F15 /* CheckPlease WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 235CDC181D29794300E15F15 /* CheckPlease WatchKit App.app */; };
 		238BFE281D2813FE00C8B6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BFE271D2813FE00C8B6E8 /* AppDelegate.swift */; };
 		238BFE2A1D2813FE00C8B6E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BFE291D2813FE00C8B6E8 /* ViewController.swift */; };
 		238BFE2D1D2813FE00C8B6E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238BFE2B1D2813FE00C8B6E8 /* Main.storyboard */; };
@@ -16,6 +24,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		235CDC261D29794300E15F15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 238BFE1C1D2813FE00C8B6E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 235CDC231D29794300E15F15;
+			remoteInfo = "CheckPlease WatchKit App Extension";
+		};
+		235CDC321D29794300E15F15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 238BFE1C1D2813FE00C8B6E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 235CDC171D29794300E15F15;
+			remoteInfo = "CheckPlease WatchKit App";
+		};
 		238BFE391D2813FE00C8B6E8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 238BFE1C1D2813FE00C8B6E8 /* Project object */;
@@ -25,7 +47,42 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		235CDC381D29794400E15F15 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				235CDC251D29794300E15F15 /* CheckPlease WatchKit App Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		235CDC3C1D29794400E15F15 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				235CDC341D29794300E15F15 /* CheckPlease WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		235CDC181D29794300E15F15 /* CheckPlease WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CheckPlease WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		235CDC1B1D29794300E15F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		235CDC1D1D29794300E15F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		235CDC1F1D29794300E15F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		235CDC241D29794300E15F15 /* CheckPlease WatchKit App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CheckPlease WatchKit App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		235CDC291D29794300E15F15 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		235CDC2B1D29794300E15F15 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		235CDC2D1D29794300E15F15 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		235CDC2F1D29794300E15F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		235CDC311D29794300E15F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		238BFE241D2813FE00C8B6E8 /* CheckPlease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckPlease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238BFE271D2813FE00C8B6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		238BFE291D2813FE00C8B6E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +96,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		235CDC211D29794300E15F15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		238BFE211D2813FE00C8B6E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -56,11 +120,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		235CDC191D29794300E15F15 /* CheckPlease WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				235CDC1A1D29794300E15F15 /* Interface.storyboard */,
+				235CDC1D1D29794300E15F15 /* Assets.xcassets */,
+				235CDC1F1D29794300E15F15 /* Info.plist */,
+			);
+			path = "CheckPlease WatchKit App";
+			sourceTree = "<group>";
+		};
+		235CDC281D29794300E15F15 /* CheckPlease WatchKit App Extension */ = {
+			isa = PBXGroup;
+			children = (
+				235CDC291D29794300E15F15 /* InterfaceController.swift */,
+				235CDC2B1D29794300E15F15 /* ExtensionDelegate.swift */,
+				235CDC2D1D29794300E15F15 /* ComplicationController.swift */,
+				235CDC2F1D29794300E15F15 /* Assets.xcassets */,
+				235CDC311D29794300E15F15 /* Info.plist */,
+			);
+			path = "CheckPlease WatchKit App Extension";
+			sourceTree = "<group>";
+		};
 		238BFE1B1D2813FE00C8B6E8 = {
 			isa = PBXGroup;
 			children = (
 				238BFE261D2813FE00C8B6E8 /* CheckPlease */,
 				238BFE3B1D2813FE00C8B6E8 /* CheckPleaseTests */,
+				235CDC191D29794300E15F15 /* CheckPlease WatchKit App */,
+				235CDC281D29794300E15F15 /* CheckPlease WatchKit App Extension */,
 				238BFE251D2813FE00C8B6E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +158,8 @@
 			children = (
 				238BFE241D2813FE00C8B6E8 /* CheckPlease.app */,
 				238BFE381D2813FE00C8B6E8 /* CheckPleaseTests.xctest */,
+				235CDC181D29794300E15F15 /* CheckPlease WatchKit App.app */,
+				235CDC241D29794300E15F15 /* CheckPlease WatchKit App Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +189,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		235CDC171D29794300E15F15 /* CheckPlease WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 235CDC391D29794400E15F15 /* Build configuration list for PBXNativeTarget "CheckPlease WatchKit App" */;
+			buildPhases = (
+				235CDC161D29794300E15F15 /* Resources */,
+				235CDC381D29794400E15F15 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				235CDC271D29794300E15F15 /* PBXTargetDependency */,
+			);
+			name = "CheckPlease WatchKit App";
+			productName = "CheckPlease WatchKit App";
+			productReference = 235CDC181D29794300E15F15 /* CheckPlease WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		235CDC231D29794300E15F15 /* CheckPlease WatchKit App Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 235CDC351D29794400E15F15 /* Build configuration list for PBXNativeTarget "CheckPlease WatchKit App Extension" */;
+			buildPhases = (
+				235CDC201D29794300E15F15 /* Sources */,
+				235CDC211D29794300E15F15 /* Frameworks */,
+				235CDC221D29794300E15F15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CheckPlease WatchKit App Extension";
+			productName = "CheckPlease WatchKit App Extension";
+			productReference = 235CDC241D29794300E15F15 /* CheckPlease WatchKit App Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		238BFE231D2813FE00C8B6E8 /* CheckPlease */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 238BFE411D2813FE00C8B6E8 /* Build configuration list for PBXNativeTarget "CheckPlease" */;
@@ -106,10 +230,12 @@
 				238BFE201D2813FE00C8B6E8 /* Sources */,
 				238BFE211D2813FE00C8B6E8 /* Frameworks */,
 				238BFE221D2813FE00C8B6E8 /* Resources */,
+				235CDC3C1D29794400E15F15 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				235CDC331D29794300E15F15 /* PBXTargetDependency */,
 			);
 			name = CheckPlease;
 			productName = CheckPlease;
@@ -144,6 +270,14 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Jake Hirzel";
 				TargetAttributes = {
+					235CDC171D29794300E15F15 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 34LB63F74B;
+					};
+					235CDC231D29794300E15F15 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 34LB63F74B;
+					};
 					238BFE231D2813FE00C8B6E8 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 34LB63F74B;
@@ -169,11 +303,30 @@
 			targets = (
 				238BFE231D2813FE00C8B6E8 /* CheckPlease */,
 				238BFE371D2813FE00C8B6E8 /* CheckPleaseTests */,
+				235CDC171D29794300E15F15 /* CheckPlease WatchKit App */,
+				235CDC231D29794300E15F15 /* CheckPlease WatchKit App Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		235CDC161D29794300E15F15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				235CDC1E1D29794300E15F15 /* Assets.xcassets in Resources */,
+				235CDC1C1D29794300E15F15 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		235CDC221D29794300E15F15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				235CDC301D29794300E15F15 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		238BFE221D2813FE00C8B6E8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -194,6 +347,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		235CDC201D29794300E15F15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				235CDC2C1D29794300E15F15 /* ExtensionDelegate.swift in Sources */,
+				235CDC2A1D29794300E15F15 /* InterfaceController.swift in Sources */,
+				235CDC2E1D29794300E15F15 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		238BFE201D2813FE00C8B6E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,6 +377,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		235CDC271D29794300E15F15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 235CDC231D29794300E15F15 /* CheckPlease WatchKit App Extension */;
+			targetProxy = 235CDC261D29794300E15F15 /* PBXContainerItemProxy */;
+		};
+		235CDC331D29794300E15F15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 235CDC171D29794300E15F15 /* CheckPlease WatchKit App */;
+			targetProxy = 235CDC321D29794300E15F15 /* PBXContainerItemProxy */;
+		};
 		238BFE3A1D2813FE00C8B6E8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 238BFE231D2813FE00C8B6E8 /* CheckPlease */;
@@ -222,6 +395,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		235CDC1A1D29794300E15F15 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				235CDC1B1D29794300E15F15 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		238BFE2B1D2813FE00C8B6E8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -241,6 +422,78 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		235CDC361D29794400E15F15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "CheckPlease WatchKit App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CheckPlease.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		235CDC371D29794400E15F15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "CheckPlease WatchKit App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CheckPlease.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		235CDC3A1D29794400E15F15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = CheckPlease_WatchKit_App_Extension;
+				INFOPLIST_FILE = "CheckPlease WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CheckPlease.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		235CDC3B1D29794400E15F15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = CheckPlease_WatchKit_App_Extension;
+				INFOPLIST_FILE = "CheckPlease WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CheckPlease.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 		238BFE3F1D2813FE00C8B6E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -381,6 +634,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		235CDC351D29794400E15F15 /* Build configuration list for PBXNativeTarget "CheckPlease WatchKit App Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				235CDC361D29794400E15F15 /* Debug */,
+				235CDC371D29794400E15F15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		235CDC391D29794400E15F15 /* Build configuration list for PBXNativeTarget "CheckPlease WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				235CDC3A1D29794400E15F15 /* Debug */,
+				235CDC3B1D29794400E15F15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		238BFE1F1D2813FE00C8B6E8 /* Build configuration list for PBXProject "CheckPlease" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

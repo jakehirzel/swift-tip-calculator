@@ -44,7 +44,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             textField.text = nil
             return false
         }
-                
+        
         fifteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[0])
         eighteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[1])
         twentyTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[2])

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CheckPlease_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="1" alignment="center" verticalAlignment="center" text="$0.00" textAlignment="center" id="VsU-MM-wwh">
+                            <fontDescription key="font" type="boldSystem" pointSize="18"/>
+                        </label>
+                        <slider width="1" alignment="center" verticalAlignment="center" continuous="YES" maximum="500" steps="1000" id="oHc-kx-vgg">
+                            <connections>
+                                <action selector="sliderAction:" destination="AgC-eL-Hgc" id="wif-dR-phm"/>
+                            </connections>
+                        </slider>
+                        <label width="1" alignment="center" verticalAlignment="center" text="15% - $0.00" textAlignment="center" id="RIb-5p-K8Y"/>
+                        <label width="1" alignment="center" verticalAlignment="center" text="18% - $0.00" textAlignment="center" id="c4W-zq-vLY"/>
+                        <label width="1" alignment="center" verticalAlignment="center" text="20% - $0.00" textAlignment="center" id="A6b-ac-v6j"/>
+                    </items>
+                    <connections>
+                        <outlet property="eighteenPercent" destination="c4W-zq-vLY" id="Gti-Pm-AfK"/>
+                        <outlet property="fifteenPercent" destination="RIb-5p-K8Y" id="vjK-r6-jFB"/>
+                        <outlet property="totalBill" destination="VsU-MM-wwh" id="DDg-Js-llb"/>
+                        <outlet property="totalBillSlider" destination="oHc-kx-vgg" id="eGw-Zc-VS8"/>
+                        <outlet property="twentyPercent" destination="A6b-ac-v6j" id="i5u-dA-gfe"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>

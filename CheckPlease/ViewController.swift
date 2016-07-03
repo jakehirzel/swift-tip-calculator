@@ -41,11 +41,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textField.text = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
         
         guard let totalBillAmount = Double(textField.text!) else {
-            textField.resignFirstResponder()
             textField.text = nil
             return false
         }
-        
+                
         fifteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[0])
         eighteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[1])
         twentyTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[2])

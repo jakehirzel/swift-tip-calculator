@@ -32,6 +32,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func addDoneButtonOnKeyboard() {
         
+        // or this http://stackoverflow.com/questions/24035984/instantiate-and-present-a-viewcontroller-in-swift
+        
         // Make the toolbar
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
         doneToolbar.barStyle = UIBarStyle.Default
@@ -70,16 +72,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        if isNumeric(textField.text!) {
-            let totalBillAmount = Double(textField.text!)!
-            fifteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[0])
-            eighteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[1])
-            twentyTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[2])
-        }
-        else {
+        guard let totalBillAmount = Double(textField.text!) else {
             textField.resignFirstResponder()
             textField.text = nil
+            return
         }
+        
+        fifteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[0])
+        eighteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[1])
+        twentyTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[2])
     }
     
     func isNumeric(a: String) -> Bool {

@@ -25,40 +25,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Set total input as delegate
         totalBillField.delegate = self
         
-        // Add done button to number pad
-        addDoneButtonOnKeyboard()
+        // Open keyboard
+        totalBillField.becomeFirstResponder()
         
     }
     
-    func addDoneButtonOnKeyboard() {
-        
-        // or this http://stackoverflow.com/questions/24035984/instantiate-and-present-a-viewcontroller-in-swift
-        
-        // Make the toolbar
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
-        doneToolbar.barStyle = UIBarStyle.Default
-        
-        // Make the buttons
-        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: #selector(ViewController.doneButtonAction))
-        
-        // Put them together
-        var items = [UIBarButtonItem]()
-        items.append(flexSpace)
-        items.append(done)
-        
-        doneToolbar.items = items
-        doneToolbar.sizeToFit()
-        
-        // Assign to totalBillField
-        totalBillField.inputAccessoryView = doneToolbar
-        
-    }
-    
-    func doneButtonAction() {
-        totalBillField.resignFirstResponder()
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -67,7 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // MARK: UITextFieldDelegate
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
-        textField.text = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString:string)
+        textField.text = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
         
         guard let totalBillAmount = Double(textField.text!) else {
             textField.resignFirstResponder()
@@ -79,35 +50,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         eighteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[1])
         twentyTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[2])
         
-        return true
+        return false
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         return false
     }
     
-//    func textFieldDidEndEditing(textField: UITextField) {
-//        guard let totalBillAmount = Double(textField.text!) else {
-//            textField.resignFirstResponder()
-//            textField.text = nil
-//            return
-//        }
-//        
-//        fifteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[0])
-//        eighteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[1])
-//        twentyTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[2])
-//    }
-//    
-//    func isNumeric(a: String) -> Bool {
-//        return Double(a) != nil
-//    }
-//
-//    // ACTIONS:
-//    
-//    // Close keyboard when you tap
-//    @IBAction func backgroundTap(sender: UITapGestureRecognizer) {
-//        totalBillField.resignFirstResponder()
-//    }
-
 }
-

@@ -8,25 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     // MARK: Properties
-    @IBOutlet weak var totalBillField: UITextField!
-    @IBOutlet weak var fifteenTipAmount: UILabel!
-    @IBOutlet weak var eighteenTipAmount: UILabel!
-    @IBOutlet weak var twentyTipAmount: UILabel!
+    @IBOutlet weak var totalBillPicker: UIPickerView!
+    @IBOutlet weak var percentOne: UILabel!
+    @IBOutlet weak var percentTwo: UILabel!
+    @IBOutlet weak var percentThree: UILabel!
     
-    let possibleTipPercentages = [0.15, 0.18, 0.20]
+    // Create instance of TipCalculator class
+    let tipCalculatorInstance = TipCalculator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // Set total input as delegate
-        totalBillField.delegate = self
+        // Set picker data source and delegate
+        totalBillPicker.dataSource = self
+        totalBillPicker.delegate = self
         
-        // Open keyboard
-        totalBillField.becomeFirstResponder()
+        // Populate array of total amounts
+        tipCalculatorInstance.mealTotalArray = tipCalculatorInstance.createMealTotalArray()
+        
+        // Give focus to the picker
+        totalBillPicker.focused
         
     }
     
@@ -35,25 +40,28 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: UITextFieldDelegate
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        
-        textField.text = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
-        
-        guard let totalBillAmount = Double(textField.text!) else {
-            textField.text = nil
-            return false
-        }
-        
-        fifteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[0])
-        eighteenTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[1])
-        twentyTipAmount.text = String(format: "%.2f", totalBillAmount * possibleTipPercentages[2])
-        
-        return false
-    }
-
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        return false
+    // MARK: UIPickerViewDelegate
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
     }
     
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return tipCalculatorInstance.mealTotalArray.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return String(format: "$%.2f", tipCalculatorInstance.mealTotalArray[row])
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        // Run the calculator
+        let tipResults = tipCalculatorInstance.tipCalculator(tipCalculatorInstance.mealTotalArray, index: row)
+        
+        // Convert resulting floats to $0.00 format
+        percentOne.text = String(format: "$%.2f", tipResults.tipOne)
+        percentTwo.text = String(format: "$%.2f", tipResults.tipTwo)
+        percentThree.text = String(format: "$%.2f", tipResults.tipThree)
+        
+    }
 }

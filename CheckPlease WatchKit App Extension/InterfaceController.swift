@@ -18,7 +18,8 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var eighteenPercent: WKInterfaceLabel!
     @IBOutlet var twentyPercent: WKInterfaceLabel!
     
-    var totalAmounts: [Float] = []
+    // Create instance of TipCalculator class
+    let tipCalculatorInstance = TipCalculator()
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -30,20 +31,18 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        
-        // Populate totalAmounts array
-        var i = 0
-        while i < 499 {
-            totalAmounts.append(Float(i))
-            i += 1
-        }
-        
-        let pickerItems: [WKPickerItem] = totalAmounts.map {
+
+        // Populate array of total amounts
+        tipCalculatorInstance.mealTotalArray = tipCalculatorInstance.createMealTotalArray()
+
+        // Map total amounts to the pickerItems array
+        let pickerItems: [WKPickerItem] = tipCalculatorInstance.mealTotalArray.map {
             let pickerItem = WKPickerItem()
             pickerItem.title = String(format: "$%.2f", $0)
             return pickerItem
         }
         
+        // Apply values to the picker
         totalBillPicker.setItems(pickerItems)
         
     }
@@ -57,10 +56,13 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func pickerAction(value: Int) {
         
-        // Figure out tips and convert floats to $0.00 format
-        let formattedFifteen = String(format: "15%% - $%.2f", totalAmounts[value] * 0.15)
-        let formattedEighteen = String(format: "18%% - $%.2f", totalAmounts[value] * 0.18)
-        let formattedTwenty = String(format: "20%% - $%.2f", totalAmounts[value] * 0.20)
+        // Run the calculator
+        let tipResults = tipCalculatorInstance.tipCalculator(tipCalculatorInstance.mealTotalArray, index: value)
+        
+        // Convert resulting floats to $0.00 format
+        let formattedFifteen = String(format: "15%% - $%.2f", tipResults.tipOne)
+        let formattedEighteen = String(format: "18%% - $%.2f", tipResults.tipTwo)
+        let formattedTwenty = String(format: "20%% - $%.2f", tipResults.tipThree)
 
         // Set tips to labels
         fifteenPercent.setText("\(formattedFifteen)")

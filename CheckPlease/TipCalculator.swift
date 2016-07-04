@@ -10,20 +10,40 @@ import UIKit
 
 class TipCalculator: NSObject {
     
+    // MARK: Properties
+    
     // Create tip percentages, initialized to recommended values
     var tipPercentOne: Float = 0.15
     var tipPercentTwo: Float = 0.18
     var tipPercentThree: Float = 0.20
     
+    // Create empty mealTotalArray
+    var mealTotalArray: [Float] = []
+    
     // Create bounds for total meal pricing, initalized to recommended values
     var lowMealTotal: Float = 1.00
     var highMealTotal: Float = 500.00
     
+//    // MARK: Initialization
+//    init?(tipPercentOne: Float, tipPercentTwo: Float, tipPercentThree: Float, lowMealTotal: Float, highMealTotal: Float) {
+//        
+//        // Initialize to recommended values
+//        self.tipPercentOne = 0.15
+//        self.tipPercentTwo = 0.18
+//        self.tipPercentThree = 0.20
+//        self.mealTotalArray = []
+//        self.lowMealTotal = 1.00
+//        self.highMealTotal = 500.00
+//        
+//        super.init()
+//        
+//    }
+    
     // Define function to create array containing meal totals based on meal price bounds
-    func createMealTotalArray(low: Float, high: Float) -> ([Float]) {
+    func createMealTotalArray() -> ([Float]) {
         var i: Float = 0.00
         var mealTotalArray: [Float] = []
-        while i <= high {
+        while i <= highMealTotal {
             mealTotalArray.append(i)
             i += 0.5
         }

@@ -15,6 +15,8 @@
 		235CDC2E1D29794300E15F15 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC2D1D29794300E15F15 /* ComplicationController.swift */; };
 		235CDC301D29794300E15F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235CDC2F1D29794300E15F15 /* Assets.xcassets */; };
 		235CDC341D29794300E15F15 /* CheckPlease WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 235CDC181D29794300E15F15 /* CheckPlease WatchKit App.app */; };
+		235CDC3E1D2AACC100E15F15 /* TipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */; };
+		235CDC3F1D2AACC100E15F15 /* TipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */; };
 		238BFE281D2813FE00C8B6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BFE271D2813FE00C8B6E8 /* AppDelegate.swift */; };
 		238BFE2A1D2813FE00C8B6E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BFE291D2813FE00C8B6E8 /* ViewController.swift */; };
 		238BFE2D1D2813FE00C8B6E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238BFE2B1D2813FE00C8B6E8 /* Main.storyboard */; };
@@ -83,6 +85,7 @@
 		235CDC2D1D29794300E15F15 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		235CDC2F1D29794300E15F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		235CDC311D29794300E15F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculator.swift; sourceTree = "<group>"; };
 		238BFE241D2813FE00C8B6E8 /* CheckPlease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckPlease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238BFE271D2813FE00C8B6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		238BFE291D2813FE00C8B6E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +176,7 @@
 				238BFE2E1D2813FE00C8B6E8 /* Assets.xcassets */,
 				238BFE301D2813FE00C8B6E8 /* LaunchScreen.storyboard */,
 				238BFE331D2813FE00C8B6E8 /* Info.plist */,
+				235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */,
 			);
 			path = CheckPlease;
 			sourceTree = "<group>";
@@ -352,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				235CDC2C1D29794300E15F15 /* ExtensionDelegate.swift in Sources */,
+				235CDC3F1D2AACC100E15F15 /* TipCalculator.swift in Sources */,
 				235CDC2A1D29794300E15F15 /* InterfaceController.swift in Sources */,
 				235CDC2E1D29794300E15F15 /* ComplicationController.swift in Sources */,
 			);
@@ -361,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				235CDC3E1D2AACC100E15F15 /* TipCalculator.swift in Sources */,
 				238BFE2A1D2813FE00C8B6E8 /* ViewController.swift in Sources */,
 				238BFE281D2813FE00C8B6E8 /* AppDelegate.swift in Sources */,
 			);
@@ -641,6 +647,7 @@
 				235CDC371D29794400E15F15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		235CDC391D29794400E15F15 /* Build configuration list for PBXNativeTarget "CheckPlease WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -649,6 +656,7 @@
 				235CDC3B1D29794400E15F15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		238BFE1F1D2813FE00C8B6E8 /* Build configuration list for PBXProject "CheckPlease" */ = {
 			isa = XCConfigurationList;

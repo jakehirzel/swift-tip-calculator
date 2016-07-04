@@ -25,16 +25,10 @@ class InterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
-        totalBillPicker.focus()
-    }
 
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-
-        // Populate array of total amounts
-        tipCalculatorInstance.mealTotalArray = tipCalculatorInstance.createMealTotalArray()
-
+//        // Populate array of total amounts
+//        tipCalculatorInstance.mealTotalArray = tipCalculatorInstance.createMealTotalArray()
+        
         // Map total amounts to the pickerItems array
         let pickerItems: [WKPickerItem] = tipCalculatorInstance.mealTotalArray.map {
             let pickerItem = WKPickerItem()
@@ -45,6 +39,14 @@ class InterfaceController: WKInterfaceController {
         // Apply values to the picker
         totalBillPicker.setItems(pickerItems)
         
+        // Give the picker focus
+        totalBillPicker.focus()
+
+    }
+
+    override func willActivate() {
+        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
     }
 
     override func didDeactivate() {

@@ -13,7 +13,7 @@
                         <label width="1" alignment="left" verticalAlignment="center" text="Total:" textAlignment="center" id="FJZ-k7-Qc3">
                             <fontDescription key="font" type="system" weight="black" pointSize="16"/>
                         </label>
-                        <picker width="1" height="37" alignment="center" verticalAlignment="center" focusStyle="stack" indicatorMode="shownWhileFocused" id="OgI-xT-qjB">
+                        <picker width="1" height="37" alignment="center" verticalAlignment="center" focusStyle="stack" id="OgI-xT-qjB">
                             <connections>
                                 <action selector="pickerAction:" destination="AgC-eL-Hgc" id="xIx-XT-7wg"/>
                             </connections>
@@ -33,7 +33,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="312" y="197.75"/>
+            <point key="canvasLocation" x="124" y="155.75"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.015686274509803921" green="0.87058823529411766" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>

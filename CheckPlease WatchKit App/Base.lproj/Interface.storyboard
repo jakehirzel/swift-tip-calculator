@@ -26,10 +26,10 @@
                         <label width="1" alignment="center" verticalAlignment="center" text="20% - $0.00" textAlignment="center" id="A6b-ac-v6j"/>
                     </items>
                     <connections>
-                        <outlet property="eighteenPercent" destination="c4W-zq-vLY" id="Gti-Pm-AfK"/>
-                        <outlet property="fifteenPercent" destination="RIb-5p-K8Y" id="vjK-r6-jFB"/>
+                        <outlet property="percentOne" destination="RIb-5p-K8Y" id="baR-7U-3yY"/>
+                        <outlet property="percentThree" destination="A6b-ac-v6j" id="UeE-rW-P4o"/>
+                        <outlet property="percentTwo" destination="c4W-zq-vLY" id="0X9-eu-THe"/>
                         <outlet property="totalBillPicker" destination="OgI-xT-qjB" id="bul-y0-aXr"/>
-                        <outlet property="twentyPercent" destination="A6b-ac-v6j" id="i5u-dA-gfe"/>
                     </connections>
                 </controller>
             </objects>

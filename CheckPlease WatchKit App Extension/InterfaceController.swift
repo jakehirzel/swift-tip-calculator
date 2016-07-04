@@ -14,9 +14,9 @@ class InterfaceController: WKInterfaceController {
     
     // MARK: Properties
     @IBOutlet var totalBillPicker: WKInterfacePicker!
-    @IBOutlet var fifteenPercent: WKInterfaceLabel!
-    @IBOutlet var eighteenPercent: WKInterfaceLabel!
-    @IBOutlet var twentyPercent: WKInterfaceLabel!
+    @IBOutlet var percentOne: WKInterfaceLabel!
+    @IBOutlet var percentTwo: WKInterfaceLabel!
+    @IBOutlet var percentThree: WKInterfaceLabel!
     
     // Create instance of TipCalculator class
     let tipCalculatorInstance = TipCalculator()
@@ -60,14 +60,14 @@ class InterfaceController: WKInterfaceController {
         let tipResults = tipCalculatorInstance.tipCalculator(tipCalculatorInstance.mealTotalArray, index: value)
         
         // Convert resulting floats to $0.00 format
-        let formattedFifteen = String(format: "15%% - $%.2f", tipResults.tipOne)
-        let formattedEighteen = String(format: "18%% - $%.2f", tipResults.tipTwo)
-        let formattedTwenty = String(format: "20%% - $%.2f", tipResults.tipThree)
+        let formattedTipOne = String(format: "15%% - $%.2f", tipResults.tipOne)
+        let formattedTipTwo = String(format: "18%% - $%.2f", tipResults.tipTwo)
+        let formattedTipThree = String(format: "20%% - $%.2f", tipResults.tipThree)
 
         // Set tips to labels
-        fifteenPercent.setText("\(formattedFifteen)")
-        eighteenPercent.setText("\(formattedEighteen)")
-        twentyPercent.setText("\(formattedTwenty)")
+        percentOne.setText("\(formattedTipOne)")
+        percentTwo.setText("\(formattedTipTwo)")
+        percentThree.setText("\(formattedTipThree)")
         
         // Add whimsical haptic feedback
         WKInterfaceDevice.currentDevice().playHaptic(.DirectionDown)

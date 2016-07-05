@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TipCalculator: NSObject {
+class TipCalculator {
     
     // MARK: Properties
     
@@ -25,7 +25,7 @@ class TipCalculator: NSObject {
     var highMealTotal: Float
     
     // MARK: Initialization
-    override init() {
+    init() {
         
         // Initialize to recommended values, except for mealTotalArray which is blank
         self.tipPercentOne = 0.15
@@ -34,11 +34,6 @@ class TipCalculator: NSObject {
         self.mealTotalArray = []
         self.lowMealTotal = 1.00
         self.highMealTotal = 500.00
-
-        super.init()
-        
-        // Fill meal total array with recommended values
-        self.mealTotalArray = self.createMealTotalArray()
 
     }
     
@@ -51,6 +46,17 @@ class TipCalculator: NSObject {
             i += 0.5
         }
         return mealTotalArray
+    }
+    
+    // Define function to extend array containing meal totals by $50
+    func extendMealTotalArray(mealTotalArray: [Float]) -> [Float] {
+        var i: Float = mealTotalArray.last!
+        var localArray = mealTotalArray
+        while i <= mealTotalArray.last! + 50.00 {
+            localArray.append(i)
+            i += 0.50
+        }
+        return localArray
     }
     
     // Define the basic function to calculate tip amounts from an index to the meal pricing array

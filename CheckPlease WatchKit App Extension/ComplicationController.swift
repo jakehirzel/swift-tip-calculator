@@ -57,7 +57,28 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getPlaceholderTemplateForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTemplate?) -> Void) {
         // This method will be called once per supported complication, and the results will be cached
-        handler(nil)
+        
+        var template: CLKComplicationTemplate? = nil
+        switch complication.family {
+        case .ModularSmall:
+            let modularTemplate = CLKComplicationTemplateModularSmallSimpleImage()
+            modularTemplate.imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "Complication/Modular")!)
+            template = modularTemplate
+        case .ModularLarge:
+            template = nil
+        case .UtilitarianSmall:
+            let utilitarianTemplate = CLKComplicationTemplateUtilitarianSmallFlat()
+            utilitarianTemplate.imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!)
+            template = utilitarianTemplate
+        case .UtilitarianLarge:
+            template = nil
+        case .CircularSmall:
+            let circularTemplate = CLKComplicationTemplateCircularSmallRingImage()
+            circularTemplate.imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "Complication/Circular")!)
+            template = circularTemplate
+        }
+        handler(template)
+        
     }
     
 }

@@ -12,9 +12,14 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     
     // MARK: Properties
     @IBOutlet weak var totalBillPicker: UIPickerView!
+    @IBOutlet weak var totalBillLabel: UILabel!
     @IBOutlet weak var percentOne: UILabel!
     @IBOutlet weak var percentTwo: UILabel!
     @IBOutlet weak var percentThree: UILabel!
+    
+    @IBOutlet weak var keyOne: UIButton!
+    @IBOutlet weak var keyTwo: UIButton!
+    @IBOutlet weak var keyThree: UIButton!
     
     // Create instance of TipCalculator class
     let tipCalculatorInstance = TipCalculator()
@@ -64,4 +69,23 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         percentThree.text = String(format: "$%.2f", tipResults.tipThree)
         
     }
+    
+    // MARK: Actions
+    
+    @IBAction func oneKeyTap(sender: UIButton) {
+        keypadButtonTapped(sender)
+    }
+    
+    @IBAction func twoKeyTap(sender: UIButton) {
+        keypadButtonTapped(sender)
+    }
+    
+    @IBAction func threeKeyTap(sender: UIButton) {
+        keypadButtonTapped(sender)
+    }
+    
+    func keypadButtonTapped(button: UIButton) {
+        totalBillLabel.text = button.titleLabel!.text
+    }
+    
 }

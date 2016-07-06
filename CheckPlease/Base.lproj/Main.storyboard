@@ -124,7 +124,7 @@
                                                                     <color key="titleShadowColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="oneKeyTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v8h-yL-TEj"/>
+                                                                    <action selector="numKeyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vAF-rg-eTD"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgT-Ut-yz6">
@@ -135,7 +135,7 @@
                                                                     <color key="titleShadowColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="twoKeyTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MUN-WN-naW"/>
+                                                                    <action selector="numKeyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WFW-RE-xtO"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6Q-t3-4vf">
@@ -146,7 +146,7 @@
                                                                     <color key="titleShadowColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="threeKeyTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PqC-Vj-7mb"/>
+                                                                    <action selector="numKeyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="luA-gm-6Bo"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -161,6 +161,9 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="numKeyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jpn-Pm-ffN"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XN-T2-L33">
                                                                 <rect key="frame" x="187" y="0.0" width="187" height="80"/>
@@ -169,6 +172,9 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="numKeyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="anb-nH-cgT"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZN8-Nz-dzl">
                                                                 <rect key="frame" x="374" y="0.0" width="187" height="80"/>
@@ -177,6 +183,9 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="numKeyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y8l-J2-vbi"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -190,6 +199,9 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="numKeyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xE9-qr-A0L"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ass-5D-N61">
                                                                 <rect key="frame" x="187" y="0.0" width="187" height="81"/>
@@ -198,6 +210,9 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="numKeyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z0Z-K3-vjA"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEe-D3-w8c">
                                                                 <rect key="frame" x="374" y="0.0" width="187" height="81"/>
@@ -206,6 +221,9 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="numKeyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pXa-dG-hTW"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -219,6 +237,9 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="numKeyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="39A-Zj-aAj"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG6-4a-Tc9">
                                                                 <rect key="frame" x="187" y="0.0" width="187" height="80"/>
@@ -227,6 +248,9 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="numKeyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1yB-Pc-UAR"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daj-Ax-5AI">
                                                                 <rect key="frame" x="374" y="0.0" width="187" height="80"/>
@@ -235,6 +259,9 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="titleShadowColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="delKeyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ok4-6m-apA"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -262,9 +289,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="keyDelete" destination="daj-Ax-5AI" id="pU8-Bo-gRt"/>
+                        <outlet property="keyEight" destination="Ass-5D-N61" id="y7P-oo-WZA"/>
+                        <outlet property="keyFive" destination="7XN-T2-L33" id="O5n-oq-bPF"/>
+                        <outlet property="keyFour" destination="KPj-TX-XcS" id="bZT-hP-nhw"/>
+                        <outlet property="keyNine" destination="TEe-D3-w8c" id="BWH-Te-v6I"/>
                         <outlet property="keyOne" destination="Ate-lI-Wjs" id="xSE-3n-wZ3"/>
+                        <outlet property="keyPoint" destination="ZUl-pQ-AB2" id="9hG-If-by7"/>
+                        <outlet property="keySeven" destination="Zhu-QL-6jV" id="kzR-CS-rPe"/>
+                        <outlet property="keySix" destination="ZN8-Nz-dzl" id="foJ-i4-w1e"/>
                         <outlet property="keyThree" destination="Q6Q-t3-4vf" id="e27-Vm-wOm"/>
                         <outlet property="keyTwo" destination="AgT-Ut-yz6" id="fVt-Yp-ez3"/>
+                        <outlet property="keyZero" destination="IG6-4a-Tc9" id="GoD-uk-JiM"/>
                         <outlet property="percentOne" destination="SVg-bu-uiR" id="YY5-zG-rgs"/>
                         <outlet property="percentThree" destination="1KY-yt-Vob" id="fWc-3A-Re7"/>
                         <outlet property="percentTwo" destination="0kM-Lr-ddq" id="jjY-qm-C4C"/>

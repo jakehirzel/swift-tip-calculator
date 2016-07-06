@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+class ViewController: UIViewController {
     
     // MARK: Properties
-    @IBOutlet weak var totalBillPicker: UIPickerView!
+    
     @IBOutlet weak var totalBillLabel: UILabel!
     @IBOutlet weak var percentOne: UILabel!
     @IBOutlet weak var percentTwo: UILabel!
@@ -39,17 +39,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        // Set picker data source and delegate
-        totalBillPicker.dataSource = self
-        totalBillPicker.delegate = self
-        
-        // Populate array of total amounts
-        tipCalculatorInstance.mealTotalArray = tipCalculatorInstance.createMealTotalArray()
-        
-        // Give focus to the picker
-        totalBillPicker.focused
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,64 +46,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: UIPickerViewDelegate
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return tipCalculatorInstance.mealTotalArray.count
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(format: "$%.2f", tipCalculatorInstance.mealTotalArray[row])
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        let currentMealValue = tipCalculatorInstance.mealTotalArray[row]
-        
-        // Run the calculator
-        let tipResults = tipCalculatorInstance.tipCalculator(currentMealValue)
-        
-        // Convert resulting floats to $0.00 format
-        percentOne.text = String(format: "$%.2f", tipResults.tipOne)
-        percentTwo.text = String(format: "$%.2f", tipResults.tipTwo)
-        percentThree.text = String(format: "$%.2f", tipResults.tipThree)
-        
-    }
-    
-//    // MARK: Total Bill Label Parsing & Tip Calculation
-//    
-//    // Delete the $ and check if it's a number by trying to cast as a Double
-//    func isNumeric() -> Bool {
-//        var totalBillSansDollar = totalBillLabel.text
-//        totalBillSansDollar!.removeAtIndex(totalBillSansDollar!.startIndex)
-//        return Float(totalBillSansDollar!) != nil
-//    }
-//    
-//    func totalBillLabelChanged() {
-//        if isNumeric() {
-//            var totalBillSansDollar: String = totalBillLabel.text!
-//            totalBillSansDollar.removeAtIndex(totalBillSansDollar.startIndex)
-//            let totalBillFloat = Float(totalBillSansDollar)!
-//            var totalBillAmount: [Float] = []
-//            totalBillAmount.append(totalBillFloat)
-//            
-//            let tipResults = tipCalculatorInstance.tipCalculator(totalBillAmount, index: 0)
-//
-//            // Convert resulting floats to $0.00 format
-//            percentOne.text = String(format: "$%.2f", totalBillFloat)
-//            percentTwo.text = String(format: "$%.2f", tipResults.tipTwo)
-//            percentThree.text = String(format: "$%.2f", tipResults.tipThree)
-//
-//        }
-//    }
-    
     // MARK: Keyboard Behaviors
     
     func keypadButtonTapped(button: UIButton) {
-        
         if totalBillLabel.text == "$0.00" {
             totalBillLabel.text = "$"
             totalBillLabel.text?.appendContentsOf(button.titleLabel!.text!)
@@ -128,10 +62,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     }
     
     func processTipCalculation() {
-
         let totalBillFloat: Float? = Float(totalBillLabelValue)
-        
         if totalBillFloat != nil {
+
             let tipResults = tipCalculatorInstance.tipCalculator(totalBillFloat!)
             
             // Convert resulting floats to $0.00 format
@@ -140,7 +73,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
             percentThree.text = String(format: "$%.2f", tipResults.tipThree)
             
         }
-        
     }
     
     // MARK: Actions

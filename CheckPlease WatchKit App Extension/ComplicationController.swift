@@ -69,6 +69,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         case .UtilitarianSmall:
             let utilitarianTemplate = CLKComplicationTemplateUtilitarianSmallFlat()
             utilitarianTemplate.imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!)
+            utilitarianTemplate.textProvider = CLKSimpleTextProvider(text: "CkPls")
             template = utilitarianTemplate
         case .UtilitarianLarge:
             template = nil

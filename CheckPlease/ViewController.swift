@@ -27,8 +27,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         totalBillPicker.dataSource = self
         totalBillPicker.delegate = self
         
-//        // Populate array of total amounts
-//        tipCalculatorInstance.mealTotalArray = tipCalculatorInstance.createMealTotalArray()
+        // Populate array of total amounts
+        tipCalculatorInstance.mealTotalArray = tipCalculatorInstance.createMealTotalArray()
         
         // Give focus to the picker
         totalBillPicker.focused

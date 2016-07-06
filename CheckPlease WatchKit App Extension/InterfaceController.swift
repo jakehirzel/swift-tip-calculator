@@ -59,8 +59,11 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func pickerAction(value: Int) {
         
+        // Get displayed picker value
+        let currentMealValue = tipCalculatorInstance.mealTotalArray[value]
+        
         // Run the calculator
-        let tipResults = tipCalculatorInstance.tipCalculator(tipCalculatorInstance.mealTotalArray, index: value)
+        let tipResults = tipCalculatorInstance.tipCalculator(currentMealValue)
         
         // Convert resulting floats to $0.00 format
         let formattedTipOne = String(format: "15%% - $%.2f", tipResults.tipOne)

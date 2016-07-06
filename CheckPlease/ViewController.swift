@@ -30,6 +30,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     @IBOutlet weak var keyPoint: UIButton!
     @IBOutlet weak var keyDelete: UIButton!
     
+    // String to hold value of totalBillLabel without the $
+    var totalBillLabelValue = ""
+    
     // Create instance of TipCalculator class
     let tipCalculatorInstance = TipCalculator()
     
@@ -69,8 +72,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
+        let currentMealValue = tipCalculatorInstance.mealTotalArray[row]
+        
         // Run the calculator
-        let tipResults = tipCalculatorInstance.tipCalculator(tipCalculatorInstance.mealTotalArray, index: row)
+        let tipResults = tipCalculatorInstance.tipCalculator(currentMealValue)
         
         // Convert resulting floats to $0.00 format
         percentOne.text = String(format: "$%.2f", tipResults.tipOne)
@@ -78,17 +83,64 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         percentThree.text = String(format: "$%.2f", tipResults.tipThree)
         
     }
-        
+    
+//    // MARK: Total Bill Label Parsing & Tip Calculation
+//    
+//    // Delete the $ and check if it's a number by trying to cast as a Double
+//    func isNumeric() -> Bool {
+//        var totalBillSansDollar = totalBillLabel.text
+//        totalBillSansDollar!.removeAtIndex(totalBillSansDollar!.startIndex)
+//        return Float(totalBillSansDollar!) != nil
+//    }
+//    
+//    func totalBillLabelChanged() {
+//        if isNumeric() {
+//            var totalBillSansDollar: String = totalBillLabel.text!
+//            totalBillSansDollar.removeAtIndex(totalBillSansDollar.startIndex)
+//            let totalBillFloat = Float(totalBillSansDollar)!
+//            var totalBillAmount: [Float] = []
+//            totalBillAmount.append(totalBillFloat)
+//            
+//            let tipResults = tipCalculatorInstance.tipCalculator(totalBillAmount, index: 0)
+//
+//            // Convert resulting floats to $0.00 format
+//            percentOne.text = String(format: "$%.2f", totalBillFloat)
+//            percentTwo.text = String(format: "$%.2f", tipResults.tipTwo)
+//            percentThree.text = String(format: "$%.2f", tipResults.tipThree)
+//
+//        }
+//    }
+    
     // MARK: Keyboard Behaviors
     
     func keypadButtonTapped(button: UIButton) {
+        
         if totalBillLabel.text == "$0.00" {
             totalBillLabel.text = "$"
             totalBillLabel.text?.appendContentsOf(button.titleLabel!.text!)
+            totalBillLabelValue += button.titleLabel!.text!
         }
         else {
             totalBillLabel.text?.appendContentsOf(button.titleLabel!.text!)
+            totalBillLabelValue += button.titleLabel!.text!
         }
+        processTipCalculation()
+    }
+    
+    func processTipCalculation() {
+
+        let totalBillFloat: Float? = Float(totalBillLabelValue)
+        
+        if totalBillFloat != nil {
+            let tipResults = tipCalculatorInstance.tipCalculator(totalBillFloat!)
+            
+            // Convert resulting floats to $0.00 format
+            percentOne.text = String(format: "$%.2f", tipResults.tipOne)
+            percentTwo.text = String(format: "$%.2f", tipResults.tipTwo)
+            percentThree.text = String(format: "$%.2f", tipResults.tipThree)
+            
+        }
+        
     }
     
     // MARK: Actions
@@ -99,10 +151,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     
     @IBAction func delKeyTapped(sender: UIButton) {
         if totalBillLabel.text == "$" {
-            return
         }
         else {
             totalBillLabel.text?.removeAtIndex((totalBillLabel.text?.endIndex.predecessor())!)
+            totalBillLabelValue.removeAtIndex(totalBillLabelValue.endIndex.predecessor())
         }
+        processTipCalculation()
     }
 }

@@ -39,6 +39,9 @@ class InterfaceController: WKInterfaceController {
         // Apply values to the picker
         totalBillPicker.setItems(pickerItems)
         
+        // Set picker to $20
+        totalBillPicker.setSelectedItemIndex(40)
+        
     }
 
     override func willActivate() {

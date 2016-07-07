@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var keyPoint: UIButton!
     @IBOutlet weak var keyDelete: UIButton!
     
+    @IBOutlet weak var cursor: UIView!
+    
     // String to hold value of totalBillLabel without the $
     var totalBillLabelValue = ""
     
@@ -39,6 +41,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Make the cursor repeatedly blink
+        cursor.blink()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -74,7 +84,7 @@ class ViewController: UIViewController {
             
         }
     }
-    
+        
     // MARK: Actions
     
     @IBAction func numKeyTapped(sender: UIButton) {

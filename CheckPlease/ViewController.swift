@@ -59,11 +59,13 @@ class ViewController: UIViewController {
     // MARK: Keyboard Behaviors
     
     func keypadButtonTapped(button: UIButton) {
-        if totalBillLabel.text == "$0.00" {
-            totalBillLabel.text = "$"
-            totalBillLabel.text?.appendContentsOf(button.titleLabel!.text!)
-            totalBillLabelValue += button.titleLabel!.text!
+        
+        // Only allow two characters after a .
+        if totalBillLabel.text?.characters.count > 3 && totalBillLabel.text![(totalBillLabel.text?.endIndex.predecessor().predecessor().predecessor())!] == "." {
+            return
         }
+            
+        // Otherwise add the characters to both strings
         else {
             totalBillLabel.text?.appendContentsOf(button.titleLabel!.text!)
             totalBillLabelValue += button.titleLabel!.text!

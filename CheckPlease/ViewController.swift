@@ -64,7 +64,12 @@ class ViewController: UIViewController {
         if totalBillLabel.text?.characters.count > 3 && totalBillLabel.text![(totalBillLabel.text?.endIndex.predecessor().predecessor().predecessor())!] == "." {
             return
         }
-            
+        
+        // Only allow one .
+        else if button.titleLabel!.text == "." && totalBillLabel.text?.characters.contains(".") == true {
+            return
+        }
+        
         // Otherwise add the characters to both strings
         else {
             totalBillLabel.text?.appendContentsOf(button.titleLabel!.text!)

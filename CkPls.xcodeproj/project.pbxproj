@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		235CDC1C1D29794300E15F15 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235CDC1A1D29794300E15F15 /* Interface.storyboard */; };
 		235CDC1E1D29794300E15F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235CDC1D1D29794300E15F15 /* Assets.xcassets */; };
-		235CDC251D29794300E15F15 /* CheckPlease WatchKit App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 235CDC241D29794300E15F15 /* CheckPlease WatchKit App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		235CDC251D29794300E15F15 /* CkPls.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 235CDC241D29794300E15F15 /* CkPls.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		235CDC2A1D29794300E15F15 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC291D29794300E15F15 /* InterfaceController.swift */; };
 		235CDC2C1D29794300E15F15 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC2B1D29794300E15F15 /* ExtensionDelegate.swift */; };
 		235CDC2E1D29794300E15F15 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC2D1D29794300E15F15 /* ComplicationController.swift */; };
 		235CDC301D29794300E15F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235CDC2F1D29794300E15F15 /* Assets.xcassets */; };
-		235CDC341D29794300E15F15 /* CheckPlease WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 235CDC181D29794300E15F15 /* CheckPlease WatchKit App.app */; };
+		235CDC341D29794300E15F15 /* CkPls.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 235CDC181D29794300E15F15 /* CkPls.app */; };
 		235CDC3E1D2AACC100E15F15 /* TipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */; };
 		235CDC3F1D2AACC100E15F15 /* TipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */; };
 		238BFE281D2813FE00C8B6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BFE271D2813FE00C8B6E8 /* AppDelegate.swift */; };
@@ -60,7 +60,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				235CDC251D29794300E15F15 /* CheckPlease WatchKit App Extension.appex in Embed App Extensions */,
+				235CDC251D29794300E15F15 /* CkPls.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,7 +71,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				235CDC341D29794300E15F15 /* CheckPlease WatchKit App.app in Embed Watch Content */,
+				235CDC341D29794300E15F15 /* CkPls.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,25 +79,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		235CDC181D29794300E15F15 /* CheckPlease WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CheckPlease WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		235CDC181D29794300E15F15 /* CkPls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CkPls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		235CDC1B1D29794300E15F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		235CDC1D1D29794300E15F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		235CDC1F1D29794300E15F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		235CDC241D29794300E15F15 /* CheckPlease WatchKit App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CheckPlease WatchKit App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		235CDC241D29794300E15F15 /* CkPls.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CkPls.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		235CDC291D29794300E15F15 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		235CDC2B1D29794300E15F15 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		235CDC2D1D29794300E15F15 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		235CDC2F1D29794300E15F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		235CDC311D29794300E15F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculator.swift; sourceTree = "<group>"; };
-		238BFE241D2813FE00C8B6E8 /* CheckPlease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckPlease.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		238BFE241D2813FE00C8B6E8 /* CkPls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CkPls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238BFE271D2813FE00C8B6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		238BFE291D2813FE00C8B6E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		238BFE2C1D2813FE00C8B6E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		238BFE2E1D2813FE00C8B6E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		238BFE311D2813FE00C8B6E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		238BFE331D2813FE00C8B6E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		238BFE381D2813FE00C8B6E8 /* CheckPleaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckPleaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		238BFE381D2813FE00C8B6E8 /* CkPls.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CkPls.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		238BFE3C1D2813FE00C8B6E8 /* CheckPleaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPleaseTests.swift; sourceTree = "<group>"; };
 		238BFE3E1D2813FE00C8B6E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23970B621D2D4DB300A67666 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
@@ -166,10 +166,10 @@
 		238BFE251D2813FE00C8B6E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				238BFE241D2813FE00C8B6E8 /* CheckPlease.app */,
-				238BFE381D2813FE00C8B6E8 /* CheckPleaseTests.xctest */,
-				235CDC181D29794300E15F15 /* CheckPlease WatchKit App.app */,
-				235CDC241D29794300E15F15 /* CheckPlease WatchKit App Extension.appex */,
+				238BFE241D2813FE00C8B6E8 /* CkPls.app */,
+				238BFE381D2813FE00C8B6E8 /* CkPls.xctest */,
+				235CDC181D29794300E15F15 /* CkPls.app */,
+				235CDC241D29794300E15F15 /* CkPls.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,9 +201,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		235CDC171D29794300E15F15 /* CheckPlease WatchKit App */ = {
+		235CDC171D29794300E15F15 /* CkPls WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 235CDC391D29794400E15F15 /* Build configuration list for PBXNativeTarget "CheckPlease WatchKit App" */;
+			buildConfigurationList = 235CDC391D29794400E15F15 /* Build configuration list for PBXNativeTarget "CkPls WatchKit App" */;
 			buildPhases = (
 				235CDC161D29794300E15F15 /* Resources */,
 				235CDC381D29794400E15F15 /* Embed App Extensions */,
@@ -213,14 +213,14 @@
 			dependencies = (
 				235CDC271D29794300E15F15 /* PBXTargetDependency */,
 			);
-			name = "CheckPlease WatchKit App";
+			name = "CkPls WatchKit App";
 			productName = "CheckPlease WatchKit App";
-			productReference = 235CDC181D29794300E15F15 /* CheckPlease WatchKit App.app */;
+			productReference = 235CDC181D29794300E15F15 /* CkPls.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
-		235CDC231D29794300E15F15 /* CheckPlease WatchKit App Extension */ = {
+		235CDC231D29794300E15F15 /* CkPls WatchKit App Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 235CDC351D29794400E15F15 /* Build configuration list for PBXNativeTarget "CheckPlease WatchKit App Extension" */;
+			buildConfigurationList = 235CDC351D29794400E15F15 /* Build configuration list for PBXNativeTarget "CkPls WatchKit App Extension" */;
 			buildPhases = (
 				235CDC201D29794300E15F15 /* Sources */,
 				235CDC211D29794300E15F15 /* Frameworks */,
@@ -230,14 +230,14 @@
 			);
 			dependencies = (
 			);
-			name = "CheckPlease WatchKit App Extension";
+			name = "CkPls WatchKit App Extension";
 			productName = "CheckPlease WatchKit App Extension";
-			productReference = 235CDC241D29794300E15F15 /* CheckPlease WatchKit App Extension.appex */;
+			productReference = 235CDC241D29794300E15F15 /* CkPls.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
-		238BFE231D2813FE00C8B6E8 /* CheckPlease */ = {
+		238BFE231D2813FE00C8B6E8 /* CkPls */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 238BFE411D2813FE00C8B6E8 /* Build configuration list for PBXNativeTarget "CheckPlease" */;
+			buildConfigurationList = 238BFE411D2813FE00C8B6E8 /* Build configuration list for PBXNativeTarget "CkPls" */;
 			buildPhases = (
 				238BFE201D2813FE00C8B6E8 /* Sources */,
 				238BFE211D2813FE00C8B6E8 /* Frameworks */,
@@ -249,14 +249,14 @@
 			dependencies = (
 				235CDC331D29794300E15F15 /* PBXTargetDependency */,
 			);
-			name = CheckPlease;
+			name = CkPls;
 			productName = CheckPlease;
-			productReference = 238BFE241D2813FE00C8B6E8 /* CheckPlease.app */;
+			productReference = 238BFE241D2813FE00C8B6E8 /* CkPls.app */;
 			productType = "com.apple.product-type.application";
 		};
-		238BFE371D2813FE00C8B6E8 /* CheckPleaseTests */ = {
+		238BFE371D2813FE00C8B6E8 /* CkPlsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 238BFE441D2813FE00C8B6E8 /* Build configuration list for PBXNativeTarget "CheckPleaseTests" */;
+			buildConfigurationList = 238BFE441D2813FE00C8B6E8 /* Build configuration list for PBXNativeTarget "CkPlsTests" */;
 			buildPhases = (
 				238BFE341D2813FE00C8B6E8 /* Sources */,
 				238BFE351D2813FE00C8B6E8 /* Frameworks */,
@@ -267,9 +267,9 @@
 			dependencies = (
 				238BFE3A1D2813FE00C8B6E8 /* PBXTargetDependency */,
 			);
-			name = CheckPleaseTests;
+			name = CkPlsTests;
 			productName = CheckPleaseTests;
-			productReference = 238BFE381D2813FE00C8B6E8 /* CheckPleaseTests.xctest */;
+			productReference = 238BFE381D2813FE00C8B6E8 /* CkPls.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -284,15 +284,15 @@
 				TargetAttributes = {
 					235CDC171D29794300E15F15 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 34LB63F74B;
+						DevelopmentTeam = BSAA9W64H3;
 					};
 					235CDC231D29794300E15F15 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 34LB63F74B;
+						DevelopmentTeam = BSAA9W64H3;
 					};
 					238BFE231D2813FE00C8B6E8 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 34LB63F74B;
+						DevelopmentTeam = BSAA9W64H3;
 					};
 					238BFE371D2813FE00C8B6E8 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -300,7 +300,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 238BFE1F1D2813FE00C8B6E8 /* Build configuration list for PBXProject "CheckPlease" */;
+			buildConfigurationList = 238BFE1F1D2813FE00C8B6E8 /* Build configuration list for PBXProject "CkPls" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -313,10 +313,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				238BFE231D2813FE00C8B6E8 /* CheckPlease */,
-				238BFE371D2813FE00C8B6E8 /* CheckPleaseTests */,
-				235CDC171D29794300E15F15 /* CheckPlease WatchKit App */,
-				235CDC231D29794300E15F15 /* CheckPlease WatchKit App Extension */,
+				238BFE231D2813FE00C8B6E8 /* CkPls */,
+				238BFE371D2813FE00C8B6E8 /* CkPlsTests */,
+				235CDC171D29794300E15F15 /* CkPls WatchKit App */,
+				235CDC231D29794300E15F15 /* CkPls WatchKit App Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -397,17 +397,17 @@
 /* Begin PBXTargetDependency section */
 		235CDC271D29794300E15F15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 235CDC231D29794300E15F15 /* CheckPlease WatchKit App Extension */;
+			target = 235CDC231D29794300E15F15 /* CkPls WatchKit App Extension */;
 			targetProxy = 235CDC261D29794300E15F15 /* PBXContainerItemProxy */;
 		};
 		235CDC331D29794300E15F15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 235CDC171D29794300E15F15 /* CheckPlease WatchKit App */;
+			target = 235CDC171D29794300E15F15 /* CkPls WatchKit App */;
 			targetProxy = 235CDC321D29794300E15F15 /* PBXContainerItemProxy */;
 		};
 		238BFE3A1D2813FE00C8B6E8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 238BFE231D2813FE00C8B6E8 /* CheckPlease */;
+			target = 238BFE231D2813FE00C8B6E8 /* CkPls */;
 			targetProxy = 238BFE391D2813FE00C8B6E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -444,12 +444,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "CheckPlease WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CheckPlease.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CkPls.watchkitapp.watchkitextension;
+				PRODUCT_NAME = CkPls;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -462,12 +462,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "CheckPlease WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CheckPlease.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CkPls.watchkitapp.watchkitextension;
+				PRODUCT_NAME = CkPls;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -480,13 +480,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = CheckPlease_WatchKit_App_Extension;
 				INFOPLIST_FILE = "CheckPlease WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CheckPlease.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CkPls.watchkitapp;
+				PRODUCT_NAME = CkPls;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -498,13 +498,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = CheckPlease_WatchKit_App_Extension;
 				INFOPLIST_FILE = "CheckPlease WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CheckPlease.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CkPls.watchkitapp;
+				PRODUCT_NAME = CkPls;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -601,12 +601,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CheckPlease/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CheckPlease;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CkPls;
+				PRODUCT_NAME = CkPls;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -615,12 +615,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CheckPlease/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CheckPlease;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CkPls;
+				PRODUCT_NAME = CkPls;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -632,8 +632,8 @@
 				INFOPLIST_FILE = CheckPleaseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CheckPleaseTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckPlease.app/CheckPlease";
+				PRODUCT_NAME = CkPls;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CkPls.app/CkPls";
 			};
 			name = Debug;
 		};
@@ -644,15 +644,15 @@
 				INFOPLIST_FILE = CheckPleaseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CheckPleaseTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckPlease.app/CheckPlease";
+				PRODUCT_NAME = CkPls;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CkPls.app/CkPls";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		235CDC351D29794400E15F15 /* Build configuration list for PBXNativeTarget "CheckPlease WatchKit App Extension" */ = {
+		235CDC351D29794400E15F15 /* Build configuration list for PBXNativeTarget "CkPls WatchKit App Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				235CDC361D29794400E15F15 /* Debug */,
@@ -661,7 +661,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		235CDC391D29794400E15F15 /* Build configuration list for PBXNativeTarget "CheckPlease WatchKit App" */ = {
+		235CDC391D29794400E15F15 /* Build configuration list for PBXNativeTarget "CkPls WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				235CDC3A1D29794400E15F15 /* Debug */,
@@ -670,7 +670,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		238BFE1F1D2813FE00C8B6E8 /* Build configuration list for PBXProject "CheckPlease" */ = {
+		238BFE1F1D2813FE00C8B6E8 /* Build configuration list for PBXProject "CkPls" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				238BFE3F1D2813FE00C8B6E8 /* Debug */,
@@ -679,7 +679,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		238BFE411D2813FE00C8B6E8 /* Build configuration list for PBXNativeTarget "CheckPlease" */ = {
+		238BFE411D2813FE00C8B6E8 /* Build configuration list for PBXNativeTarget "CkPls" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				238BFE421D2813FE00C8B6E8 /* Debug */,
@@ -688,7 +688,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		238BFE441D2813FE00C8B6E8 /* Build configuration list for PBXNativeTarget "CheckPleaseTests" */ = {
+		238BFE441D2813FE00C8B6E8 /* Build configuration list for PBXNativeTarget "CkPlsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				238BFE451D2813FE00C8B6E8 /* Debug */,

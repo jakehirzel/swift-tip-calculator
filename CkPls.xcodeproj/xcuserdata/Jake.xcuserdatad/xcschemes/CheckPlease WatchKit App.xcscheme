@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "235CDC171D29794300E15F15"
-               BuildableName = "CheckPlease WatchKit App.app"
-               BlueprintName = "CheckPlease WatchKit App"
-               ReferencedContainer = "container:CheckPlease.xcodeproj">
+               BuildableName = "CkPls.app"
+               BlueprintName = "CkPls WatchKit App"
+               ReferencedContainer = "container:CkPls.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "238BFE231D2813FE00C8B6E8"
-               BuildableName = "CheckPlease.app"
-               BlueprintName = "CheckPlease"
-               ReferencedContainer = "container:CheckPlease.xcodeproj">
+               BuildableName = "CkPls.app"
+               BlueprintName = "CkPls"
+               ReferencedContainer = "container:CkPls.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "235CDC231D29794300E15F15"
-               BuildableName = "CheckPlease WatchKit App Extension.appex"
-               BlueprintName = "CheckPlease WatchKit App Extension"
-               ReferencedContainer = "container:CheckPlease.xcodeproj">
+               BuildableName = "CkPls.appex"
+               BlueprintName = "CkPls WatchKit App Extension"
+               ReferencedContainer = "container:CkPls.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "235CDC171D29794300E15F15"
-            BuildableName = "CheckPlease WatchKit App.app"
-            BlueprintName = "CheckPlease WatchKit App"
-            ReferencedContainer = "container:CheckPlease.xcodeproj">
+            BuildableName = "CkPls.app"
+            BlueprintName = "CkPls WatchKit App"
+            ReferencedContainer = "container:CkPls.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -86,18 +86,18 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "235CDC171D29794300E15F15"
-            BuildableName = "CheckPlease WatchKit App.app"
-            BlueprintName = "CheckPlease WatchKit App"
-            ReferencedContainer = "container:CheckPlease.xcodeproj">
+            BuildableName = "CkPls.app"
+            BlueprintName = "CkPls WatchKit App"
+            ReferencedContainer = "container:CkPls.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "235CDC171D29794300E15F15"
-            BuildableName = "CheckPlease WatchKit App.app"
-            BlueprintName = "CheckPlease WatchKit App"
-            ReferencedContainer = "container:CheckPlease.xcodeproj">
+            BuildableName = "CkPls.app"
+            BlueprintName = "CkPls WatchKit App"
+            ReferencedContainer = "container:CkPls.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -116,18 +116,18 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "235CDC171D29794300E15F15"
-            BuildableName = "CheckPlease WatchKit App.app"
-            BlueprintName = "CheckPlease WatchKit App"
-            ReferencedContainer = "container:CheckPlease.xcodeproj">
+            BuildableName = "CkPls.app"
+            BlueprintName = "CkPls WatchKit App"
+            ReferencedContainer = "container:CkPls.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "235CDC171D29794300E15F15"
-            BuildableName = "CheckPlease WatchKit App.app"
-            BlueprintName = "CheckPlease WatchKit App"
-            ReferencedContainer = "container:CheckPlease.xcodeproj">
+            BuildableName = "CkPls.app"
+            BlueprintName = "CkPls WatchKit App"
+            ReferencedContainer = "container:CkPls.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

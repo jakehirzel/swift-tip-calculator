@@ -90,6 +90,11 @@ class ViewController: UIViewController {
             percentThree.text = String(format: "$%.2f", tipResults.tipThree)
             
         }
+        else {
+            percentOne.text = "$0.00"
+            percentTwo.text = "$0.00"
+            percentThree.text = "$0.00"
+        }
     }
         
     // MARK: Actions

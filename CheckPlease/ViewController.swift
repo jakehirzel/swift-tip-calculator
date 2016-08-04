@@ -60,8 +60,13 @@ class ViewController: UIViewController {
     
     func keypadButtonTapped(button: UIButton) {
         
+        // Only allow 9 characters to be entered
+        if totalBillLabel.text?.characters.count > 9 {
+            return
+        }
+        
         // Only allow two characters after a .
-        if totalBillLabel.text?.characters.count > 3 && totalBillLabel.text![(totalBillLabel.text?.endIndex.predecessor().predecessor().predecessor())!] == "." {
+        else if totalBillLabel.text?.characters.count > 3 && totalBillLabel.text![(totalBillLabel.text?.endIndex.predecessor().predecessor().predecessor())!] == "." {
             return
         }
         

@@ -77,6 +77,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             let circularTemplate = CLKComplicationTemplateCircularSmallRingImage()
             circularTemplate.imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "Complication/Circular")!)
             template = circularTemplate
+        default:
+            handler(nil)
         }
         handler(template)
         

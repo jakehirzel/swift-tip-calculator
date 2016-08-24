@@ -32,8 +32,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var cursor: UIView!
     
-    @IBOutlet var textView: UIView!
-    
     // String to hold value of totalBillLabel without the $
     var totalBillLabelValue = ""
     
@@ -122,12 +120,8 @@ class ViewController: UIViewController {
         processTipCalculation()
     }
     
-    @IBAction func tipTapped(_ sender: UITapGestureRecognizer) {
-        sender.view?.blink()
-        textView.alpha = 0.5
-    }
-
-
-    
-    
+//    @IBAction func tipTapped(_ sender: UITapGestureRecognizer) {
+//        sender.view?.blink()
+//        textView.alpha = 0.5
+//    }
 }

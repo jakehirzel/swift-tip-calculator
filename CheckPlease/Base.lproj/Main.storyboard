@@ -19,32 +19,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dpE-Hk-tFd" userLabel="Total Bill">
+                            <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dpE-Hk-tFd" userLabel="Total Bill">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFn-cO-D7W">
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                         <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="N51-Xy-bzw">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="N51-Xy-bzw">
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ex-Gi-bz8">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ex-Gi-bz8">
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rnu-Yg-tqF">
                                                 <color key="backgroundColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="wIV-OR-czQ"/>
+                                                    <constraint firstAttribute="height" constant="30" id="whT-G3-dul"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qVf-bC-seh" userLabel="Tips View">
-                                <frame key="frameInset" minX="16" minY="140" width="343" height="174"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVf-bC-seh" userLabel="Tips View">
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" misplaced="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nxM-e0-gsK" userLabel="Tips">
-                                        <frame key="frameInset" minX="106" width="130" height="174"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nxM-e0-gsK" userLabel="Tips">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie9-CZ-Mje">
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
@@ -65,9 +68,6 @@
                                                     </label>
                                                 </subviews>
                                                 <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="VU5-09-iUH" appends="YES" id="Mdi-wS-6We"/>
-                                                </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ke4-JR-NDZ" userLabel="Tip Two - Stack View">
                                                 <subviews>
@@ -83,9 +83,6 @@
                                                     </label>
                                                 </subviews>
                                                 <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="BCR-uU-fvz" appends="YES" id="3mg-11-plg"/>
-                                                </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6GI-16-jmU" userLabel="Tip Three - Stack View">
                                                 <subviews>
@@ -101,9 +98,6 @@
                                                     </label>
                                                 </subviews>
                                                 <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="v7l-4j-IGN" appends="YES" id="6vs-Eq-2Tc"/>
-                                                </connections>
                                             </stackView>
                                         </subviews>
                                         <constraints>
@@ -265,13 +259,14 @@
                         <constraints>
                             <constraint firstItem="qVf-bC-seh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Ab-An-JqU"/>
                             <constraint firstItem="qVf-bC-seh" firstAttribute="top" secondItem="dpE-Hk-tFd" secondAttribute="bottom" constant="12" id="1jQ-aB-Qwc"/>
+                            <constraint firstItem="qVf-bC-seh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4Ke-7H-hw6"/>
                             <constraint firstItem="dpE-Hk-tFd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="12" id="ASu-M4-YWT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dpE-Hk-tFd" secondAttribute="trailing" id="C8x-rh-6tA"/>
                             <constraint firstItem="dpE-Hk-tFd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EWb-aw-9md"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n73-yC-KlY" secondAttribute="bottom" constant="12" id="SkH-DO-ZGc"/>
                             <constraint firstItem="n73-yC-KlY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kEn-P5-RRg"/>
                             <constraint firstItem="n73-yC-KlY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mhc-Kl-df1"/>
-                            <constraint firstItem="dpE-Hk-tFd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sCs-IW-tNF"/>
+                            <constraint firstItem="qVf-bC-seh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nEG-gQ-oyP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n73-yC-KlY" secondAttribute="trailing" id="voF-0a-Wyb"/>
                         </constraints>
                     </view>
@@ -292,26 +287,10 @@
                         <outlet property="percentOne" destination="SVg-bu-uiR" id="YY5-zG-rgs"/>
                         <outlet property="percentThree" destination="1KY-yt-Vob" id="fWc-3A-Re7"/>
                         <outlet property="percentTwo" destination="0kM-Lr-ddq" id="jjY-qm-C4C"/>
-                        <outlet property="textView" destination="8bC-Xf-vdC" id="FST-c5-oCs"/>
                         <outlet property="totalBillLabel" destination="7ex-Gi-bz8" id="5jY-AV-sB2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="BCR-uU-fvz">
-                    <connections>
-                        <action selector="tipTapped:" destination="BYZ-38-t0r" id="4SK-Zp-jhj"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="v7l-4j-IGN">
-                    <connections>
-                        <action selector="tipTapped:" destination="BYZ-38-t0r" id="ocu-EE-93t"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="VU5-09-iUH">
-                    <connections>
-                        <action selector="tipTapped:" destination="BYZ-38-t0r" id="omk-hp-Mmk"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="356" y="80.50974512743629"/>
         </scene>

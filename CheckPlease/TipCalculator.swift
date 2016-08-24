@@ -49,7 +49,7 @@ class TipCalculator {
     }
     
     // Define function to extend array containing meal totals by $50
-    func extendMealTotalArray(mealTotalArray: [Float]) -> [Float] {
+    func extendMealTotalArray(_ mealTotalArray: [Float]) -> [Float] {
         var i: Float = mealTotalArray.last!
         var localArray = mealTotalArray
         while i <= mealTotalArray.last! + 50.00 {
@@ -60,7 +60,7 @@ class TipCalculator {
     }
     
     // Define the basic function to calculate tip amounts from an index to the meal pricing array
-    func tipCalculator(mealValue: Float) -> (tipOne: Float, tipTwo: Float, tipThree: Float) {
+    func tipCalculator(_ mealValue: Float) -> (tipOne: Float, tipTwo: Float, tipThree: Float) {
         
         // Compute tips
         let tipOne = mealValue * tipPercentOne

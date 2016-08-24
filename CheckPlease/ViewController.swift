@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         // Make the cursor repeatedly blink
@@ -61,12 +61,14 @@ class ViewController: UIViewController {
     func keypadButtonTapped(button: UIButton) {
         
         // Only allow 9 characters to be entered
-        if totalBillLabel.text?.characters.count > 9 {
+        if (totalBillLabel.text?.characters.count)! > 9 {
             return
         }
         
         // Only allow two characters after a .
-        else if totalBillLabel.text?.characters.count > 3 && totalBillLabel.text![(totalBillLabel.text?.endIndex.predecessor().predecessor().predecessor())!] == "." {
+        else if (totalBillLabel.text?.characters.count)! > 3 &&
+            
+            totalBillLabel.text?[(totalBillLabel.text?.index((totalBillLabel.text?.endIndex)!, offsetBy: -3))!] == "." {
             return
         }
         
@@ -77,7 +79,7 @@ class ViewController: UIViewController {
         
         // Otherwise add the characters to both strings
         else {
-            totalBillLabel.text?.appendContentsOf(button.titleLabel!.text!)
+            totalBillLabel.text?.append(button.titleLabel!.text!)
             totalBillLabelValue += button.titleLabel!.text!
         }
         processTipCalculation()
@@ -104,16 +106,17 @@ class ViewController: UIViewController {
         
     // MARK: Actions
     
+
     @IBAction func numKeyTapped(sender: UIButton) {
-        keypadButtonTapped(sender)
+        keypadButtonTapped(button: sender)
     }
     
     @IBAction func delKeyTapped(sender: UIButton) {
         if totalBillLabel.text == "$" {
         }
         else {
-            totalBillLabel.text?.removeAtIndex((totalBillLabel.text?.endIndex.predecessor())!)
-            totalBillLabelValue.removeAtIndex(totalBillLabelValue.endIndex.predecessor())
+            totalBillLabel.text?.remove(at: (totalBillLabel.text?.index((totalBillLabel.text?.endIndex)!, offsetBy: -1))!)
+            totalBillLabelValue.remove(at: totalBillLabelValue.index(totalBillLabelValue.endIndex, offsetBy: -1))
         }
         processTipCalculation()
     }

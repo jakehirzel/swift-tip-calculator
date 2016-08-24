@@ -21,8 +21,8 @@ class InterfaceController: WKInterfaceController {
     // Create instance of TipCalculator class
     let tipCalculatorInstance = TipCalculator()
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
         // Configure interface objects here.
 
@@ -60,7 +60,7 @@ class InterfaceController: WKInterfaceController {
     
     // MARK: Actions
     
-    @IBAction func pickerAction(value: Int) {
+    @IBAction func pickerAction(_ value: Int) {
         
         // Get displayed picker value
         let currentMealValue = tipCalculatorInstance.mealTotalArray[value]
@@ -79,7 +79,7 @@ class InterfaceController: WKInterfaceController {
         percentThree.setText("\(formattedTipThree)")
         
         // Add whimsical haptic feedback
-        WKInterfaceDevice.currentDevice().playHaptic(.DirectionDown)
+        WKInterfaceDevice.current().play(.directionDown)
 
     }
     

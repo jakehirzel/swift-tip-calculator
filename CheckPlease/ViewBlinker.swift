@@ -10,9 +10,9 @@ import UIKit
 
 extension UIView {
     func blink() {
-        UIView.animateWithDuration(1.0, // Duration
+        UIView.animate(withDuration: 1.0, // Duration
             delay: 0.0,
-            options: [.CurveEaseInOut, .Autoreverse, .Repeat],
+            options: [.autoreverse, .repeat],
             animations: { [weak self] in self?.alpha = 0.0 },
             completion: { [weak self] _ in self?.alpha = 1.0 })
     }

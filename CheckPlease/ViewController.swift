@@ -105,9 +105,9 @@ class ViewController: UIViewController {
             
         }
         else {
-            percentOne.text = "$0.00"
-            percentTwo.text = "$0.00"
-            percentThree.text = "$0.00"
+            percentOne.text = "$0.00 / $0.00"
+            percentTwo.text = "$0.00 / $0.00"
+            percentThree.text = "$0.00 / $0.00"
         }
     }
     

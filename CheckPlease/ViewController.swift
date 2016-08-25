@@ -53,6 +53,9 @@ class ViewController: UIViewController {
     // Variable to Track Tag of Tip Stack Item Tapped
     var tipsStackTag = 0
     
+    // Number of people set in splitsView
+    var peopleNumber = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -111,16 +114,20 @@ class ViewController: UIViewController {
             percentTwo.text = String(format: "$%.2f", tipResults.tipTwo) + " / " + String(format: "$%.2f", tipResults.totalTwo)
             percentThree.text = String(format: "$%.2f", tipResults.tipThree) + " / " + String(format: "$%.2f", tipResults.totalThree)
             
-            // Set split total
+            // Set split total and each person total
             switch tipsStackTag {
             case 1:
                 splitTotal.text = percentOne.text
+                eachTotal.text = percentOne.text
             case 2:
                 splitTotal.text = percentTwo.text
+                eachTotal.text = percentTwo.text
             case 3:
                 splitTotal.text = percentThree.text
+                eachTotal.text = percentThree.text
             default:
                 splitTotal.text = "$0.00 / $0.00"
+                eachTotal.text = "$0.00 / $0.00"
             }
             
         }
@@ -129,6 +136,7 @@ class ViewController: UIViewController {
             percentTwo.text = "$0.00 / $0.00"
             percentThree.text = "$0.00 / $0.00"
             splitTotal.text = "$0.00 / $0.00"
+            eachTotal.text = "$0.00 / $0.00"
         }
     }
     

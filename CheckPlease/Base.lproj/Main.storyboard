@@ -371,7 +371,7 @@
                     </view>
                     <connections>
                         <outlet property="cursor" destination="rnu-Yg-tqF" id="PXA-KY-cBU"/>
-                        <outlet property="eachTotal" destination="1KY-yt-Vob" id="Dgb-en-SFH"/>
+                        <outlet property="eachTotal" destination="njH-j5-Xas" id="Irl-4K-LSk"/>
                         <outlet property="keyDelete" destination="daj-Ax-5AI" id="pU8-Bo-gRt"/>
                         <outlet property="keyEight" destination="Ass-5D-N61" id="y7P-oo-WZA"/>
                         <outlet property="keyFive" destination="7XN-T2-L33" id="O5n-oq-bPF"/>

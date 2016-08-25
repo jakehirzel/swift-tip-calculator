@@ -371,6 +371,7 @@
                     </view>
                     <connections>
                         <outlet property="cursor" destination="rnu-Yg-tqF" id="PXA-KY-cBU"/>
+                        <outlet property="eachTotal" destination="1KY-yt-Vob" id="Dgb-en-SFH"/>
                         <outlet property="keyDelete" destination="daj-Ax-5AI" id="pU8-Bo-gRt"/>
                         <outlet property="keyEight" destination="Ass-5D-N61" id="y7P-oo-WZA"/>
                         <outlet property="keyFive" destination="7XN-T2-L33" id="O5n-oq-bPF"/>
@@ -386,6 +387,9 @@
                         <outlet property="percentOne" destination="SVg-bu-uiR" id="YY5-zG-rgs"/>
                         <outlet property="percentThree" destination="1KY-yt-Vob" id="fWc-3A-Re7"/>
                         <outlet property="percentTwo" destination="0kM-Lr-ddq" id="jjY-qm-C4C"/>
+                        <outlet property="splitPeople" destination="VbF-vi-uma" id="PUV-GX-Kvg"/>
+                        <outlet property="splitPercent" destination="cHf-2q-Cvo" id="wOg-46-IBe"/>
+                        <outlet property="splitTotal" destination="SVg-bu-uiR" id="yvv-oF-jpY"/>
                         <outlet property="splitsView" destination="vjs-IY-5Uc" id="BMR-jD-eT1"/>
                         <outlet property="tipsView" destination="cCy-LE-lf8" id="FkD-D3-Avd"/>
                         <outlet property="totalBillLabel" destination="7ex-Gi-bz8" id="5jY-AV-sB2"/>

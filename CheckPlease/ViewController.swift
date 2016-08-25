@@ -21,6 +21,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var splitsView: UIView!
     @IBOutlet var tipLines: [UIStackView]!
     
+    @IBOutlet weak var splitPercent: UILabel!
+    @IBOutlet weak var splitTotal: UILabel!
+    @IBOutlet weak var splitPeople: UILabel!
+    @IBOutlet weak var eachTotal: UILabel!
+    
     @IBOutlet weak var keyOne: UIButton!
     @IBOutlet weak var keyTwo: UIButton!
     @IBOutlet weak var keyThree: UIButton!

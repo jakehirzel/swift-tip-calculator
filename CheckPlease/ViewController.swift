@@ -118,13 +118,13 @@ class ViewController: UIViewController {
             switch tipsStackTag {
             case 1:
                 splitTotal.text = percentOne.text
-                eachTotal.text = percentOne.text
+                eachTotal.text = String(format: "$%.2f", tipResults.splitTipOne) + " / " + String(format: "$%.2f", tipResults.splitTotalOne)
             case 2:
                 splitTotal.text = percentTwo.text
-                eachTotal.text = percentTwo.text
+                eachTotal.text = String(format: "$%.2f", tipResults.splitTipTwo) + " / " + String(format: "$%.2f", tipResults.splitTotalTwo)
             case 3:
                 splitTotal.text = percentThree.text
-                eachTotal.text = percentThree.text
+                eachTotal.text = String(format: "$%.2f", tipResults.splitTipThree) + " / " + String(format: "$%.2f", tipResults.splitTotalThree)
             default:
                 splitTotal.text = "$0.00 / $0.00"
                 eachTotal.text = "$0.00 / $0.00"

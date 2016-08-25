@@ -60,14 +60,18 @@ class TipCalculator {
     }
     
     // Define the basic function to calculate tip amounts from an index to the meal pricing array
-    func tipCalculator(_ mealValue: Float) -> (tipOne: Float, tipTwo: Float, tipThree: Float) {
+    func tipCalculator(_ mealValue: Float) -> (tipOne: Float, tipTwo: Float, tipThree: Float, totalOne: Float, totalTwo: Float, totalThree: Float) {
         
         // Compute tips
         let tipOne = mealValue * tipPercentOne
         let tipTwo = mealValue * tipPercentTwo
         let tipThree = mealValue * tipPercentThree
         
-        return (tipOne, tipTwo, tipThree)
+        let totalOne = tipOne + mealValue
+        let totalTwo = tipTwo + mealValue
+        let totalThree = tipThree + mealValue
+        
+        return (tipOne, tipTwo, tipThree, totalOne, totalTwo ,totalThree)
         
     }
 

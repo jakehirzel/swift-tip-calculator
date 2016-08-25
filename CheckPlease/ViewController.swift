@@ -99,9 +99,9 @@ class ViewController: UIViewController {
             let tipResults = tipCalculatorInstance.tipCalculator(totalBillFloat!)
             
             // Convert resulting floats to $0.00 format
-            percentOne.text = String(format: "$%.2f", tipResults.tipOne)
-            percentTwo.text = String(format: "$%.2f", tipResults.tipTwo)
-            percentThree.text = String(format: "$%.2f", tipResults.tipThree)
+            percentOne.text = String(format: "$%.2f", tipResults.tipOne) + " / " + String(format: "$%.2f", tipResults.totalOne)
+            percentTwo.text = String(format: "$%.2f", tipResults.tipTwo) + " / " + String(format: "$%.2f", tipResults.totalTwo)
+            percentThree.text = String(format: "$%.2f", tipResults.tipThree) + " / " + String(format: "$%.2f", tipResults.totalThree)
             
         }
         else {

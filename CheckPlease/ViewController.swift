@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var percentTwo: UILabel!
     @IBOutlet weak var percentThree: UILabel!
     
+    @IBOutlet weak var tipsView: UIView!
+    @IBOutlet weak var splitsView: UIView!
     @IBOutlet var tipLines: [UIStackView]!
     
     @IBOutlet weak var keyOne: UIButton!
@@ -39,6 +41,9 @@ class ViewController: UIViewController {
     
     // Create instance of TipCalculator class
     let tipCalculatorInstance = TipCalculator()
+    
+    // Set initial state of splitsView
+    var isSplitsViewShowing = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,28 +129,26 @@ class ViewController: UIViewController {
     
     @IBAction func tipTapped(_ sender: UITapGestureRecognizer) {
         
-        for line in tipLines {
+        if isSplitsViewShowing == false {
+            UIView.transition(
+                from: tipsView,
+                to: splitsView,
+                duration: 1.0,
+                options: [UIViewAnimationOptions.transitionFlipFromRight, UIViewAnimationOptions.showHideTransitionViews] ,
+                completion: nil)
+        }
             
-            // Stop any animation
-            line.layer.removeAllAnimations()
-            
-            // fadeIn() anything hidden
-            if line.alpha == 0 {
-                line.fadeIn()
-            }
-            
-            // Blink the tapped view
-            else if line == sender.view {
-                line.blink()
-            }
-            
-            // fadeOut() other lines
-            else {
-                line.fadeOut()
-            }
-            
+        else {
+            UIView.transition(
+                from: splitsView,
+                to: tipsView,
+                duration: 1.0,
+                options: [UIViewAnimationOptions.transitionFlipFromLeft, UIViewAnimationOptions.showHideTransitionViews],
+                completion: nil)
         }
         
+        isSplitsViewShowing = !isSplitsViewShowing
+
     }
     
 }

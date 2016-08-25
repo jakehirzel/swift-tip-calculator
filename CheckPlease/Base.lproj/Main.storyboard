@@ -21,81 +21,100 @@
                         <subviews>
                             <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYh-rv-3rj" userLabel="Top Spacer"/>
                             <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Tt-fa-qMu" userLabel="Middle Spacer"/>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVf-bC-seh" userLabel="Tips View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVf-bC-seh" userLabel="Tips View Holder">
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nxM-e0-gsK" userLabel="Tips">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjs-IY-5Uc" userLabel=" Splits View">
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="dgY-u2-sbS" appends="YES" id="Vzi-FY-OFu"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCy-LE-lf8" userLabel="Tips View">
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie9-CZ-Mje">
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                                <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nhW-bO-doK" userLabel="Tip One - Stack View">
+                                            <stackView contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nxM-e0-gsK" userLabel="Tips Stack">
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqQ-SL-DNT">
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie9-CZ-Mje">
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                         <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVg-bu-uiR">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nhW-bO-doK" userLabel="Tip One - Stack View">
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqQ-SL-DNT">
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVg-bu-uiR">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <gestureRecognizers/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="nJT-vf-NOA" appends="YES" id="2aO-5l-h4Z"/>
+                                                        </connections>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ke4-JR-NDZ" userLabel="Tip Two - Stack View">
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ6-9n-zoG">
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kM-Lr-ddq">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <gestureRecognizers/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="Y2H-bA-2rF" appends="YES" id="fll-ya-8CL"/>
+                                                        </connections>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6GI-16-jmU" userLabel="Tip Three - Stack View">
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edg-0T-Dr3">
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KY-yt-Vob">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <gestureRecognizers/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="2kZ-8H-p65" appends="YES" id="Bba-RO-1aW"/>
+                                                        </connections>
+                                                    </stackView>
                                                 </subviews>
-                                                <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="nJT-vf-NOA" appends="YES" id="1B1-0e-p3N"/>
-                                                </connections>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ke4-JR-NDZ" userLabel="Tip Two - Stack View">
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ6-9n-zoG">
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                        <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kM-Lr-ddq">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="Y2H-bA-2rF" appends="YES" id="Hgk-zE-tH8"/>
-                                                </connections>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6GI-16-jmU" userLabel="Tip Three - Stack View">
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edg-0T-Dr3">
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                        <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KY-yt-Vob">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="2kZ-8H-p65" appends="YES" id="fp2-cZ-5Mv"/>
-                                                </connections>
+                                                <constraints>
+                                                    <constraint firstItem="nhW-bO-doK" firstAttribute="centerX" secondItem="nxM-e0-gsK" secondAttribute="centerX" id="EwJ-hS-tgN"/>
+                                                    <constraint firstItem="6GI-16-jmU" firstAttribute="centerX" secondItem="nxM-e0-gsK" secondAttribute="centerX" id="O0f-wh-7eT"/>
+                                                    <constraint firstItem="Ke4-JR-NDZ" firstAttribute="centerX" secondItem="nxM-e0-gsK" secondAttribute="centerX" id="cHe-gU-f2a"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="nhW-bO-doK" firstAttribute="centerX" secondItem="nxM-e0-gsK" secondAttribute="centerX" id="EwJ-hS-tgN"/>
-                                            <constraint firstItem="6GI-16-jmU" firstAttribute="centerX" secondItem="nxM-e0-gsK" secondAttribute="centerX" id="O0f-wh-7eT"/>
-                                            <constraint firstItem="Ke4-JR-NDZ" firstAttribute="centerX" secondItem="nxM-e0-gsK" secondAttribute="centerX" id="cHe-gU-f2a"/>
+                                            <constraint firstItem="nxM-e0-gsK" firstAttribute="top" secondItem="cCy-LE-lf8" secondAttribute="top" id="8jR-ep-AkH"/>
+                                            <constraint firstItem="nxM-e0-gsK" firstAttribute="centerX" secondItem="cCy-LE-lf8" secondAttribute="centerX" id="r0h-6D-5Op"/>
+                                            <constraint firstAttribute="bottom" secondItem="nxM-e0-gsK" secondAttribute="bottom" id="xfM-9A-sYW"/>
                                         </constraints>
-                                    </stackView>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="nxM-e0-gsK" firstAttribute="centerX" secondItem="qVf-bC-seh" secondAttribute="centerX" id="8db-Bn-4Xh"/>
-                                    <constraint firstAttribute="bottom" secondItem="nxM-e0-gsK" secondAttribute="bottom" id="ePq-9n-rPA"/>
-                                    <constraint firstItem="nxM-e0-gsK" firstAttribute="top" secondItem="qVf-bC-seh" secondAttribute="top" id="kpo-96-JcO"/>
+                                    <constraint firstItem="vjs-IY-5Uc" firstAttribute="top" secondItem="qVf-bC-seh" secondAttribute="top" id="BLj-rj-4kt"/>
+                                    <constraint firstAttribute="trailing" secondItem="cCy-LE-lf8" secondAttribute="trailing" id="SR3-bK-WGP"/>
+                                    <constraint firstItem="cCy-LE-lf8" firstAttribute="leading" secondItem="qVf-bC-seh" secondAttribute="leading" id="Usy-4C-fiC"/>
+                                    <constraint firstItem="vjs-IY-5Uc" firstAttribute="leading" secondItem="qVf-bC-seh" secondAttribute="leading" id="WHe-pC-feu"/>
+                                    <constraint firstAttribute="bottom" secondItem="cCy-LE-lf8" secondAttribute="bottom" id="cFC-9O-GuW"/>
+                                    <constraint firstAttribute="bottom" secondItem="vjs-IY-5Uc" secondAttribute="bottom" id="fwt-Gg-WBC"/>
+                                    <constraint firstItem="cCy-LE-lf8" firstAttribute="top" secondItem="qVf-bC-seh" secondAttribute="top" id="gLP-R2-Mjg"/>
+                                    <constraint firstAttribute="trailing" secondItem="vjs-IY-5Uc" secondAttribute="trailing" id="mev-fB-6yw"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVN-19-uVF" userLabel="Lower Spacer"/>
@@ -311,26 +330,33 @@
                         <outlet property="percentOne" destination="SVg-bu-uiR" id="YY5-zG-rgs"/>
                         <outlet property="percentThree" destination="1KY-yt-Vob" id="fWc-3A-Re7"/>
                         <outlet property="percentTwo" destination="0kM-Lr-ddq" id="jjY-qm-C4C"/>
+                        <outlet property="splitsView" destination="vjs-IY-5Uc" id="BMR-jD-eT1"/>
+                        <outlet property="tipsView" destination="cCy-LE-lf8" id="FkD-D3-Avd"/>
                         <outlet property="totalBillLabel" destination="7ex-Gi-bz8" id="5jY-AV-sB2"/>
+                        <outletCollection property="tipLines" destination="6GI-16-jmU" collectionClass="NSMutableArray" id="f5F-Ry-SoL"/>
                         <outletCollection property="tipLines" destination="nhW-bO-doK" collectionClass="NSMutableArray" id="sYv-oi-POF"/>
                         <outletCollection property="tipLines" destination="Ke4-JR-NDZ" collectionClass="NSMutableArray" id="5pY-XL-iSz"/>
-                        <outletCollection property="tipLines" destination="6GI-16-jmU" collectionClass="NSMutableArray" id="f5F-Ry-SoL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="nJT-vf-NOA">
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="nJT-vf-NOA" userLabel="T1 - Tap Gesture Recognizer">
                     <connections>
-                        <action selector="tipTapped:" destination="BYZ-38-t0r" id="f51-p9-fzL"/>
+                        <action selector="tipTapped:" destination="BYZ-38-t0r" id="ZU7-34-bKs"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="Y2H-bA-2rF">
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="Y2H-bA-2rF" userLabel="T2 - Tap Gesture Recognizer">
                     <connections>
-                        <action selector="tipTapped:" destination="BYZ-38-t0r" id="Ph9-c0-9eN"/>
+                        <action selector="tipTapped:" destination="BYZ-38-t0r" id="lzH-a6-uIY"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="2kZ-8H-p65">
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="2kZ-8H-p65" userLabel="T3 - Tap Gesture Recognizer">
                     <connections>
-                        <action selector="tipTapped:" destination="BYZ-38-t0r" id="SWb-XZ-Tty"/>
+                        <action selector="tipTapped:" destination="BYZ-38-t0r" id="iaY-Zf-PBm"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dgY-u2-sbS" userLabel="Splits - Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="tipTapped:" destination="BYZ-38-t0r" id="Zxk-tc-fga"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

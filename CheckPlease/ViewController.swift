@@ -107,7 +107,7 @@ class ViewController: UIViewController {
         let totalBillFloat: Float? = Float(totalBillLabelValue)
         if totalBillFloat != nil {
 
-            let tipResults = tipCalculatorInstance.tipCalculator(totalBillFloat!)
+            let tipResults = tipCalculatorInstance.tipCalculator(totalBillFloat!, people: Float(peopleNumber))
             
             // Convert resulting floats to $0.00 format
             percentOne.text = String(format: "$%.2f", tipResults.tipOne) + " / " + String(format: "$%.2f", tipResults.totalOne)

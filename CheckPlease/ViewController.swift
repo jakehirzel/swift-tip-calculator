@@ -124,14 +124,21 @@ class ViewController: UIViewController {
     
     @IBAction func tipTapped(_ sender: UITapGestureRecognizer) {
         for line in tipLines {
+            
+            // Stop any animation; fadeIn() all
             line.layer.removeAllAnimations()
+            line.fadeIn()
+            
+            // Blink the tapped view
             if line == sender.view {
-                line.alpha = 1
                 line.blink()
             }
+            
+            // fadeOut() other lines
             else {
-                line.alpha = 0.5
+                line.fadeOut()
             }
+            
         }
     }
     

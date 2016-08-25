@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var percentTwo: UILabel!
     @IBOutlet weak var percentThree: UILabel!
     
+    @IBOutlet var tipLines: [UIStackView]!
+    
     @IBOutlet weak var keyOne: UIButton!
     @IBOutlet weak var keyTwo: UIButton!
     @IBOutlet weak var keyThree: UIButton!
@@ -120,8 +122,17 @@ class ViewController: UIViewController {
         processTipCalculation()
     }
     
-//    @IBAction func tipTapped(_ sender: UITapGestureRecognizer) {
-//        sender.view?.blink()
-//        textView.alpha = 0.5
-//    }
+    @IBAction func tipTapped(_ sender: UITapGestureRecognizer) {
+        for line in tipLines {
+            line.layer.removeAllAnimations()
+            if line == sender.view {
+                line.alpha = 1
+                line.blink()
+            }
+            else {
+                line.alpha = 0.5
+            }
+        }
+    }
+    
 }

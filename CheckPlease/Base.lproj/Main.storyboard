@@ -44,6 +44,9 @@
                                                     </label>
                                                 </subviews>
                                                 <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="nJT-vf-NOA" appends="YES" id="1B1-0e-p3N"/>
+                                                </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ke4-JR-NDZ" userLabel="Tip Two - Stack View">
                                                 <subviews>
@@ -59,6 +62,9 @@
                                                     </label>
                                                 </subviews>
                                                 <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Y2H-bA-2rF" appends="YES" id="Hgk-zE-tH8"/>
+                                                </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6GI-16-jmU" userLabel="Tip Three - Stack View">
                                                 <subviews>
@@ -74,6 +80,9 @@
                                                     </label>
                                                 </subviews>
                                                 <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="2kZ-8H-p65" appends="YES" id="fp2-cZ-5Mv"/>
+                                                </connections>
                                             </stackView>
                                         </subviews>
                                         <constraints>
@@ -303,9 +312,27 @@
                         <outlet property="percentThree" destination="1KY-yt-Vob" id="fWc-3A-Re7"/>
                         <outlet property="percentTwo" destination="0kM-Lr-ddq" id="jjY-qm-C4C"/>
                         <outlet property="totalBillLabel" destination="7ex-Gi-bz8" id="5jY-AV-sB2"/>
+                        <outletCollection property="tipLines" destination="nhW-bO-doK" collectionClass="NSMutableArray" id="sYv-oi-POF"/>
+                        <outletCollection property="tipLines" destination="Ke4-JR-NDZ" collectionClass="NSMutableArray" id="5pY-XL-iSz"/>
+                        <outletCollection property="tipLines" destination="6GI-16-jmU" collectionClass="NSMutableArray" id="f5F-Ry-SoL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nJT-vf-NOA">
+                    <connections>
+                        <action selector="tipTapped:" destination="BYZ-38-t0r" id="f51-p9-fzL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Y2H-bA-2rF">
+                    <connections>
+                        <action selector="tipTapped:" destination="BYZ-38-t0r" id="Ph9-c0-9eN"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="2kZ-8H-p65">
+                    <connections>
+                        <action selector="tipTapped:" destination="BYZ-38-t0r" id="SWb-XZ-Tty"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="356" y="80.50974512743629"/>
         </scene>

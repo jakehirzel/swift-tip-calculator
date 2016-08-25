@@ -111,11 +111,24 @@ class ViewController: UIViewController {
             percentTwo.text = String(format: "$%.2f", tipResults.tipTwo) + " / " + String(format: "$%.2f", tipResults.totalTwo)
             percentThree.text = String(format: "$%.2f", tipResults.tipThree) + " / " + String(format: "$%.2f", tipResults.totalThree)
             
+            // Set split total
+            switch tipsStackTag {
+            case 1:
+                splitTotal.text = percentOne.text
+            case 2:
+                splitTotal.text = percentTwo.text
+            case 3:
+                splitTotal.text = percentThree.text
+            default:
+                splitTotal.text = "$0.00 / $0.00"
+            }
+            
         }
         else {
             percentOne.text = "$0.00 / $0.00"
             percentTwo.text = "$0.00 / $0.00"
             percentThree.text = "$0.00 / $0.00"
+            splitTotal.text = "$0.00 / $0.00"
         }
     }
     
@@ -148,7 +161,7 @@ class ViewController: UIViewController {
                 options: [UIViewAnimationOptions.transitionFlipFromRight, UIViewAnimationOptions.showHideTransitionViews] ,
                 completion: nil)
             
-            splitTotal.text = percentOne.text
+            processTipCalculation()
             
         }
             

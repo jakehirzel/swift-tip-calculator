@@ -98,7 +98,7 @@
                                                         <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nhW-bO-doK" userLabel="Tip One - Stack View">
+                                                    <stackView opaque="NO" tag="1" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nhW-bO-doK" userLabel="Tip One - Stack View">
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqQ-SL-DNT">
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
@@ -116,7 +116,7 @@
                                                             <outletCollection property="gestureRecognizers" destination="nJT-vf-NOA" appends="YES" id="2aO-5l-h4Z"/>
                                                         </connections>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ke4-JR-NDZ" userLabel="Tip Two - Stack View">
+                                                    <stackView opaque="NO" tag="2" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ke4-JR-NDZ" userLabel="Tip Two - Stack View">
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ6-9n-zoG">
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
@@ -134,7 +134,7 @@
                                                             <outletCollection property="gestureRecognizers" destination="Y2H-bA-2rF" appends="YES" id="fll-ya-8CL"/>
                                                         </connections>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6GI-16-jmU" userLabel="Tip Three - Stack View">
+                                                    <stackView opaque="NO" tag="3" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6GI-16-jmU" userLabel="Tip Three - Stack View">
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edg-0T-Dr3">
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
@@ -389,7 +389,7 @@
                         <outlet property="percentTwo" destination="0kM-Lr-ddq" id="jjY-qm-C4C"/>
                         <outlet property="splitPeople" destination="VbF-vi-uma" id="PUV-GX-Kvg"/>
                         <outlet property="splitPercent" destination="cHf-2q-Cvo" id="wOg-46-IBe"/>
-                        <outlet property="splitTotal" destination="SVg-bu-uiR" id="yvv-oF-jpY"/>
+                        <outlet property="splitTotal" destination="pvO-gL-okU" id="u80-kw-MXX"/>
                         <outlet property="splitsView" destination="vjs-IY-5Uc" id="BMR-jD-eT1"/>
                         <outlet property="tipsView" destination="cCy-LE-lf8" id="FkD-D3-Avd"/>
                         <outlet property="totalBillLabel" destination="7ex-Gi-bz8" id="5jY-AV-sB2"/>

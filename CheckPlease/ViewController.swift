@@ -50,6 +50,9 @@ class ViewController: UIViewController {
     // Set initial state of splitsView
     var isSplitsViewShowing = false
     
+    // Variable to Track Tag of Tip Stack Item Tapped
+    var tipsStackTag = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -134,13 +137,19 @@ class ViewController: UIViewController {
     
     @IBAction func tipTapped(_ sender: UITapGestureRecognizer) {
         
+        tipsStackTag = (sender.view?.tag)!
+        
         if isSplitsViewShowing == false {
+            
             UIView.transition(
                 from: tipsView,
                 to: splitsView,
                 duration: 1.0,
                 options: [UIViewAnimationOptions.transitionFlipFromRight, UIViewAnimationOptions.showHideTransitionViews] ,
                 completion: nil)
+            
+            splitTotal.text = percentOne.text
+            
         }
             
         else {

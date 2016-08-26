@@ -212,4 +212,6 @@ class ViewController: UIViewController {
         processTipCalculation()
     }
 
+    @IBAction func splitShareTapped(_ sender: AnyObject) {
+    }
 }

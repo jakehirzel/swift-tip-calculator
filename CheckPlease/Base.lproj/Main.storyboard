@@ -49,6 +49,11 @@
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gSk-NA-AU9" userLabel="Split - Stack View">
                                                         <subviews>
+                                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fep-b4-bu5">
+                                                                <connections>
+                                                                    <action selector="splitStepperTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="ySk-Z3-Hag"/>
+                                                                </connections>
+                                                            </stepper>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-/+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKz-FY-WyG">
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -389,6 +394,7 @@
                         <outlet property="percentTwo" destination="0kM-Lr-ddq" id="jjY-qm-C4C"/>
                         <outlet property="splitPeople" destination="VbF-vi-uma" id="PUV-GX-Kvg"/>
                         <outlet property="splitPercent" destination="cHf-2q-Cvo" id="wOg-46-IBe"/>
+                        <outlet property="splitStepper" destination="fep-b4-bu5" id="OyG-io-3xA"/>
                         <outlet property="splitTotal" destination="pvO-gL-okU" id="u80-kw-MXX"/>
                         <outlet property="splitsView" destination="vjs-IY-5Uc" id="BMR-jD-eT1"/>
                         <outlet property="tipsView" destination="cCy-LE-lf8" id="FkD-D3-Avd"/>

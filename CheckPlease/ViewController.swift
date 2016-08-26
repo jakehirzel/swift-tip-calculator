@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var splitPercent: UILabel!
     @IBOutlet weak var splitTotal: UILabel!
+    @IBOutlet weak var splitStepper: UIStepper!
     @IBOutlet weak var splitPeople: UILabel!
     @IBOutlet weak var eachTotal: UILabel!
     
@@ -53,9 +54,6 @@ class ViewController: UIViewController {
     // Variable to Track Tag of Tip Stack Item Tapped
     var tipsStackTag = 0
     
-    // Number of people set in splitsView
-    var peopleNumber = 1
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -67,6 +65,12 @@ class ViewController: UIViewController {
         // Make the cursor repeatedly blink
         cursor.blink()
         
+        // Set up the stepper
+        splitStepper.tintColor = UIColor.white
+        splitStepper.minimumValue = 1
+        splitStepper.maximumValue = 100
+        splitStepper.value = 1
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -107,7 +111,7 @@ class ViewController: UIViewController {
         let totalBillFloat: Float? = Float(totalBillLabelValue)
         if totalBillFloat != nil {
 
-            let tipResults = tipCalculatorInstance.tipCalculator(totalBillFloat!, people: Float(peopleNumber))
+            let tipResults = tipCalculatorInstance.tipCalculator(totalBillFloat!, people: Float(splitStepper.value))
             
             // Convert resulting floats to $0.00 format
             percentOne.text = String(format: "$%.2f", tipResults.tipOne) + " / " + String(format: "$%.2f", tipResults.totalOne)
@@ -139,6 +143,10 @@ class ViewController: UIViewController {
             eachTotal.text = "$0.00 / $0.00"
         }
     }
+    
+    // MARK: Stepper behavior
+    
+    
     
     // MARK: Actions
 
@@ -186,4 +194,8 @@ class ViewController: UIViewController {
 
     }
     
+    @IBAction func splitStepperTapped(_ sender: UIStepper) {
+        processTipCalculation()
+    }
+
 }

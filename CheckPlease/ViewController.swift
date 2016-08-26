@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var splitPercent: UILabel!
     @IBOutlet weak var splitTotal: UILabel!
     @IBOutlet weak var splitStepper: UIStepper!
+    @IBOutlet weak var splitNumber: UILabel!
     @IBOutlet weak var splitPeople: UILabel!
     @IBOutlet weak var eachTotal: UILabel!
     
@@ -117,6 +118,15 @@ class ViewController: UIViewController {
             percentOne.text = String(format: "$%.2f", tipResults.tipOne) + " / " + String(format: "$%.2f", tipResults.totalOne)
             percentTwo.text = String(format: "$%.2f", tipResults.tipTwo) + " / " + String(format: "$%.2f", tipResults.totalTwo)
             percentThree.text = String(format: "$%.2f", tipResults.tipThree) + " / " + String(format: "$%.2f", tipResults.totalThree)
+            
+            // Update split number
+            splitNumber.text = String(Int(splitStepper.value))
+            if splitStepper.value == 1 {
+                splitPeople.text = "Person"
+            }
+            else {
+                splitPeople.text = "People"
+            }
             
             // Set split total and each person total
             switch tipsStackTag {

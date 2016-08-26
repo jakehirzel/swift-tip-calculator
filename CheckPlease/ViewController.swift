@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     
     // MARK: Properties
     
@@ -158,9 +159,10 @@ class ViewController: UIViewController {
         }
     }
     
-    // MARK: Stepper behavior
-    
-    
+    // MARK: MFMessageComposeViewControllerDelegate
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     // MARK: Actions
 
@@ -213,5 +215,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func splitShareTapped(_ sender: AnyObject) {
+        
+        let messageVC = MFMessageComposeViewController()
+        
+        if MFMessageComposeViewController.canSendText() {
+            
+            messageVC.messageComposeDelegate = self;
+            messageVC.body = "With " + splitNumber.text! + " of us, your Tip / Total should be: " + eachTotal.text! + " (" + splitPercent.text! + " tip on a " + totalBillLabel.text! + " bill). CkPls!"
+            self.present(messageVC, animated: false, completion: nil)
+
+        }
+
     }
 }

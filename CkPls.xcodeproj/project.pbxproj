@@ -17,6 +17,11 @@
 		235CDC341D29794300E15F15 /* CkPls.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 235CDC181D29794300E15F15 /* CkPls.app */; };
 		235CDC3E1D2AACC100E15F15 /* TipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */; };
 		235CDC3F1D2AACC100E15F15 /* TipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */; };
+		238A4B641D7112130067BCFA /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238A4B631D7112130067BCFA /* Messages.framework */; };
+		238A4B671D7112130067BCFA /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238A4B661D7112130067BCFA /* MessagesViewController.swift */; };
+		238A4B6A1D7112130067BCFA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238A4B681D7112130067BCFA /* MainInterface.storyboard */; };
+		238A4B6C1D7112130067BCFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 238A4B6B1D7112130067BCFA /* Assets.xcassets */; };
+		238A4B701D7112130067BCFA /* CkPls iMessage App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 238A4B611D7112130067BCFA /* CkPls iMessage App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		238BFE281D2813FE00C8B6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BFE271D2813FE00C8B6E8 /* AppDelegate.swift */; };
 		238BFE2A1D2813FE00C8B6E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BFE291D2813FE00C8B6E8 /* ViewController.swift */; };
 		238BFE2D1D2813FE00C8B6E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238BFE2B1D2813FE00C8B6E8 /* Main.storyboard */; };
@@ -43,6 +48,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 235CDC171D29794300E15F15;
 			remoteInfo = "CheckPlease WatchKit App";
+		};
+		238A4B6E1D7112130067BCFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 238BFE1C1D2813FE00C8B6E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 238A4B601D7112130067BCFA;
+			remoteInfo = "CkPls iMessage App Extension";
 		};
 		238BFE391D2813FE00C8B6E8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -76,6 +88,17 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		238A4B741D7112130067BCFA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				238A4B701D7112130067BCFA /* CkPls iMessage App Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +113,12 @@
 		235CDC2F1D29794300E15F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		235CDC311D29794300E15F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculator.swift; sourceTree = "<group>"; };
+		238A4B611D7112130067BCFA /* CkPls iMessage App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CkPls iMessage App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		238A4B631D7112130067BCFA /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		238A4B661D7112130067BCFA /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		238A4B691D7112130067BCFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		238A4B6B1D7112130067BCFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		238A4B6D1D7112130067BCFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		238BFE241D2813FE00C8B6E8 /* CkPls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CkPls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238BFE271D2813FE00C8B6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		238BFE291D2813FE00C8B6E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +138,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238A4B5E1D7112130067BCFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238A4B641D7112130067BCFA /* Messages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +188,25 @@
 			path = "CheckPlease WatchKit App Extension";
 			sourceTree = "<group>";
 		};
+		238A4B621D7112130067BCFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				238A4B631D7112130067BCFA /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		238A4B651D7112130067BCFA /* CkPls iMessage App Extension */ = {
+			isa = PBXGroup;
+			children = (
+				238A4B661D7112130067BCFA /* MessagesViewController.swift */,
+				238A4B681D7112130067BCFA /* MainInterface.storyboard */,
+				238A4B6B1D7112130067BCFA /* Assets.xcassets */,
+				238A4B6D1D7112130067BCFA /* Info.plist */,
+			);
+			path = "CkPls iMessage App Extension";
+			sourceTree = "<group>";
+		};
 		238BFE1B1D2813FE00C8B6E8 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +215,8 @@
 				238BFE3B1D2813FE00C8B6E8 /* CheckPleaseTests */,
 				235CDC191D29794300E15F15 /* CheckPlease WatchKit App */,
 				235CDC281D29794300E15F15 /* CheckPlease WatchKit App Extension */,
+				238A4B651D7112130067BCFA /* CkPls iMessage App Extension */,
+				238A4B621D7112130067BCFA /* Frameworks */,
 				238BFE251D2813FE00C8B6E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -170,6 +228,7 @@
 				238BFE381D2813FE00C8B6E8 /* CkPls.xctest */,
 				235CDC181D29794300E15F15 /* CkPls.app */,
 				235CDC241D29794300E15F15 /* CkPls.appex */,
+				238A4B611D7112130067BCFA /* CkPls iMessage App Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,6 +294,23 @@
 			productReference = 235CDC241D29794300E15F15 /* CkPls.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		238A4B601D7112130067BCFA /* CkPls iMessage App Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238A4B731D7112130067BCFA /* Build configuration list for PBXNativeTarget "CkPls iMessage App Extension" */;
+			buildPhases = (
+				238A4B5D1D7112130067BCFA /* Sources */,
+				238A4B5E1D7112130067BCFA /* Frameworks */,
+				238A4B5F1D7112130067BCFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CkPls iMessage App Extension";
+			productName = "CkPls iMessage App Extension";
+			productReference = 238A4B611D7112130067BCFA /* CkPls iMessage App Extension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
 		238BFE231D2813FE00C8B6E8 /* CkPls */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 238BFE411D2813FE00C8B6E8 /* Build configuration list for PBXNativeTarget "CkPls" */;
@@ -243,11 +319,13 @@
 				238BFE211D2813FE00C8B6E8 /* Frameworks */,
 				238BFE221D2813FE00C8B6E8 /* Resources */,
 				235CDC3C1D29794400E15F15 /* Embed Watch Content */,
+				238A4B741D7112130067BCFA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				235CDC331D29794300E15F15 /* PBXTargetDependency */,
+				238A4B6F1D7112130067BCFA /* PBXTargetDependency */,
 			);
 			name = CkPls;
 			productName = CheckPlease;
@@ -281,7 +359,7 @@
 				KnownAssetTags = (
 					1,
 				);
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Jake Hirzel";
 				TargetAttributes = {
@@ -294,6 +372,11 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = BSAA9W64H3;
 						LastSwiftMigration = 0800;
+					};
+					238A4B601D7112130067BCFA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BSAA9W64H3;
+						ProvisioningStyle = Automatic;
 					};
 					238BFE231D2813FE00C8B6E8 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -324,6 +407,7 @@
 				238BFE371D2813FE00C8B6E8 /* CkPlsTests */,
 				235CDC171D29794300E15F15 /* CkPls WatchKit App */,
 				235CDC231D29794300E15F15 /* CkPls WatchKit App Extension */,
+				238A4B601D7112130067BCFA /* CkPls iMessage App Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -345,6 +429,15 @@
 			files = (
 				23970B651D2D4DB300A67666 /* License.txt in Resources */,
 				235CDC301D29794300E15F15 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		238A4B5F1D7112130067BCFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238A4B6C1D7112130067BCFA /* Assets.xcassets in Resources */,
+				238A4B6A1D7112130067BCFA /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +473,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		238A4B5D1D7112130067BCFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238A4B671D7112130067BCFA /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		238BFE201D2813FE00C8B6E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -412,6 +513,11 @@
 			target = 235CDC171D29794300E15F15 /* CkPls WatchKit App */;
 			targetProxy = 235CDC321D29794300E15F15 /* PBXContainerItemProxy */;
 		};
+		238A4B6F1D7112130067BCFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 238A4B601D7112130067BCFA /* CkPls iMessage App Extension */;
+			targetProxy = 238A4B6E1D7112130067BCFA /* PBXContainerItemProxy */;
+		};
 		238BFE3A1D2813FE00C8B6E8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 238BFE231D2813FE00C8B6E8 /* CkPls */;
@@ -426,6 +532,14 @@
 				235CDC1B1D29794300E15F15 /* Base */,
 			);
 			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		238A4B681D7112130067BCFA /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				238A4B691D7112130067BCFA /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 		238BFE2B1D2813FE00C8B6E8 /* Main.storyboard */ = {
@@ -527,6 +641,45 @@
 			};
 			name = Release;
 		};
+		238A4B711D7112130067BCFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BSAA9W64H3;
+				INFOPLIST_FILE = "CkPls iMessage App Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jakehirzel.CkPls.CkPls-iMessage-App-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		238A4B721D7112130067BCFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BSAA9W64H3;
+				INFOPLIST_FILE = "CkPls iMessage App Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jakehirzel.CkPls.CkPls-iMessage-App-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		238BFE3F1D2813FE00C8B6E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -622,6 +775,7 @@
 		238BFE421D2813FE00C8B6E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -637,6 +791,7 @@
 		238BFE431D2813FE00C8B6E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -695,6 +850,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		238A4B731D7112130067BCFA /* Build configuration list for PBXNativeTarget "CkPls iMessage App Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238A4B711D7112130067BCFA /* Debug */,
+				238A4B721D7112130067BCFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		238BFE1F1D2813FE00C8B6E8 /* Build configuration list for PBXProject "CkPls" */ = {
 			isa = XCConfigurationList;

@@ -52,16 +52,16 @@
                         <constraints>
                             <constraint firstItem="x69-yX-dNl" firstAttribute="trailing" secondItem="zMn-AG-sqS" secondAttribute="trailingMargin" id="0RJ-aX-RaP"/>
                             <constraint firstItem="x69-yX-dNl" firstAttribute="height" secondItem="JdS-pM-mVs" secondAttribute="height" id="85K-V8-Sav"/>
-                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="x69-yX-dNl" secondAttribute="bottom" id="8Cl-7D-ihe"/>
                             <constraint firstItem="NUm-bT-VLg" firstAttribute="top" secondItem="JdS-pM-mVs" secondAttribute="bottom" id="9wb-Ev-Z9u"/>
-                            <constraint firstItem="JdS-pM-mVs" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" constant="12" id="Fdu-ij-9v1"/>
                             <constraint firstItem="NUm-bT-VLg" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" id="L3k-H8-Fmr"/>
                             <constraint firstItem="x69-yX-dNl" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" id="Q4Y-hV-8Yg"/>
                             <constraint firstItem="JdS-pM-mVs" firstAttribute="trailing" secondItem="zMn-AG-sqS" secondAttribute="trailingMargin" id="Sie-6x-zmG"/>
+                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="x69-yX-dNl" secondAttribute="bottom" id="UMM-w8-xf0"/>
                             <constraint firstItem="x69-yX-dNl" firstAttribute="top" secondItem="NUm-bT-VLg" secondAttribute="bottom" constant="12" id="W1s-5C-PvJ"/>
                             <constraint firstItem="JdS-pM-mVs" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" id="WC8-dC-mkt"/>
                             <constraint firstItem="NUm-bT-VLg" firstAttribute="top" secondItem="JdS-pM-mVs" secondAttribute="bottom" id="Xpp-oe-13j"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NUm-bT-VLg" secondAttribute="trailing" id="Z1r-hm-770"/>
+                            <constraint firstItem="JdS-pM-mVs" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" id="iH3-Ez-uwp"/>
                             <constraint firstItem="x69-yX-dNl" firstAttribute="height" secondItem="JdS-pM-mVs" secondAttribute="height" id="wbc-fN-pvj"/>
                         </constraints>
                     </view>

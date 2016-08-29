@@ -364,9 +364,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="dpE-Hk-tFd" secondAttribute="trailing" id="C8x-rh-6tA"/>
                             <constraint firstItem="xVN-19-uVF" firstAttribute="height" secondItem="rYh-rv-3rj" secondAttribute="height" id="Clf-9U-tF4"/>
                             <constraint firstItem="dpE-Hk-tFd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EWb-aw-9md"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n73-yC-KlY" secondAttribute="bottom" constant="12" id="HYf-6Z-RuD"/>
                             <constraint firstItem="1Tt-fa-qMu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="MtY-nB-0Aj"/>
                             <constraint firstItem="xVN-19-uVF" firstAttribute="top" secondItem="qVf-bC-seh" secondAttribute="bottom" constant="12" id="QPx-z4-LBj"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n73-yC-KlY" secondAttribute="bottom" constant="12" id="SkH-DO-ZGc"/>
                             <constraint firstItem="xVN-19-uVF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Wg6-nY-fCd"/>
                             <constraint firstItem="qVf-bC-seh" firstAttribute="top" secondItem="1Tt-fa-qMu" secondAttribute="bottom" id="iQW-EJ-afd"/>
                             <constraint firstItem="rYh-rv-3rj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iat-By-mCW"/>
@@ -378,7 +378,7 @@
                             <constraint firstItem="rYh-rv-3rj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="s6Q-yX-r8e"/>
                             <constraint firstItem="dpE-Hk-tFd" firstAttribute="top" secondItem="rYh-rv-3rj" secondAttribute="bottom" id="tZ9-85-yKk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n73-yC-KlY" secondAttribute="trailing" id="voF-0a-Wyb"/>
-                            <constraint firstItem="rYh-rv-3rj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="12" id="wbs-9W-fk0"/>
+                            <constraint firstItem="rYh-rv-3rj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="12" id="x2m-up-6RV"/>
                             <constraint firstItem="1Tt-fa-qMu" firstAttribute="top" secondItem="dpE-Hk-tFd" secondAttribute="bottom" constant="12" id="y3N-w6-VHk"/>
                         </constraints>
                     </view>

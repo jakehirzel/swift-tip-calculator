@@ -144,7 +144,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         
         // Process key press
         let keypadOutput = keypadAction.keypadButtonTapped(button: sender, textIn: totalBillLabel.text!, totalIn: totalBillLabelValue)
-        
+                
         // Assign return values to labels
         totalBillLabel.text = keypadOutput.textOut
         totalBillLabelValue = keypadOutput.totalOut

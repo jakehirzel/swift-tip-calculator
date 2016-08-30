@@ -9,6 +9,7 @@
 import UIKit
 
 class KeypadBehavior {
+    
     func keypadButtonTapped(button: UIButton, textIn: String, totalIn: String) -> (textOut: String, totalOut: String) {
         
         // Only allow 7 characters to be entered
@@ -36,5 +37,6 @@ class KeypadBehavior {
             totalOut += button.titleLabel!.text!
             return (textOut: textOut, totalOut: totalOut)
         }
+        
     }
 }

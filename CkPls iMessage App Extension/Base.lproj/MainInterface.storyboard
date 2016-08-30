@@ -153,6 +153,9 @@
                                                                 <state key="normal" title="SHARE">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="shareButtonTapped:" destination="Z97-vK-7Mv" eventType="touchUpInside" id="CJI-sX-alj"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <gestureRecognizers/>

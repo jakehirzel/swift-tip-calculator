@@ -181,4 +181,10 @@ class ExpandedViewController: MSMessagesAppViewController {
         processTipCalculation()
     }
     
+    @IBAction func shareButtonTapped(_ sender: AnyObject) {
+        
+        // Close the expanded view when the share button is tapped
+        requestPresentationStyle(.compact)
+        
+    }
 }

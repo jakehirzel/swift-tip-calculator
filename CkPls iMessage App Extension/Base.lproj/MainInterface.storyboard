@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jz2-lz-YJZ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -7,10 +7,30 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="UcV-oh-pXD">
+            <objects>
+                <viewController id="jz2-lz-YJZ" customClass="MessagesViewController" customModule="CkPls_iMessage_App_Extension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8up-fc-97v"/>
+                        <viewControllerLayoutGuide type="bottom" id="kdo-2N-e8x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e7X-z4-b1S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30j-ZK-CLo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1142" y="-190"/>
+        </scene>
         <!--Compact View-->
         <scene sceneID="7MM-of-jgj">
             <objects>
-                <viewController storyboardIdentifier="compactView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ObA-dk-sSI" userLabel="Compact View" customClass="MessagesViewController" customModule="CkPls_iMessage_App_Extension" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="compactView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ObA-dk-sSI" userLabel="Compact View" customClass="MessagesViewController" customModule="CkPls_iMessage_App_Extension" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
                         <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
@@ -19,7 +39,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdS-pM-mVs" userLabel="Top Spacer"/>
                             <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NUm-bT-VLg" userLabel="Total Bill">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVn-Ui-T7z">
@@ -46,25 +65,16 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x69-yX-dNl" userLabel="Middle Spacer"/>
                         </subviews>
-                        <color key="backgroundColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="x69-yX-dNl" firstAttribute="trailing" secondItem="zMn-AG-sqS" secondAttribute="trailingMargin" id="0RJ-aX-RaP"/>
-                            <constraint firstItem="x69-yX-dNl" firstAttribute="height" secondItem="JdS-pM-mVs" secondAttribute="height" id="85K-V8-Sav"/>
-                            <constraint firstItem="NUm-bT-VLg" firstAttribute="top" secondItem="JdS-pM-mVs" secondAttribute="bottom" id="9wb-Ev-Z9u"/>
                             <constraint firstItem="NUm-bT-VLg" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" id="L3k-H8-Fmr"/>
-                            <constraint firstItem="x69-yX-dNl" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" id="Q4Y-hV-8Yg"/>
-                            <constraint firstItem="JdS-pM-mVs" firstAttribute="trailing" secondItem="zMn-AG-sqS" secondAttribute="trailingMargin" id="Sie-6x-zmG"/>
-                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="x69-yX-dNl" secondAttribute="bottom" id="UMM-w8-xf0"/>
-                            <constraint firstItem="x69-yX-dNl" firstAttribute="top" secondItem="NUm-bT-VLg" secondAttribute="bottom" constant="12" id="W1s-5C-PvJ"/>
-                            <constraint firstItem="JdS-pM-mVs" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" id="WC8-dC-mkt"/>
-                            <constraint firstItem="NUm-bT-VLg" firstAttribute="top" secondItem="JdS-pM-mVs" secondAttribute="bottom" id="Xpp-oe-13j"/>
+                            <constraint firstItem="NUm-bT-VLg" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" constant="-25" id="Xgn-jN-cVm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NUm-bT-VLg" secondAttribute="trailing" id="Z1r-hm-770"/>
-                            <constraint firstItem="JdS-pM-mVs" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" id="iH3-Ez-uwp"/>
-                            <constraint firstItem="x69-yX-dNl" firstAttribute="height" secondItem="JdS-pM-mVs" secondAttribute="height" id="wbc-fN-pvj"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -362,7 +372,6 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="jYH-Og-iP0" firstAttribute="trailing" secondItem="2P4-Wo-hAG" secondAttribute="trailingMargin" id="2R9-wL-3Qk"/>
                             <constraint firstItem="jYH-Og-iP0" firstAttribute="leading" secondItem="2P4-Wo-hAG" secondAttribute="leadingMargin" id="88I-rq-tSm"/>

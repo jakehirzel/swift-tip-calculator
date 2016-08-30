@@ -33,7 +33,7 @@ class MessagesViewController: MSMessagesAppViewController {
         presentViewController(for: conversation, with: presentationStyle)
         
     }
-    
+
 //    override func didResignActive(with conversation: MSConversation) {
         // Called when the extension is about to move from the active to inactive state.
         // This will happen when the user dissmises the extension, changes to a different
@@ -72,11 +72,11 @@ class MessagesViewController: MSMessagesAppViewController {
         
     }
     
-    override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
+//    override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
         // Called after the extension transitions to a new presentation style.
     
         // Use this method to finalize any behaviors associated with the change in presentation style.
-    }
+//    }
     
     // MARK: Child view controller presentation
     
@@ -114,7 +114,7 @@ class MessagesViewController: MSMessagesAppViewController {
         
         view.addSubview(controller.view)
         
-//        UIView.transition(with: self.view, duration: 1.5, options: .curveEaseInOut, animations: { _ in
+//        UIView.transition(with: self.view, duration: 1.5, options: .transitionCrossDissolve, animations: { _ in
 //            self.view.addSubview(controller.view)
 //            }, completion: nil)
         

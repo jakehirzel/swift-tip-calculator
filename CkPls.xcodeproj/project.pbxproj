@@ -11,6 +11,8 @@
 		23342EBF1D76289300CF11A9 /* CompactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23342EBE1D76289300CF11A9 /* CompactViewController.swift */; };
 		23342EC31D762DEA00CF11A9 /* ExpandedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23342EC21D762DEA00CF11A9 /* ExpandedViewController.swift */; };
 		23342EC41D7630F900CF11A9 /* TipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */; };
+		23342EC61D7631E600CF11A9 /* KeypadBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23342EC51D7631E600CF11A9 /* KeypadBehavior.swift */; };
+		23342EC71D7631E600CF11A9 /* KeypadBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23342EC51D7631E600CF11A9 /* KeypadBehavior.swift */; };
 		235CDC1C1D29794300E15F15 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235CDC1A1D29794300E15F15 /* Interface.storyboard */; };
 		235CDC1E1D29794300E15F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235CDC1D1D29794300E15F15 /* Assets.xcassets */; };
 		235CDC251D29794300E15F15 /* CkPls.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 235CDC241D29794300E15F15 /* CkPls.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -108,6 +110,7 @@
 /* Begin PBXFileReference section */
 		23342EBE1D76289300CF11A9 /* CompactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactViewController.swift; sourceTree = "<group>"; };
 		23342EC21D762DEA00CF11A9 /* ExpandedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedViewController.swift; sourceTree = "<group>"; };
+		23342EC51D7631E600CF11A9 /* KeypadBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadBehavior.swift; sourceTree = "<group>"; };
 		235CDC181D29794300E15F15 /* CkPls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CkPls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		235CDC1B1D29794300E15F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		235CDC1D1D29794300E15F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -251,6 +254,7 @@
 				238BFE301D2813FE00C8B6E8 /* LaunchScreen.storyboard */,
 				238BFE331D2813FE00C8B6E8 /* Info.plist */,
 				235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */,
+				23342EC51D7631E600CF11A9 /* KeypadBehavior.swift */,
 				23970B711D2DD7A700A67666 /* ViewBlinker.swift */,
 			);
 			path = CheckPlease;
@@ -486,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23342EBF1D76289300CF11A9 /* CompactViewController.swift in Sources */,
+				23342EC71D7631E600CF11A9 /* KeypadBehavior.swift in Sources */,
 				23342EBB1D75DDB700CF11A9 /* ViewBlinker.swift in Sources */,
 				238A4B671D7112130067BCFA /* MessagesViewController.swift in Sources */,
 				23342EC31D762DEA00CF11A9 /* ExpandedViewController.swift in Sources */,
@@ -497,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23342EC61D7631E600CF11A9 /* KeypadBehavior.swift in Sources */,
 				235CDC3E1D2AACC100E15F15 /* TipCalculator.swift in Sources */,
 				238BFE2A1D2813FE00C8B6E8 /* ViewController.swift in Sources */,
 				23970B721D2DD7A700A67666 /* ViewBlinker.swift in Sources */,

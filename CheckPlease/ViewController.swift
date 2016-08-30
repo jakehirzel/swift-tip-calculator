@@ -50,6 +50,9 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     // Create instance of TipCalculator class
     let tipCalculatorInstance = TipCalculator()
     
+    // Create instance of KeypadBehavior class
+    let keypadAction = KeypadBehavior()
+    
     // Set initial state of splitsView
     var isSplitsViewShowing = false
     
@@ -78,35 +81,6 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    // MARK: Keyboard Behaviors
-    
-    func keypadButtonTapped(button: UIButton) {
-        
-        // Only allow 7 characters to be entered
-        if (totalBillLabel.text?.characters.count)! > 7 {
-            return
-        }
-        
-        // Only allow two characters after a .
-        else if (totalBillLabel.text?.characters.count)! > 3 &&
-            
-            totalBillLabel.text?[(totalBillLabel.text?.index((totalBillLabel.text?.endIndex)!, offsetBy: -3))!] == "." {
-            return
-        }
-        
-        // Only allow one .
-        else if button.titleLabel!.text == "." && totalBillLabel.text?.characters.contains(".") == true {
-            return
-        }
-        
-        // Otherwise add the characters to both strings
-        else {
-            totalBillLabel.text?.append(button.titleLabel!.text!)
-            totalBillLabelValue += button.titleLabel!.text!
-        }
-        processTipCalculation()
     }
     
     func processTipCalculation() {
@@ -167,7 +141,17 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     // MARK: Actions
 
     @IBAction func numKeyTapped(sender: UIButton) {
-        keypadButtonTapped(button: sender)
+        
+        // Process key press
+        let keypadOutput = keypadAction.keypadButtonTapped(button: sender, textIn: totalBillLabel.text!, totalIn: totalBillLabelValue)
+        
+        // Assign return values to labels
+        totalBillLabel.text = keypadOutput.textOut
+        totalBillLabelValue = keypadOutput.totalOut
+        
+        // Process the tip
+        processTipCalculation()
+        
     }
     
     @IBAction func delKeyTapped(sender: UIButton) {

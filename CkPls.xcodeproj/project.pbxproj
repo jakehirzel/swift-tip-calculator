@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23342EBB1D75DDB700CF11A9 /* ViewBlinker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23970B711D2DD7A700A67666 /* ViewBlinker.swift */; };
 		235CDC1C1D29794300E15F15 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235CDC1A1D29794300E15F15 /* Interface.storyboard */; };
 		235CDC1E1D29794300E15F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235CDC1D1D29794300E15F15 /* Assets.xcassets */; };
 		235CDC251D29794300E15F15 /* CkPls.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 235CDC241D29794300E15F15 /* CkPls.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -477,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23342EBB1D75DDB700CF11A9 /* ViewBlinker.swift in Sources */,
 				238A4B671D7112130067BCFA /* MessagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -858,6 +860,7 @@
 				238A4B721D7112130067BCFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		238BFE1F1D2813FE00C8B6E8 /* Build configuration list for PBXProject "CkPls" */ = {
 			isa = XCConfigurationList;

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Messages
 
 extension UIView {
     func blink() {

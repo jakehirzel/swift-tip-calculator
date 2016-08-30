@@ -11,14 +11,28 @@ import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
     
+    // MARK: Properties
+    
+    @IBOutlet weak var cursorCompact: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+
+        // Animate the compact view cursor
+        if cursorCompact != nil {
+            cursorCompact.blink()
+        }
+
     }
     
     // MARK: - Conversation Handling
@@ -33,6 +47,9 @@ class MessagesViewController: MSMessagesAppViewController {
         presentViewController(for: conversation, with: presentationStyle)
         
     }
+    
+//    override func didBecomeActive(with conversation: MSConversation) {
+//    }
 
 //    override func didResignActive(with conversation: MSConversation) {
         // Called when the extension is about to move from the active to inactive state.
@@ -76,6 +93,7 @@ class MessagesViewController: MSMessagesAppViewController {
         // Called after the extension transitions to a new presentation style.
     
         // Use this method to finalize any behaviors associated with the change in presentation style.
+
 //    }
     
     // MARK: Child view controller presentation

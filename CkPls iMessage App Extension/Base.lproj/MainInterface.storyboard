@@ -108,7 +108,7 @@
                             <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYH-Og-iP0" userLabel="Middle Spacer"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUK-eB-5ka" userLabel="Tips View Holder">
                                 <subviews>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GsO-Xm-3hV" userLabel=" Splits View">
+                                    <view hidden="YES" contentMode="scaleToFill" restorationIdentifier="splitsView" translatesAutoresizingMaskIntoConstraints="NO" id="GsO-Xm-3hV" userLabel=" Splits View">
                                         <subviews>
                                             <stackView contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dtu-hR-DkK" userLabel="Splits Stack">
                                                 <subviews>
@@ -117,7 +117,7 @@
                                                         <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KZR-A5-sgE" userLabel="Tip - Stack View">
+                                                    <stackView opaque="NO" tag="1" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KZR-A5-sgE" userLabel="Tip - Stack View">
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDO-vi-Q9w">
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
@@ -132,9 +132,13 @@
                                                         </subviews>
                                                         <gestureRecognizers/>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="don-h2-XRh" userLabel="Split - Stack View">
+                                                    <stackView opaque="NO" tag="2" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="don-h2-XRh" userLabel="Split - Stack View">
                                                         <subviews>
-                                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="4WX-hq-B0F"/>
+                                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="4WX-hq-B0F">
+                                                                <connections>
+                                                                    <action selector="splitStepperTapped:" destination="Z97-vK-7Mv" eventType="valueChanged" id="dGE-qu-Z6x"/>
+                                                                </connections>
+                                                            </stepper>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sy6-UY-1nY" userLabel="Split Number">
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                                 <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -153,7 +157,7 @@
                                                         </subviews>
                                                         <gestureRecognizers/>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YUG-gF-YTp" userLabel="Split Cost - Stack View">
+                                                    <stackView opaque="NO" tag="3" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YUG-gF-YTp" userLabel="Split Cost - Stack View">
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" ea." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjS-qX-Ixo">
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
@@ -176,8 +180,11 @@
                                             <constraint firstItem="dtu-hR-DkK" firstAttribute="top" secondItem="GsO-Xm-3hV" secondAttribute="top" id="S7s-8k-fmd"/>
                                             <constraint firstItem="dtu-hR-DkK" firstAttribute="centerX" secondItem="GsO-Xm-3hV" secondAttribute="centerX" id="b8K-ML-Mr2"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="bTA-cT-gkY" appends="YES" id="wQu-zT-shl"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPK-Wc-upi" userLabel="Tips View">
+                                    <view contentMode="scaleToFill" restorationIdentifier="tipsView" translatesAutoresizingMaskIntoConstraints="NO" id="hPK-Wc-upi" userLabel="Tips View">
                                         <subviews>
                                             <stackView contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AuD-Ng-Fk4" userLabel="Tips Stack">
                                                 <subviews>
@@ -200,6 +207,9 @@
                                                             </label>
                                                         </subviews>
                                                         <gestureRecognizers/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="n00-Hz-snq" appends="YES" id="IX3-Zk-pXH"/>
+                                                        </connections>
                                                     </stackView>
                                                     <stackView opaque="NO" tag="2" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eXi-Nm-C6Z" userLabel="Tip Two - Stack View">
                                                         <subviews>
@@ -215,6 +225,9 @@
                                                             </label>
                                                         </subviews>
                                                         <gestureRecognizers/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="t1Z-I3-M3Z" appends="YES" id="mXt-hG-yoO"/>
+                                                        </connections>
                                                     </stackView>
                                                     <stackView opaque="NO" tag="3" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VaQ-xd-yTX" userLabel="Tip Three - Stack View">
                                                         <subviews>
@@ -230,6 +243,9 @@
                                                             </label>
                                                         </subviews>
                                                         <gestureRecognizers/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="CAh-Sn-vW0" appends="YES" id="Qxl-oP-rnC"/>
+                                                        </connections>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
@@ -478,6 +494,26 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpp-UG-C0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bTA-cT-gkY" userLabel="Splits - Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="tipTapped:" destination="Z97-vK-7Mv" id="JxG-Jh-au4"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="n00-Hz-snq" userLabel="T1 - Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="tipTapped:" destination="Z97-vK-7Mv" id="em4-Uo-MX1"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="t1Z-I3-M3Z" userLabel="T2 - Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="tipTapped:" destination="Z97-vK-7Mv" id="vV9-1x-g2c"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="CAh-Sn-vW0" userLabel="T3 - Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="tipTapped:" destination="Z97-vK-7Mv" id="MTI-eC-eza"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="218" y="-190"/>
         </scene>

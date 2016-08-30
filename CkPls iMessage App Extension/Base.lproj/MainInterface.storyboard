@@ -30,7 +30,7 @@
         <!--Compact View-->
         <scene sceneID="7MM-of-jgj">
             <objects>
-                <viewController storyboardIdentifier="compactView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ObA-dk-sSI" userLabel="Compact View" customClass="MessagesViewController" customModule="CkPls_iMessage_App_Extension" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="compactView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ObA-dk-sSI" userLabel="Compact View" customClass="CompactViewController" customModule="CkPls_iMessage_App_Extension" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
                         <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
@@ -66,27 +66,36 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="NUm-bT-VLg" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" id="L3k-H8-Fmr"/>
                             <constraint firstItem="NUm-bT-VLg" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" constant="-25" id="Xgn-jN-cVm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NUm-bT-VLg" secondAttribute="trailing" id="Z1r-hm-770"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Tow-05-c2h" appends="YES" id="fnz-EW-hcs"/>
+                        </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="cursorCompact" destination="PGr-GC-0KO" id="in8-UD-wNS"/>
+                        <outlet property="compactCursor" destination="PGr-GC-0KO" id="dgM-C1-0uc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Tow-05-c2h">
+                    <connections>
+                        <action selector="compactViewTapped:" destination="ObA-dk-sSI" id="3e7-xx-b5T"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-447" y="-190"/>
         </scene>
         <!--Expanded View-->
         <scene sceneID="AG9-NN-jHQ">
             <objects>
-                <viewController storyboardIdentifier="expandedView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z97-vK-7Mv" userLabel="Expanded View" customClass="MessagesViewController" customModule="CkPls_iMessage_App_Extension" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="expandedView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z97-vK-7Mv" userLabel="Expanded View" customClass="ExpandedViewController" customModule="CkPls_iMessage_App_Extension" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YIK-4y-Rf4"/>
                         <viewControllerLayoutGuide type="bottom" id="q49-3l-ToR"/>
@@ -403,6 +412,9 @@
                             <constraint firstItem="y5M-2J-ccg" firstAttribute="top" secondItem="VnU-rQ-Bn8" secondAttribute="bottom" id="tuQ-Gp-LhK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cursor" destination="Eg1-V8-gbd" id="S7E-aQ-kp1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpp-UG-C0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

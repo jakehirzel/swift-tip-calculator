@@ -11,10 +11,6 @@ import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
     
-    // MARK: Properties
-    
-    @IBOutlet weak var cursorCompact: UIView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,15 +20,6 @@ class MessagesViewController: MSMessagesAppViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-
-        // Animate the compact view cursor
-        if cursorCompact != nil {
-            cursorCompact.blink()
-        }
-
     }
     
     // MARK: - Conversation Handling

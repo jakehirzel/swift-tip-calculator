@@ -414,6 +414,31 @@
                     </view>
                     <connections>
                         <outlet property="cursor" destination="Eg1-V8-gbd" id="S7E-aQ-kp1"/>
+                        <outlet property="eachTotal" destination="KS6-7J-0pw" id="rw9-RY-5vd"/>
+                        <outlet property="keyDelete" destination="hzg-xQ-7y5" id="F8b-Wr-6qQ"/>
+                        <outlet property="keyEight" destination="KTr-Ek-5Jz" id="zUN-5q-dUH"/>
+                        <outlet property="keyFive" destination="2B5-AI-KqU" id="LrG-nQ-O2R"/>
+                        <outlet property="keyFour" destination="aSx-8S-yTu" id="ue3-UH-6Eq"/>
+                        <outlet property="keyNine" destination="e25-rv-xRA" id="lB9-Hc-WCR"/>
+                        <outlet property="keyOne" destination="0re-gi-E94" id="be4-aF-AWO"/>
+                        <outlet property="keyPoint" destination="eE1-dN-PFN" id="7Rm-Ol-5Sj"/>
+                        <outlet property="keySeven" destination="R9C-h1-4xq" id="slh-c1-sG7"/>
+                        <outlet property="keySix" destination="7eL-hP-7JA" id="gyF-88-vie"/>
+                        <outlet property="keyThree" destination="Ty3-3I-JgX" id="jaM-hM-cfd"/>
+                        <outlet property="keyTwo" destination="RQ1-y1-X0w" id="Rmw-Fj-lAR"/>
+                        <outlet property="keyZero" destination="M1v-Et-Q00" id="0gW-IM-G3e"/>
+                        <outlet property="percentOne" destination="kKH-3a-ouj" id="bDA-Qp-jU1"/>
+                        <outlet property="percentThree" destination="1ho-gd-Yai" id="wWK-uo-cPH"/>
+                        <outlet property="percentTwo" destination="KJ5-2B-iec" id="Efb-fY-r9t"/>
+                        <outlet property="splitNumber" destination="Sy6-UY-1nY" id="nlE-V4-bwt"/>
+                        <outlet property="splitPeople" destination="WFW-c9-qbH" id="9fx-TK-ugw"/>
+                        <outlet property="splitPercent" destination="lDO-vi-Q9w" id="qI9-v9-VJp"/>
+                        <outlet property="splitStepper" destination="4WX-hq-B0F" id="ehT-h2-1Fo"/>
+                        <outlet property="splitTotal" destination="UZr-DY-GLq" id="Qbb-Ic-pJO"/>
+                        <outlet property="splitsView" destination="GsO-Xm-3hV" id="h4U-iQ-shf"/>
+                        <outlet property="tipsView" destination="hPK-Wc-upi" id="J9b-cK-LBu"/>
+                        <outlet property="totalBillLabel" destination="2b6-VE-esB" id="qlJ-sX-XvT"/>
+                        <outletCollection property="tipLines" destination="AuD-Ng-Fk4" collectionClass="NSMutableArray" id="3JU-tn-ycc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpp-UG-C0x" userLabel="First Responder" sceneMemberID="firstResponder"/>

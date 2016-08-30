@@ -45,7 +45,29 @@ class ExpandedViewController: MSMessagesAppViewController {
     @IBOutlet weak var cursor: UIView!
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        // Make the cursor blink
         cursor.blink()
+        
+        // Set up the stepper
+        splitStepper.tintColor = UIColor.white
+        splitStepper.minimumValue = 1
+        splitStepper.maximumValue = 100
+        splitStepper.value = 1
     }
 
+    // String to hold value of totalBillLabel without the $
+    var totalBillLabelValue = ""
+    
+    // Create instance of TipCalculator class
+    let tipCalculatorInstance = TipCalculator()
+    
+    // Set initial state of splitsView
+    var isSplitsViewShowing = false
+    
+    // Variable to Track Tag of Tip Stack Item Tapped
+    var tipsStackTag = 0
+    
+    
+    
 }

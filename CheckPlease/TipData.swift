@@ -11,11 +11,13 @@ import Foundation
 class TipData {
 
     var totalBillLabel: String
-    var splitNumber: String
+    var totalBillLabelValue: String
+    var splitNumber: Double
     
     private init() {
         self.totalBillLabel = "$0.00"
-        self.splitNumber = "1"
+        self.totalBillLabelValue = "0.00"
+        self.splitNumber = 1
     }
     
     static let sharedInstance = TipData()

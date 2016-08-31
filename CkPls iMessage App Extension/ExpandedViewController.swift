@@ -54,6 +54,27 @@ class ExpandedViewController: MSMessagesAppViewController {
         splitStepper.minimumValue = 1
         splitStepper.maximumValue = 100
         splitStepper.value = 1
+        
+        // Update values from TipData singleton
+        if TipData.sharedInstance.totalBillLabel == "$0.00" {
+            return
+        }
+        else {
+            totalBillLabel.text = TipData.sharedInstance.totalBillLabel
+            totalBillLabelValue = TipData.sharedInstance.totalBillLabelValue
+            splitStepper.value = TipData.sharedInstance.splitNumber
+            processTipCalculation()
+        }
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        // Update TipData singleton when chevron is tapped or other qualifying event happens!
+        TipData.sharedInstance.totalBillLabel = totalBillLabel.text!
+        TipData.sharedInstance.totalBillLabelValue = totalBillLabelValue
+        TipData.sharedInstance.splitNumber = splitStepper.value
+        
     }
 
     // String to hold value of totalBillLabel without the $
@@ -185,7 +206,8 @@ class ExpandedViewController: MSMessagesAppViewController {
         
         // Update TipData singleton when share button is tapped
         TipData.sharedInstance.totalBillLabel = totalBillLabel.text!
-        TipData.sharedInstance.splitNumber = splitNumber.text!
+        TipData.sharedInstance.totalBillLabelValue = totalBillLabelValue
+        TipData.sharedInstance.splitNumber = splitStepper.value
         
         // Then change presentation style
         requestPresentationStyle(.compact)

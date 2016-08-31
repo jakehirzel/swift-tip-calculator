@@ -29,7 +29,6 @@ class CompactViewController: MSMessagesAppViewController {
         
     }
     
-    
     // MARK: Actions
     
     @IBAction func compactViewTapped(_ sender: AnyObject) {

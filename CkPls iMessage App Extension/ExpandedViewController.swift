@@ -137,11 +137,22 @@ class ExpandedViewController: MSMessagesAppViewController {
             
         }
         else {
+            
             percentOne.text = "$0.00 / $0.00"
             percentTwo.text = "$0.00 / $0.00"
             percentThree.text = "$0.00 / $0.00"
             splitTotal.text = "$0.00 / $0.00"
             eachTotal.text = "$0.00 / $0.00"
+            
+            // Update split number
+            splitNumber.text = String(Int(splitStepper.value))
+            if splitStepper.value == 1 {
+                splitPeople.text = "Person"
+            }
+            else {
+                splitPeople.text = "People"
+            }
+            
         }
     }
     

@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import Messages
 
 class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     
@@ -205,10 +206,39 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         if MFMessageComposeViewController.canSendText() {
             
             messageVC.messageComposeDelegate = self;
+            
             messageVC.body = "With " + splitNumber.text! + " of us, your Tip / Total should be: " + eachTotal.text! + " (" + splitPercent.text! + " tip on a " + totalBillLabel.text! + " bill). CkPls!"
+            
             self.present(messageVC, animated: false, completion: nil)
-
+            
         }
-
+        
     }
 }
+
+/*
+ if MFMessageComposeViewController.canSendText() {
+ 
+ messageVC.messageComposeDelegate = self;
+ 
+ if #available(iOS 10.0, *) {
+ let message = MSMessage()
+ let layout = MSMessageTemplateLayout()
+ layout.caption = "Test"
+ layout.subcaption = "Test"
+ 
+ message.layout = layout
+ 
+ messageVC.message = message
+ 
+ }
+ else {
+ // Fallback on earlier versions
+ messageVC.body = "With " + splitNumber.text! + " of us, your Tip / Total should be: " + eachTotal.text! + " (" + splitPercent.text! + " tip on a " + totalBillLabel.text! + " bill). CkPls!"
+ }
+ 
+ self.present(messageVC, animated: false, completion: nil)
+ 
+ }
+*/
+

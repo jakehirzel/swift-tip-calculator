@@ -74,17 +74,6 @@ class MessagesViewController: MSMessagesAppViewController {
         guard let conversation = activeConversation else { fatalError("Expected an active converstation") }
         presentViewController(for: conversation, with: presentationStyle)
         
-        // Create a message
-        let message = MSMessage()
-        
-        let layout = MSMessageTemplateLayout()
-        layout.caption = "CkPls!"
-        layout.subcaption = TipData.sharedInstance.totalBillLabel
-        
-        message.layout = layout
-        
-        conversation.insert(message)
-        
     }
     
 //    override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
@@ -105,14 +94,18 @@ class MessagesViewController: MSMessagesAppViewController {
         if presentationStyle == .compact {
 
             // Instantiate the compact version
-            controller = UIStoryboard.init(name: "MainInterface", bundle: nil).instantiateViewController(withIdentifier: "compactView") as UIViewController
+            controller = instantiateCompactViewController()
+            
+//            controller = UIStoryboard.init(name: "MainInterface", bundle: nil).instantiateViewController(withIdentifier: "compactView") as UIViewController
             
         }
         else {
             
             // Instantiate the expanded version
-            controller = UIStoryboard.init(name: "MainInterface", bundle: nil).instantiateViewController(withIdentifier: "expandedView") as UIViewController
-
+            controller = instantiateExpandedViewController()
+            
+//            controller = UIStoryboard.init(name: "MainInterface", bundle: nil).instantiateViewController(withIdentifier: "expandedView") as UIViewController
+            
         }
         
         // Remove any existing child view controllers (i.e. moving between compact and expanded)
@@ -142,5 +135,40 @@ class MessagesViewController: MSMessagesAppViewController {
         controller.didMove(toParentViewController: self)
         
     }
+    
+    private func instantiateCompactViewController() -> UIViewController {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "compactView") as! CompactViewController
+        return controller
+    }
 
+    private func instantiateExpandedViewController() -> UIViewController {
+        let controller =  storyboard?.instantiateViewController(withIdentifier: "expandedView") as! ExpandedViewController
+        controller.delegate = self
+        return controller
+    }
+    
+}
+
+
+// MARK: Extension to conform with ExpandedViewControllerDelegate protocol
+
+extension MessagesViewController: ExpandedViewControllerDelegate {
+
+    // Define the protocol methods
+    func createMessage(caption: String, subcaption: String) {
+        
+        // Create a message
+        let message = MSMessage()
+        
+        let layout = MSMessageTemplateLayout()
+        layout.caption = caption
+        layout.subcaption = subcaption
+        
+        message.layout = layout
+        
+        guard let conversation = activeConversation else { fatalError("Expected an active converstation") }
+        conversation.insert(message)
+        
+    }
+    
 }

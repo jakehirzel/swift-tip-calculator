@@ -43,6 +43,24 @@ class ExpandedViewController: MSMessagesAppViewController {
     @IBOutlet weak var keyDelete: UIButton!
     
     @IBOutlet weak var cursor: UIView!
+
+    // String to hold value of totalBillLabel without the $
+    var totalBillLabelValue = ""
+    
+    // Create instance of TipCalculator class
+    let tipCalculatorInstance = TipCalculator()
+    
+    // Create KeypadBehavior instance
+    let keypadAction = KeypadBehavior()
+    
+    // Set initial state of splitsView
+    var isSplitsViewShowing = false
+    
+    // Variable to Track Tag of Tip Stack Item Tapped
+    var tipsStackTag = 0
+    
+    // Declare delegate property
+    weak var delegate: ExpandedViewControllerDelegate? = nil
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -76,21 +94,6 @@ class ExpandedViewController: MSMessagesAppViewController {
         TipData.sharedInstance.splitNumber = splitStepper.value
         
     }
-
-    // String to hold value of totalBillLabel without the $
-    var totalBillLabelValue = ""
-    
-    // Create instance of TipCalculator class
-    let tipCalculatorInstance = TipCalculator()
-    
-    // Create KeypadBehavior instance
-    let keypadAction = KeypadBehavior()
-    
-    // Set initial state of splitsView
-    var isSplitsViewShowing = false
-    
-    // Variable to Track Tag of Tip Stack Item Tapped
-    var tipsStackTag = 0
     
     func processTipCalculation() {
         let totalBillFloat: Float? = Float(totalBillLabelValue)
@@ -209,8 +212,16 @@ class ExpandedViewController: MSMessagesAppViewController {
         TipData.sharedInstance.totalBillLabelValue = totalBillLabelValue
         TipData.sharedInstance.splitNumber = splitStepper.value
         
+        // Call delegate protocol method
+        delegate?.createMessage(caption: totalBillLabel.text!, subcaption: splitNumber.text!)
+        
         // Then change presentation style
         requestPresentationStyle(.compact)
         
     }
+}
+
+// MARK: Delegate Protocol
+protocol ExpandedViewControllerDelegate: class {
+    func createMessage(caption: String, subcaption: String)
 }

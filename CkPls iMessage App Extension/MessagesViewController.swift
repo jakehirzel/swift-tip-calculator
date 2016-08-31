@@ -74,6 +74,17 @@ class MessagesViewController: MSMessagesAppViewController {
         guard let conversation = activeConversation else { fatalError("Expected an active converstation") }
         presentViewController(for: conversation, with: presentationStyle)
         
+        // Create a message
+        let message = MSMessage()
+        
+        let layout = MSMessageTemplateLayout()
+        layout.caption = "CkPls!"
+        layout.subcaption = TipData.sharedInstance.totalBillLabel
+        
+        message.layout = layout
+        
+        conversation.insert(message)
+        
     }
     
 //    override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {

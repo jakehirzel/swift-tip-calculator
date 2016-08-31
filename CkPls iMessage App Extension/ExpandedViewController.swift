@@ -212,8 +212,12 @@ class ExpandedViewController: MSMessagesAppViewController {
         TipData.sharedInstance.totalBillLabelValue = totalBillLabelValue
         TipData.sharedInstance.splitNumber = splitStepper.value
         
+        // Create the message strings
+        let messageCaption = "With " + splitNumber.text! + " of us, your Tip / Total should be: " + eachTotal.text!
+        let messageSubcaption = "(" + splitPercent.text! + " tip on a " + totalBillLabel.text! + " bill)."
+        
         // Call delegate protocol method
-        delegate?.createMessage(caption: totalBillLabel.text!, subcaption: splitNumber.text!)
+        delegate?.createMessage(caption: messageCaption, subcaption: messageSubcaption)
         
         // Then change presentation style
         requestPresentationStyle(.compact)

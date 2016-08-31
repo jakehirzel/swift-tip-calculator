@@ -183,7 +183,11 @@ class ExpandedViewController: MSMessagesAppViewController {
     
     @IBAction func shareButtonTapped(_ sender: AnyObject) {
         
-        // Close the expanded view when the share button is tapped
+        // Update TipData singleton when share button is tapped
+        TipData.sharedInstance.totalBillLabel = totalBillLabel.text!
+        TipData.sharedInstance.splitNumber = splitNumber.text!
+        
+        // Then change presentation style
         requestPresentationStyle(.compact)
         
     }

@@ -81,6 +81,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="compactCursor" destination="PGr-GC-0KO" id="dgM-C1-0uc"/>
+                        <outlet property="totalBillLabel" destination="0SS-wH-GvZ" id="oIp-zs-cOd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>

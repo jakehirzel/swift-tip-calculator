@@ -14,10 +14,21 @@ class CompactViewController: MSMessagesAppViewController {
     // MARK: Properties
     
     @IBOutlet weak var compactCursor: UIView!
+    @IBOutlet weak var totalBillLabel: UILabel!
     
     override func viewDidAppear(_ animated: Bool) {
         compactCursor.blink()
+        
+        // Update values from TipData singleton
+        if TipData.sharedInstance.totalBillLabel == "$0.00" {
+            return
+        }
+        else {
+            totalBillLabel.text = TipData.sharedInstance.totalBillLabel
+        }
+        
     }
+    
     
     // MARK: Actions
     

@@ -62,6 +62,9 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     // Set initial state of splitsView
     var isSplitsViewShowing = false
     
+    // Set first split view toggle (for controlling pulse behavior on share button)
+    var isFirstSplitsView = true
+    
     // Variable to Track Tag of Tip Stack Item Tapped
     var tipsStackTag = 0
     
@@ -77,9 +80,9 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         cursor.blink()
         
         // Pulse the percentages
-        tipPercentLabelOne.pulseOnce()
-        tipPercentLabelTwo.pulseOnce()
-        tipPercentLabelThree.pulseOnce()
+        tipPercentLabelOne.pulseOnce(delay: 0.2)
+        tipPercentLabelTwo.pulseOnce(delay: 0.5)
+        tipPercentLabelThree.pulseOnce(delay: 0.8)
         
         // Set up the stepper
         splitStepper.tintColor = UIColor.white
@@ -197,10 +200,16 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
                 to: splitsView,
                 duration: 1.0,
                 options: [UIViewAnimationOptions.transitionFlipFromRight, UIViewAnimationOptions.showHideTransitionViews] ,
-                // Pulse the share button on completion
+                // Pulse the share button on completion the first view only
                 completion: {
                     (finished: Bool) -> Void in
-                    self.splitButton.pulseOnce()
+                    if self.isFirstSplitsView == true {
+                        self.splitButton.pulseOnce(delay: 0.1)
+                        self.isFirstSplitsView = false
+                    }
+                    else {
+                        return
+                    }
                 })
             
             processTipCalculation()
@@ -214,12 +223,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
                 duration: 1.0,
                 options: [UIViewAnimationOptions.transitionFlipFromLeft, UIViewAnimationOptions.showHideTransitionViews],
                 // Pulse the percentage labels on completion
-                completion: {
-                    (finished: Bool) -> Void in
-                    self.tipPercentLabelOne.pulseOnce()
-                    self.tipPercentLabelTwo.pulseOnce()
-                    self.tipPercentLabelThree.pulseOnce()
-                })
+                completion: nil)
         }
         
         isSplitsViewShowing = !isSplitsViewShowing

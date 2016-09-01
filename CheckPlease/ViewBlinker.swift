@@ -37,10 +37,10 @@ extension UIView {
             completion: nil)
     }
     
-    func pulseOnce() {
+    func pulseOnce(delay: TimeInterval) {
         UIView.animate(
             withDuration: 0.4,
-            delay: 0.2,
+            delay: delay,
             options: .curveEaseIn,
             animations: {
                 self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
@@ -48,7 +48,7 @@ extension UIView {
             completion: {
                 (finished: Bool) -> Void in
                 UIView.animate(
-                withDuration: 0.5,
+                withDuration: 0.4,
                 delay: 0.1,
                 options: .curveEaseOut,
                 animations: {

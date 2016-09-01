@@ -400,12 +400,16 @@
                         <outlet property="percentOne" destination="SVg-bu-uiR" id="YY5-zG-rgs"/>
                         <outlet property="percentThree" destination="1KY-yt-Vob" id="fWc-3A-Re7"/>
                         <outlet property="percentTwo" destination="0kM-Lr-ddq" id="jjY-qm-C4C"/>
+                        <outlet property="splitButton" destination="4dm-pl-Gc5" id="r0G-1E-COw"/>
                         <outlet property="splitNumber" destination="Iv9-Rr-mh3" id="8cX-eQ-gXV"/>
                         <outlet property="splitPeople" destination="VbF-vi-uma" id="PUV-GX-Kvg"/>
                         <outlet property="splitPercent" destination="cHf-2q-Cvo" id="wOg-46-IBe"/>
                         <outlet property="splitStepper" destination="fep-b4-bu5" id="OyG-io-3xA"/>
                         <outlet property="splitTotal" destination="pvO-gL-okU" id="u80-kw-MXX"/>
                         <outlet property="splitsView" destination="vjs-IY-5Uc" id="BMR-jD-eT1"/>
+                        <outlet property="tipPercentLabelOne" destination="wqQ-SL-DNT" id="2du-d8-VTp"/>
+                        <outlet property="tipPercentLabelThree" destination="edg-0T-Dr3" id="Gdo-IZ-lRj"/>
+                        <outlet property="tipPercentLabelTwo" destination="GZ6-9n-zoG" id="4dk-1B-8Q9"/>
                         <outlet property="tipsView" destination="cCy-LE-lf8" id="FkD-D3-Avd"/>
                         <outlet property="totalBillLabel" destination="7ex-Gi-bz8" id="5jY-AV-sB2"/>
                         <outletCollection property="tipLines" destination="6GI-16-jmU" collectionClass="NSMutableArray" id="f5F-Ry-SoL"/>

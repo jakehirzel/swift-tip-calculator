@@ -23,11 +23,16 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     @IBOutlet weak var splitsView: UIView!
     @IBOutlet var tipLines: [UIStackView]!
     
+    @IBOutlet weak var tipPercentLabelOne: UILabel!
+    @IBOutlet weak var tipPercentLabelTwo: UILabel!
+    @IBOutlet weak var tipPercentLabelThree: UILabel!
+    
     @IBOutlet weak var splitPercent: UILabel!
     @IBOutlet weak var splitTotal: UILabel!
     @IBOutlet weak var splitStepper: UIStepper!
     @IBOutlet weak var splitNumber: UILabel!
     @IBOutlet weak var splitPeople: UILabel!
+    @IBOutlet weak var splitButton: UIButton!
     @IBOutlet weak var eachTotal: UILabel!
     
     @IBOutlet weak var keyOne: UIButton!
@@ -70,7 +75,12 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         
         // Make the cursor repeatedly blink
         cursor.blink()
-                
+        
+        // Pulse the percentages
+        tipPercentLabelOne.pulseOnce()
+        tipPercentLabelTwo.pulseOnce()
+        tipPercentLabelThree.pulseOnce()
+        
         // Set up the stepper
         splitStepper.tintColor = UIColor.white
         splitStepper.minimumValue = 1
@@ -187,7 +197,11 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
                 to: splitsView,
                 duration: 1.0,
                 options: [UIViewAnimationOptions.transitionFlipFromRight, UIViewAnimationOptions.showHideTransitionViews] ,
-                completion: nil)
+                // Pulse the share button on completion
+                completion: {
+                    (finished: Bool) -> Void in
+                    self.splitButton.pulseOnce()
+                })
             
             processTipCalculation()
             

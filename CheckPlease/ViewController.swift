@@ -213,7 +213,13 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
                 to: tipsView,
                 duration: 1.0,
                 options: [UIViewAnimationOptions.transitionFlipFromLeft, UIViewAnimationOptions.showHideTransitionViews],
-                completion: nil)
+                // Pulse the percentage labels on completion
+                completion: {
+                    (finished: Bool) -> Void in
+                    self.tipPercentLabelOne.pulseOnce()
+                    self.tipPercentLabelTwo.pulseOnce()
+                    self.tipPercentLabelThree.pulseOnce()
+                })
         }
         
         isSplitsViewShowing = !isSplitsViewShowing

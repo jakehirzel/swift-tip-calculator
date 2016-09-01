@@ -39,11 +39,11 @@ extension UIView {
     
     func pulseOnce() {
         UIView.animate(
-            withDuration: 0.5,
-            delay: 0.0,
+            withDuration: 0.4,
+            delay: 0.2,
             options: .curveEaseIn,
             animations: {
-                self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+                self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             },
             completion: {
                 (finished: Bool) -> Void in

@@ -12,24 +12,32 @@ class KeypadBehavior {
     
     func keypadButtonTapped(button: UIButton, textIn: String, totalIn: String) -> (textOut: String, totalOut: String) {
         
-        // Only allow 7 characters to be entered
-        if textIn.characters.count > 7 {
+        // Only allow numbers up to the thousands place
+        if textIn.characters.contains(".") && textIn.characters.count > 7 {
             return (textOut: textIn, totalOut: totalIn)
         }
+        else if !textIn.characters.contains(".") && textIn.characters.count > 5 {
+            return (textOut: textIn, totalOut: totalIn)
+        }
+        
+        // Only allow 7 characters to be entered
+//        if textIn.characters.count > 7 {
+//            return (textOut: textIn, totalOut: totalIn)
+//        }
             
-            // Only allow two characters after a .
+        // Only allow two characters after a .
         else if textIn.characters.count > 3 &&
             
             textIn[(textIn.index(textIn.endIndex, offsetBy: -3))] == "." {
             return (textOut: textIn, totalOut: totalIn)
         }
             
-            // Only allow one .
+        // Only allow one .
         else if button.titleLabel!.text == "." && textIn.characters.contains(".") == true {
             return (textOut: textIn, totalOut: totalIn)
         }
             
-            // Otherwise add the characters to both strings
+        // Otherwise add the characters to both strings
         else {
             var textOut = textIn
             textOut.append(button.titleLabel!.text!)

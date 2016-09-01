@@ -70,7 +70,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         
         // Make the cursor repeatedly blink
         cursor.blink()
-        
+                
         // Set up the stepper
         splitStepper.tintColor = UIColor.white
         splitStepper.minimumValue = 1

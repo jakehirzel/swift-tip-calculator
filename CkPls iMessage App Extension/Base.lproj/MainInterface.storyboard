@@ -273,7 +273,7 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cxr-7H-9TE" userLabel="Lower Spacer"/>
-                            <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CIO-rQ-zaA" userLabel="Keypad">
+                            <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CIO-rQ-zaA" userLabel="Keypad">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vAZ-Zw-1J8">
                                         <subviews>
@@ -450,7 +450,6 @@
                             <constraint firstItem="VnU-rQ-Bn8" firstAttribute="trailing" secondItem="2P4-Wo-hAG" secondAttribute="trailingMargin" id="GUZ-GE-Nns"/>
                             <constraint firstItem="Cxr-7H-9TE" firstAttribute="top" secondItem="PUK-eB-5ka" secondAttribute="bottom" constant="12" id="IZf-Nl-jo4"/>
                             <constraint firstItem="VnU-rQ-Bn8" firstAttribute="leading" secondItem="2P4-Wo-hAG" secondAttribute="leadingMargin" id="IgR-d9-8bK"/>
-                            <constraint firstItem="Cxr-7H-9TE" firstAttribute="top" secondItem="PUK-eB-5ka" secondAttribute="bottom" constant="12" id="NXL-Ra-6mM"/>
                             <constraint firstItem="VnU-rQ-Bn8" firstAttribute="top" secondItem="YIK-4y-Rf4" secondAttribute="bottom" constant="12" id="SjV-QV-8Ca"/>
                             <constraint firstItem="CIO-rQ-zaA" firstAttribute="trailing" secondItem="2P4-Wo-hAG" secondAttribute="trailingMargin" id="TD9-8k-KSv"/>
                             <constraint firstItem="CIO-rQ-zaA" firstAttribute="top" secondItem="Cxr-7H-9TE" secondAttribute="bottom" constant="12" id="a3L-1V-Q2B"/>

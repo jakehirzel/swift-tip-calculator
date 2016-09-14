@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kdo-2N-e8x"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e7X-z4-b1S">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -36,7 +36,7 @@
                         <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NUm-bT-VLg" userLabel="Total Bill">
@@ -102,7 +102,7 @@
                         <viewControllerLayoutGuide type="bottom" id="q49-3l-ToR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2P4-Wo-hAG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnU-rQ-Bn8" userLabel="Top Spacer"/>
@@ -111,7 +111,7 @@
                                 <subviews>
                                     <view hidden="YES" contentMode="scaleToFill" restorationIdentifier="splitsView" translatesAutoresizingMaskIntoConstraints="NO" id="GsO-Xm-3hV" userLabel=" Splits View">
                                         <subviews>
-                                            <stackView contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dtu-hR-DkK" userLabel="Splits Stack">
+                                            <stackView contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dtu-hR-DkK" userLabel="Splits Stack">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip / Total:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tux-YW-S2a">
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
@@ -412,6 +412,9 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="148" id="hTI-ad-Euz"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="y5M-2J-ccg" userLabel="Total Bill">
                                 <subviews>

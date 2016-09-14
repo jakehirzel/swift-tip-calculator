@@ -242,38 +242,38 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
             
             messageVC.messageComposeDelegate = self;
             
-            messageVC.body = "With " + splitNumber.text! + " of us, your Tip / Total should be: " + eachTotal.text! + " (" + splitPercent.text! + " tip on a " + totalBillLabel.text! + " bill). CkPls!"
+            // Use iMessage App Extension if supported
+            if #available(iOS 10.0, *) {
+                let message = MSMessage()
+                let layout = MSMessageTemplateLayout()
+                layout.caption = "With " + splitNumber.text! + " of us, your Tip / Total should be: " + eachTotal.text!
+                layout.subcaption = "(" + splitPercent.text! + " tip on a " + totalBillLabel.text! + " bill)."
+                
+                message.layout = layout
+                
+                messageVC.message = message
+                
+            }
+                
+            // Or fall back on regular text message
+            else {
+                messageVC.body = "With " + splitNumber.text! + " of us, your Tip / Total should be: " + eachTotal.text! + " (" + splitPercent.text! + " tip on a " + totalBillLabel.text! + " bill). CkPls!"
+            }
             
             self.present(messageVC, animated: false, completion: nil)
             
         }
         
+//        if MFMessageComposeViewController.canSendText() {
+//            
+//            messageVC.messageComposeDelegate = self;
+//            
+//            messageVC.body = "With " + splitNumber.text! + " of us, your Tip / Total should be: " + eachTotal.text! + " (" + splitPercent.text! + " tip on a " + totalBillLabel.text! + " bill). CkPls!"
+//            
+//            self.present(messageVC, animated: false, completion: nil)
+//            
+//        }
+        
     }
 }
-
-/*
- if MFMessageComposeViewController.canSendText() {
- 
- messageVC.messageComposeDelegate = self;
- 
- if #available(iOS 10.0, *) {
- let message = MSMessage()
- let layout = MSMessageTemplateLayout()
- layout.caption = "Test"
- layout.subcaption = "Test"
- 
- message.layout = layout
- 
- messageVC.message = message
- 
- }
- else {
- // Fallback on earlier versions
- messageVC.body = "With " + splitNumber.text! + " of us, your Tip / Total should be: " + eachTotal.text! + " (" + splitPercent.text! + " tip on a " + totalBillLabel.text! + " bill). CkPls!"
- }
- 
- self.present(messageVC, animated: false, completion: nil)
- 
- }
-*/
 

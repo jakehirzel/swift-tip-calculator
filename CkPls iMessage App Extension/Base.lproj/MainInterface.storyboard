@@ -111,7 +111,7 @@
                                 <subviews>
                                     <view hidden="YES" contentMode="scaleToFill" restorationIdentifier="splitsView" translatesAutoresizingMaskIntoConstraints="NO" id="GsO-Xm-3hV" userLabel=" Splits View">
                                         <subviews>
-                                            <stackView contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dtu-hR-DkK" userLabel="Splits Stack">
+                                            <stackView contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dtu-hR-DkK" userLabel="Splits Stack">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip / Total:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tux-YW-S2a">
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
@@ -190,7 +190,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" restorationIdentifier="tipsView" translatesAutoresizingMaskIntoConstraints="NO" id="hPK-Wc-upi" userLabel="Tips View">
                                         <subviews>
-                                            <stackView contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AuD-Ng-Fk4" userLabel="Tips Stack">
+                                            <stackView contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AuD-Ng-Fk4" userLabel="Tips Stack">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip / Total:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcU-8N-LG4">
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
@@ -416,7 +416,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="148" id="hTI-ad-Euz"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="y5M-2J-ccg" userLabel="Total Bill">
+                            <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y5M-2J-ccg" userLabel="Total Bill">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the Total Bill:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgS-ST-6Um">
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>

@@ -85,7 +85,7 @@ class MessagesViewController: MSMessagesAppViewController {
     
     // MARK: Child view controller presentation
     
-    private func presentViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle) {
+    fileprivate func presentViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle) {
         
         // Define controller variable
         let controller: UIViewController
@@ -136,12 +136,12 @@ class MessagesViewController: MSMessagesAppViewController {
         
     }
     
-    private func instantiateCompactViewController() -> UIViewController {
+    fileprivate func instantiateCompactViewController() -> UIViewController {
         let controller = storyboard?.instantiateViewController(withIdentifier: "compactView") as! CompactViewController
         return controller
     }
 
-    private func instantiateExpandedViewController() -> UIViewController {
+    fileprivate func instantiateExpandedViewController() -> UIViewController {
         let controller =  storyboard?.instantiateViewController(withIdentifier: "expandedView") as! ExpandedViewController
         controller.delegate = self
         return controller
@@ -155,7 +155,7 @@ class MessagesViewController: MSMessagesAppViewController {
 extension MessagesViewController: ExpandedViewControllerDelegate {
 
     // Define the protocol methods
-    func createMessage(caption: String, subcaption: String) {
+    func createMessage(_ caption: String, subcaption: String) {
         
         // Create a message
         let message = MSMessage()

@@ -80,9 +80,9 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         cursor.blink()
         
         // Pulse the percentages
-        tipPercentLabelOne.pulseOnce(delay: 0.2)
-        tipPercentLabelTwo.pulseOnce(delay: 0.5)
-        tipPercentLabelThree.pulseOnce(delay: 0.8)
+        tipPercentLabelOne.pulseOnce(0.2)
+        tipPercentLabelTwo.pulseOnce(0.5)
+        tipPercentLabelThree.pulseOnce(0.8)
         
         // Set up the stepper
         splitStepper.tintColor = UIColor.white
@@ -168,7 +168,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     @IBAction func numKeyTapped(sender: UIButton) {
         
         // Process key press
-        let keypadOutput = keypadAction.keypadButtonTapped(button: sender, textIn: totalBillLabel.text!, totalIn: totalBillLabelValue)
+        let keypadOutput = keypadAction.keypadButtonTapped(sender, textIn: totalBillLabel.text!, totalIn: totalBillLabelValue)
                 
         // Assign return values to labels
         totalBillLabel.text = keypadOutput.textOut
@@ -204,7 +204,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
                 completion: {
                     (finished: Bool) -> Void in
                     if self.isFirstSplitsView == true {
-                        self.splitButton.pulseOnce(delay: 0.1)
+                        self.splitButton.pulseOnce(0.1)
                         self.isFirstSplitsView = false
                     }
                     else {

@@ -10,7 +10,7 @@ import UIKit
 
 class KeypadBehavior {
     
-    func keypadButtonTapped(button: UIButton, textIn: String, totalIn: String) -> (textOut: String, totalOut: String) {
+    func keypadButtonTapped(_ button: UIButton, textIn: String, totalIn: String) -> (textOut: String, totalOut: String) {
         
         // Only allow one .
         if button.titleLabel!.text == "." && textIn.characters.contains(".") == true {

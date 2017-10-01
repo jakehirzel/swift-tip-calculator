@@ -392,6 +392,7 @@
 					238A4B601D7112130067BCFA = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = BSAA9W64H3;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					238BFE231D2813FE00C8B6E8 = {
@@ -401,7 +402,7 @@
 					};
 					238BFE371D2813FE00C8B6E8 = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						TestTargetID = 238BFE231D2813FE00C8B6E8;
 					};
 				};
@@ -836,7 +837,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CheckPleaseTests;
 				PRODUCT_NAME = CkPls;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CkPls.app/CkPls";
 			};
 			name = Debug;
@@ -849,7 +850,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CheckPleaseTests;
 				PRODUCT_NAME = CkPls;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CkPls.app/CkPls";
 			};
 			name = Release;

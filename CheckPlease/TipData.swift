@@ -14,7 +14,7 @@ class TipData {
     var totalBillLabelValue: String
     var splitNumber: Double
     
-    private init() {
+    fileprivate init() {
         self.totalBillLabel = "$0.00"
         self.totalBillLabelValue = "0.00"
         self.splitNumber = 1

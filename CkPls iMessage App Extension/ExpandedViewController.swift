@@ -158,10 +158,10 @@ class ExpandedViewController: MSMessagesAppViewController {
     
     // MARK: Actions
     
-    @IBAction func numKeyTapped(sender: UIButton) {
+    @IBAction func numKeyTapped(_ sender: UIButton) {
         
         // Process key press
-        let keypadOutput = keypadAction.keypadButtonTapped(button: sender, textIn: totalBillLabel.text!, totalIn: totalBillLabelValue)
+        let keypadOutput = keypadAction.keypadButtonTapped(sender, textIn: totalBillLabel.text!, totalIn: totalBillLabelValue)
         
         // Assign return values to labels
         totalBillLabel.text = keypadOutput.textOut
@@ -172,7 +172,7 @@ class ExpandedViewController: MSMessagesAppViewController {
         
     }
     
-    @IBAction func delKeyTapped(sender: UIButton) {
+    @IBAction func delKeyTapped(_ sender: UIButton) {
         if totalBillLabel.text == "$" {
         }
         else {
@@ -228,7 +228,7 @@ class ExpandedViewController: MSMessagesAppViewController {
         let messageSubcaption = "(" + splitPercent.text! + " tip on a " + totalBillLabel.text! + " bill)."
         
         // Call delegate protocol method
-        delegate?.createMessage(caption: messageCaption, subcaption: messageSubcaption)
+        delegate?.createMessage(messageCaption, subcaption: messageSubcaption)
         
         // Then change presentation style
         requestPresentationStyle(.compact)
@@ -238,5 +238,5 @@ class ExpandedViewController: MSMessagesAppViewController {
 
 // MARK: Delegate Protocol
 protocol ExpandedViewControllerDelegate: class {
-    func createMessage(caption: String, subcaption: String)
+    func createMessage(_ caption: String, subcaption: String)
 }

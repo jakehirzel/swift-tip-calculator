@@ -37,7 +37,7 @@ extension UIView {
             completion: nil)
     }
     
-    func pulseOnce(delay: TimeInterval) {
+    func pulseOnce(_ delay: TimeInterval) {
         UIView.animate(
             withDuration: 0.4,
             delay: delay,

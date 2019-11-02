@@ -74,24 +74,24 @@ class ExpandedViewController: MSMessagesAppViewController {
         splitStepper.value = 1
         
         // Update values from TipData singleton
-        if TipData.sharedInstance.totalBillLabel == "$0.00" {
-            return
-        }
-        else {
-            totalBillLabel.text = TipData.sharedInstance.totalBillLabel
-            totalBillLabelValue = TipData.sharedInstance.totalBillLabelValue
-            splitStepper.value = TipData.sharedInstance.splitNumber
-            processTipCalculation()
-        }
+//        if TipData.sharedInstance.totalBillLabel == "$0.00" {
+//            return
+//        }
+//        else {
+//            totalBillLabel.text = TipData.sharedInstance.totalBillLabel
+//            totalBillLabelValue = TipData.sharedInstance.totalBillLabelValue
+//            splitStepper.value = TipData.sharedInstance.splitNumber
+//            processTipCalculation()
+//        }
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         
         // Update TipData singleton when chevron is tapped or other qualifying event happens!
-        TipData.sharedInstance.totalBillLabel = totalBillLabel.text!
-        TipData.sharedInstance.totalBillLabelValue = totalBillLabelValue
-        TipData.sharedInstance.splitNumber = splitStepper.value
+//        TipData.sharedInstance.totalBillLabel = totalBillLabel.text!
+//        TipData.sharedInstance.totalBillLabelValue = totalBillLabelValue
+//        TipData.sharedInstance.splitNumber = splitStepper.value
         
     }
     

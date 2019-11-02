@@ -28,7 +28,6 @@
 		238A4B641D7112130067BCFA /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238A4B631D7112130067BCFA /* Messages.framework */; };
 		238A4B671D7112130067BCFA /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238A4B661D7112130067BCFA /* MessagesViewController.swift */; };
 		238A4B6A1D7112130067BCFA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238A4B681D7112130067BCFA /* MainInterface.storyboard */; };
-		238A4B6C1D7112130067BCFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 238A4B6B1D7112130067BCFA /* Assets.xcassets */; };
 		238A4B701D7112130067BCFA /* CkPls iMessage App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 238A4B611D7112130067BCFA /* CkPls iMessage App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		238BFE281D2813FE00C8B6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BFE271D2813FE00C8B6E8 /* AppDelegate.swift */; };
 		238BFE2A1D2813FE00C8B6E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BFE291D2813FE00C8B6E8 /* ViewController.swift */; };
@@ -40,6 +39,7 @@
 		23970B641D2D4DB300A67666 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23970B621D2D4DB300A67666 /* License.txt */; };
 		23970B651D2D4DB300A67666 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23970B621D2D4DB300A67666 /* License.txt */; };
 		23970B721D2DD7A700A67666 /* ViewBlinker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23970B711D2DD7A700A67666 /* ViewBlinker.swift */; };
+		23C8BBE9236E1D530037F933 /* iMessageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 238A4B6B1D7112130067BCFA /* iMessageAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,7 +129,7 @@
 		238A4B631D7112130067BCFA /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		238A4B661D7112130067BCFA /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		238A4B691D7112130067BCFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		238A4B6B1D7112130067BCFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		238A4B6B1D7112130067BCFA /* iMessageAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = iMessageAssets.xcassets; sourceTree = "<group>"; };
 		238A4B6D1D7112130067BCFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		238BFE241D2813FE00C8B6E8 /* CkPls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CkPls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238BFE271D2813FE00C8B6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -215,7 +215,7 @@
 				23342EBE1D76289300CF11A9 /* CompactViewController.swift */,
 				23342EC21D762DEA00CF11A9 /* ExpandedViewController.swift */,
 				238A4B681D7112130067BCFA /* MainInterface.storyboard */,
-				238A4B6B1D7112130067BCFA /* Assets.xcassets */,
+				238A4B6B1D7112130067BCFA /* iMessageAssets.xcassets */,
 				238A4B6D1D7112130067BCFA /* Info.plist */,
 			);
 			path = "CkPls iMessage App Extension";
@@ -387,22 +387,22 @@
 					235CDC231D29794300E15F15 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = BSAA9W64H3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1120;
 					};
 					238A4B601D7112130067BCFA = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = BSAA9W64H3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1120;
 						ProvisioningStyle = Automatic;
 					};
 					238BFE231D2813FE00C8B6E8 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = BSAA9W64H3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1120;
 					};
 					238BFE371D2813FE00C8B6E8 = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1120;
 						TestTargetID = 238BFE231D2813FE00C8B6E8;
 					};
 				};
@@ -453,7 +453,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				238A4B6C1D7112130067BCFA /* Assets.xcassets in Resources */,
+				23C8BBE9236E1D530037F933 /* iMessageAssets.xcassets in Resources */,
 				238A4B6A1D7112130067BCFA /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,13 +594,14 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "CheckPlease WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CkPls.watchkitapp.watchkitextension;
 				PRODUCT_NAME = CkPls;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -614,13 +615,14 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "CheckPlease WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CkPls.watchkitapp.watchkitextension;
 				PRODUCT_NAME = CkPls;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -636,6 +638,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				IBSC_MODULE = CheckPlease_WatchKit_App_Extension;
 				INFOPLIST_FILE = "CheckPlease WatchKit App/Info.plist";
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CkPls.watchkitapp;
 				PRODUCT_NAME = CkPls;
 				PROVISIONING_PROFILE = "";
@@ -658,6 +661,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				IBSC_MODULE = CheckPlease_WatchKit_App_Extension;
 				INFOPLIST_FILE = "CheckPlease WatchKit App/Info.plist";
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CkPls.watchkitapp;
 				PRODUCT_NAME = CkPls;
 				PROVISIONING_PROFILE = "";
@@ -673,7 +677,7 @@
 		238A4B711D7112130067BCFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Messages Icon";
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -682,19 +686,20 @@
 				INFOPLIST_FILE = "CkPls iMessage App Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jakehirzel.CkPls.CkPls-iMessage-App-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		238A4B721D7112130067BCFA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Messages Icon";
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -703,11 +708,12 @@
 				INFOPLIST_FILE = "CkPls iMessage App Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jakehirzel.CkPls.CkPls-iMessage-App-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -830,11 +836,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CheckPlease/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CkPls;
 				PRODUCT_NAME = CkPls;
 				PROVISIONING_PROFILE = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -847,11 +854,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CheckPlease/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakehirzel.CkPls;
 				PRODUCT_NAME = CkPls;
 				PROVISIONING_PROFILE = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -864,7 +872,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CheckPleaseTests;
 				PRODUCT_NAME = CkPls;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CkPls.app/CkPls";
 			};
 			name = Debug;
@@ -878,7 +886,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CheckPleaseTests;
 				PRODUCT_NAME = CkPls;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CkPls.app/CkPls";
 			};
 			name = Release;

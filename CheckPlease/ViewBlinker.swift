@@ -23,7 +23,7 @@ extension UIView {
         UIView.animate(
             withDuration: 1.0,
             delay: 0.0,
-            options: UIViewAnimationOptions.curveEaseIn,
+            options: UIView.AnimationOptions.curveEaseIn,
             animations: { self.alpha = 1.0 },
             completion: nil)
     }
@@ -32,7 +32,7 @@ extension UIView {
         UIView.animate(
             withDuration: 1.0,
             delay: 0.0,
-            options: UIViewAnimationOptions.curveEaseOut,
+            options: UIView.AnimationOptions.curveEaseOut,
             animations: { self.alpha = 0.0 },
             completion: nil)
     }

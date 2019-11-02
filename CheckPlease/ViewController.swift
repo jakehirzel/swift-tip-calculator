@@ -199,7 +199,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
                 from: tipsView,
                 to: splitsView,
                 duration: 1.0,
-                options: [UIViewAnimationOptions.transitionFlipFromRight, UIViewAnimationOptions.showHideTransitionViews] ,
+                options: [UIView.AnimationOptions.transitionFlipFromRight, UIView.AnimationOptions.showHideTransitionViews] ,
                 // Pulse the share button on completion the first view only
                 completion: {
                     (finished: Bool) -> Void in
@@ -221,7 +221,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
                 from: splitsView,
                 to: tipsView,
                 duration: 1.0,
-                options: [UIViewAnimationOptions.transitionFlipFromLeft, UIViewAnimationOptions.showHideTransitionViews],
+                options: [UIView.AnimationOptions.transitionFlipFromLeft, UIView.AnimationOptions.showHideTransitionViews],
                 // Pulse the percentage labels on completion
                 completion: nil)
         }

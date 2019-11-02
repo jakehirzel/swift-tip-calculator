@@ -192,7 +192,7 @@ class ExpandedViewController: MSMessagesAppViewController {
                 from: tipsView,
                 to: splitsView,
                 duration: 1.0,
-                options: [UIViewAnimationOptions.transitionFlipFromRight, UIViewAnimationOptions.showHideTransitionViews] ,
+                options: [UIView.AnimationOptions.transitionFlipFromRight, UIView.AnimationOptions.showHideTransitionViews] ,
                 completion: nil)
             
             processTipCalculation()
@@ -204,7 +204,7 @@ class ExpandedViewController: MSMessagesAppViewController {
                 from: splitsView,
                 to: tipsView,
                 duration: 1.0,
-                options: [UIViewAnimationOptions.transitionFlipFromLeft, UIViewAnimationOptions.showHideTransitionViews],
+                options: [UIView.AnimationOptions.transitionFlipFromLeft, UIView.AnimationOptions.showHideTransitionViews],
                 completion: nil)
         }
         

@@ -109,14 +109,14 @@ class MessagesViewController: MSMessagesAppViewController {
         }
         
         // Remove any existing child view controllers (i.e. moving between compact and expanded)
-        for child in childViewControllers {
-            child.willMove(toParentViewController: nil)
+        for child in children {
+            child.willMove(toParent: nil)
             child.view.removeFromSuperview()
-            child.removeFromParentViewController()
+            child.removeFromParent()
         }
         
         // Embed the new child view controller and set constraints
-        addChildViewController(controller)
+        addChild(controller)
         
         controller.view.frame = view.bounds
         controller.view.translatesAutoresizingMaskIntoConstraints = false
@@ -132,7 +132,7 @@ class MessagesViewController: MSMessagesAppViewController {
         controller.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
-        controller.didMove(toParentViewController: self)
+        controller.didMove(toParent: self)
         
     }
     

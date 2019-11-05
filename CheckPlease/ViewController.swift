@@ -50,6 +50,8 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     
     @IBOutlet weak var cursor: UIView!
     
+    // MARK: Properties
+    
     // String to hold value of totalBillLabel without the $
     var totalBillLabelValue = ""
     
@@ -67,6 +69,8 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     
     // Variable to Track Tag of Tip Stack Item Tapped
     var tipsStackTag = 0
+
+    // MARK: View Handling
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,6 +100,8 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: Convenience
     
     func processTipCalculation() {
         let totalBillFloat: Float? = Float(totalBillLabelValue)
@@ -159,6 +165,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     }
     
     // MARK: MFMessageComposeViewControllerDelegate
+
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         self.dismiss(animated: true, completion: nil)
     }

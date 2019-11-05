@@ -168,11 +168,16 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     @IBAction func numKeyTapped(sender: UIButton) {
         
         // Process key press
-        let keypadOutput = keypadAction.keypadButtonTapped(sender, textIn: totalBillLabel.text!, totalIn: totalBillLabelValue)
+        let keypadOutput = keypadAction.keypadButtonTapped(sender, totalIn: totalBillLabelValue)
                 
         // Assign return values to labels
-        totalBillLabel.text = keypadOutput.textOut
-        totalBillLabelValue = keypadOutput.totalOut
+//        totalBillLabel.text = keypadOutput.textOut
+        totalBillLabelValue = keypadOutput
+        
+        // Update totalBillLabel to match totalBillLabelValue and isert decimal
+//        totalBillLabel.text = String(format: "$%.2f", totalBillLabelValue)
+        totalBillLabelValue.insert(".", at: totalBillLabelValue.index(totalBillLabelValue.endIndex, offsetBy: -2))
+        totalBillLabel.text = totalBillLabelValue
         
         // Process the tip
         processTipCalculation()

@@ -181,10 +181,24 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
 //        totalBillLabel.text = keypadOutput.textOut
         totalBillLabelValue = keypadOutput
         
-        // Update totalBillLabel to match totalBillLabelValue and isert decimal
+        // Change the color of the totalBillLabel text after first input
+//        UIView.animate(withDuration: 8) {
+//        totalBillLabel.textColor = UIColor(hue: 3.59, saturation: 0.0, brightness: 0.21, alpha: 1.0)
+//        }
+        totalBillLabel.textColor = UIColor(hue: 3.59, saturation: 0.0, brightness: 0.21, alpha: 1.0)
+        
+        // Update totalBillLabel  insert dollar sign and decimal
+        switch totalBillLabelValue.count {
+        case 1:
+            totalBillLabel.text = "$0.0" + totalBillLabelValue
+        case 2:
+            totalBillLabel.text = "$0." + totalBillLabelValue
+        default:
+            return
+        }
+        
 //        totalBillLabel.text = String(format: "$%.2f", totalBillLabelValue)
-        totalBillLabelValue.insert(".", at: totalBillLabelValue.index(totalBillLabelValue.endIndex, offsetBy: -2))
-        totalBillLabel.text = totalBillLabelValue
+//        totalBillLabel.text = totalBillLabelValue
         
         // Process the tip
         processTipCalculation()

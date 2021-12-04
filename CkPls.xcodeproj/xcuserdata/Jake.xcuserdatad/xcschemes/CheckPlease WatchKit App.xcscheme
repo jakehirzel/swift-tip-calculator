@@ -79,8 +79,8 @@
       allowLocationSimulation = "YES">
       <RemoteRunnable
          runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.carousel"
-         RemotePath = "/CheckPlease">
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/CkPls">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "235CDC171D29794300E15F15"
@@ -98,8 +98,8 @@
       debugDocumentVersioning = "YES">
       <RemoteRunnable
          runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.carousel"
-         RemotePath = "/CheckPlease">
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/CkPls">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "235CDC171D29794300E15F15"

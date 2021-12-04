@@ -65,8 +65,10 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/CkPls">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "235CDC171D29794300E15F15"
@@ -74,7 +76,7 @@
             BlueprintName = "CkPls WatchKit App"
             ReferencedContainer = "container:CkPls.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -83,8 +85,10 @@
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/CkPls">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "235CDC171D29794300E15F15"
@@ -92,7 +96,16 @@
             BlueprintName = "CkPls WatchKit App"
             ReferencedContainer = "container:CkPls.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "235CDC171D29794300E15F15"
+            BuildableName = "CkPls.app"
+            BlueprintName = "CkPls WatchKit App"
+            ReferencedContainer = "container:CkPls.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

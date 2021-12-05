@@ -53,13 +53,13 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     // MARK: Properties
     
     // String to hold value of totalBillLabel without the $
-    var totalBillLabelValue = ""
+    var totalBillLabelValue = "0.00"
     
     // Create instance of TipCalculator class
     let tipCalculatorInstance = TipCalculator()
     
     // Create instance of KeypadBehavior class
-    let keypadAction = KeypadBehavior()
+    let keypadBehavior = KeypadBehavior()
     
     // Set initial state of splitsView
     var isSplitsViewShowing = false
@@ -175,10 +175,9 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     @IBAction func numKeyTapped(sender: UIButton) {
         
         // Process key press
-        let keypadOutput = keypadAction.keypadButtonTapped(sender, totalIn: totalBillLabelValue)
+        let keypadOutput = keypadBehavior.keypadButtonTapped(sender, totalIn: totalBillLabelValue)
                 
         // Assign return values to labels
-//        totalBillLabel.text = keypadOutput.textOut
         totalBillLabelValue = keypadOutput
         
         // Change the color of the totalBillLabel text after first input
@@ -187,18 +186,9 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
 //        }
         totalBillLabel.textColor = UIColor(hue: 3.59, saturation: 0.0, brightness: 0.21, alpha: 1.0)
         
-        // Update totalBillLabel  insert dollar sign and decimal
-        switch totalBillLabelValue.count {
-        case 1:
-            totalBillLabel.text = "$0.0" + totalBillLabelValue
-        case 2:
-            totalBillLabel.text = "$0." + totalBillLabelValue
-        default:
-            return
-        }
-        
+        // Update totalBillLabel insert dollar sign
 //        totalBillLabel.text = String(format: "$%.2f", totalBillLabelValue)
-//        totalBillLabel.text = totalBillLabelValue
+        totalBillLabel.text = "$" + keypadOutput
         
         // Process the tip
         processTipCalculation()

@@ -10,6 +10,8 @@ import UIKit
 
 class KeypadBehavior {
     
+    // A function for number key taps
+    
     func keypadButtonTapped(_ button: UIButton, totalIn: String) -> String {
         
         // Limit to 8 characters (thousands + change)
@@ -42,6 +44,44 @@ class KeypadBehavior {
             return totalOut
             
         }
+        
+    }
+    
+    // A function for delete key taps
+    
+    func deleteButtonTapped(_ button: UIButton, totalIn: String) -> String {
+                
+        // If it's $0.00, do nothing
+        if totalIn == "0.00" {
+            return totalIn
+        }
+        
+        else {
+            
+            // Assign and remove last character
+            var totalOut = totalIn
+            totalOut.remove(at: totalOut.index(before: totalOut.endIndex))
+            
+            // Add leading zeros if needed
+            while totalOut.count < 4 {
+                totalOut.insert("0", at: totalOut.startIndex)
+            }
+            
+            // Move the decimal
+            let decimalOldIndex = totalOut.index(totalOut.endIndex, offsetBy: -2 )
+            let decimalNewIndex = totalOut.index(totalOut.endIndex, offsetBy: -3 )
+            let secondToLastCharacter = totalOut[decimalOldIndex]
+            if secondToLastCharacter == "." {
+                totalOut.remove(at: decimalOldIndex)
+                totalOut.insert(".", at: decimalNewIndex)
+            }
+            
+            return totalOut
+            
+        }
+
+        
+        
         
     }
 }

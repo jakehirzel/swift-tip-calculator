@@ -177,7 +177,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         // Process key press
         let keypadOutput = keypadBehavior.keypadButtonTapped(sender, totalIn: totalBillLabelValue)
                 
-        // Assign return values to labels
+        // Assign returned value to totalBillLabelValue
         totalBillLabelValue = keypadOutput
         
         // Change the color of the totalBillLabel text after first input
@@ -186,7 +186,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
 //        }
         totalBillLabel.textColor = UIColor(hue: 3.59, saturation: 0.0, brightness: 0.21, alpha: 1.0)
         
-        // Update totalBillLabel insert dollar sign
+        // Insert dollar sign and update totalBillLabel
 //        totalBillLabel.text = String(format: "$%.2f", totalBillLabelValue)
         totalBillLabel.text = "$" + keypadOutput
         
@@ -196,15 +196,21 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     }
     
     @IBAction func delKeyTapped(sender: UIButton) {
-        if totalBillLabel.text == "$" {
-        }
-        else {
-            totalBillLabel.text?.remove(at: (totalBillLabel.text?.index((totalBillLabel.text?.endIndex)!, offsetBy: -1))!)
-            totalBillLabelValue.remove(at: totalBillLabelValue.index(totalBillLabelValue.endIndex, offsetBy: -1))
-        }
+  
+        // Process delete key press
+        let deleteButtonOutput = keypadBehavior.deleteButtonTapped(sender, totalIn: totalBillLabelValue)
+
+        // Assign returned value to totalBillLabelValue
+        totalBillLabelValue = deleteButtonOutput
+
+        // Insert dollar sign and update totalBillLabel
+        totalBillLabel.text = "$" + deleteButtonOutput
+        
+        // Process the tip
         processTipCalculation()
+        
     }
-    
+        
     @IBAction func tipTapped(_ sender: UITapGestureRecognizer) {
         
         tipsStackTag = (sender.view?.tag)!

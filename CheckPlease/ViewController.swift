@@ -45,7 +45,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     @IBOutlet weak var keyEight: UIButton!
     @IBOutlet weak var keyNine: UIButton!
     @IBOutlet weak var keyZero: UIButton!
-    @IBOutlet weak var keyPoint: UIButton!
+//    @IBOutlet weak var keyPoint: UIButton!
     @IBOutlet weak var keyDelete: UIButton!
     
     @IBOutlet weak var cursor: UIView!

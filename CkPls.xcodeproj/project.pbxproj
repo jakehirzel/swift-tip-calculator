@@ -17,7 +17,7 @@
 		23342ECA1D7654A600CF11A9 /* TipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23342EC81D7654A600CF11A9 /* TipData.swift */; };
 		235CDC1C1D29794300E15F15 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235CDC1A1D29794300E15F15 /* Interface.storyboard */; };
 		235CDC1E1D29794300E15F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235CDC1D1D29794300E15F15 /* Assets.xcassets */; };
-		235CDC251D29794300E15F15 /* CkPls.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 235CDC241D29794300E15F15 /* CkPls.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		235CDC251D29794300E15F15 /* CkPls.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 235CDC241D29794300E15F15 /* CkPls.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		235CDC2A1D29794300E15F15 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC291D29794300E15F15 /* InterfaceController.swift */; };
 		235CDC2C1D29794300E15F15 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC2B1D29794300E15F15 /* ExtensionDelegate.swift */; };
 		235CDC2E1D29794300E15F15 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC2D1D29794300E15F15 /* ComplicationController.swift */; };
@@ -66,15 +66,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		235CDC381D29794400E15F15 /* Embed App Extensions */ = {
+		235CDC381D29794400E15F15 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				235CDC251D29794300E15F15 /* CkPls.appex in Embed App Extensions */,
+				235CDC251D29794300E15F15 /* CkPls.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		235CDC3C1D29794400E15F15 /* Embed Watch Content */ = {
@@ -88,14 +88,14 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		238A4B741D7112130067BCFA /* Embed App Extensions */ = {
+		238A4B741D7112130067BCFA /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -272,7 +272,7 @@
 			buildConfigurationList = 235CDC391D29794400E15F15 /* Build configuration list for PBXNativeTarget "CkPls WatchKit App" */;
 			buildPhases = (
 				235CDC161D29794300E15F15 /* Resources */,
-				235CDC381D29794400E15F15 /* Embed App Extensions */,
+				235CDC381D29794400E15F15 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -326,7 +326,7 @@
 				238BFE211D2813FE00C8B6E8 /* Frameworks */,
 				238BFE221D2813FE00C8B6E8 /* Resources */,
 				235CDC3C1D29794400E15F15 /* Embed Watch Content */,
-				238A4B741D7112130067BCFA /* Embed App Extensions */,
+				238A4B741D7112130067BCFA /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -366,7 +366,7 @@
 					1,
 				);
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = "Jake Hirzel";
 				TargetAttributes = {
 					235CDC171D29794300E15F15 = {

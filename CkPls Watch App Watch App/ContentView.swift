@@ -11,13 +11,13 @@ import SwiftUI
 struct ContentView: View {
    
     @EnvironmentObject var modelData: ModelData
-    @State var pickerSelection: String = "$1.00"
+    @State var selectedMealTotal: Float = 20.00
 
     var body: some View {
         VStack {
             Text("Total:")
                 .fontWeight(.black)
-            Picker("Total:", selection: $pickerSelection) {
+            Picker("Total:", selection: $selectedMealTotal) {
                 ForEach(modelData.mealTotalArray, id: \.self) { mealTotal in
                     Text(String(format: "$%.2f", mealTotal))
                 }
@@ -26,9 +26,9 @@ struct ContentView: View {
                 .labelsHidden()
             Text("Tip:")
                 .fontWeight(.black)
-            Text("15% - $0.00")
-            Text("18% - $0.00")
-            Text("20% - $0.00")
+            Text("15% - " + String(format: "$%.2f", selectedMealTotal * 0.15))
+            Text("18% - " + String(format: "$%.2f", selectedMealTotal * 0.18))
+            Text("20% - " + String(format: "$%.2f", selectedMealTotal * 0.20))
         }
         .padding()
     }

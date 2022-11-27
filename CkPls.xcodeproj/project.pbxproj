@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		23342EC61D7631E600CF11A9 /* KeypadBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23342EC51D7631E600CF11A9 /* KeypadBehavior.swift */; };
 		23342EC91D7654A600CF11A9 /* TipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23342EC81D7654A600CF11A9 /* TipData.swift */; };
+		23468E252933FBAE00EFAC3C /* TipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */; };
 		235CDC3E1D2AACC100E15F15 /* TipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */; };
 		238BFE281D2813FE00C8B6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BFE271D2813FE00C8B6E8 /* AppDelegate.swift */; };
 		238BFE2A1D2813FE00C8B6E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BFE291D2813FE00C8B6E8 /* ViewController.swift */; };
@@ -441,6 +442,7 @@
 				23C948032932B2DF004177D9 /* ModelData.swift in Sources */,
 				23C947FA29329AB6004177D9 /* CkPls_Widget_Complication_Extension.intentdefinition in Sources */,
 				23C947E029329516004177D9 /* CkPls_Watch_AppApp.swift in Sources */,
+				23468E252933FBAE00EFAC3C /* TipCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

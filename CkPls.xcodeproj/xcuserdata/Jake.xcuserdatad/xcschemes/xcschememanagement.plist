@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Check Please SwiftUI Watch App Watch App.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>CheckPlease WatchKit App (Complication).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -24,6 +29,26 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>CkPls Watch App Watch App.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>CkPls Widget ExtensionExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>CkPls Widget-Complication-ExtensionExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>CkPls iMessage App Extension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -43,6 +68,11 @@
 			<true/>
 		</dict>
 		<key>238BFE371D2813FE00C8B6E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>23C03F0028E0C25D00384C22</key>
 		<dict>
 			<key>primary</key>
 			<true/>

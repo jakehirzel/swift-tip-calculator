@@ -40,16 +40,16 @@ struct SimpleEntry: TimelineEntry {
 }
 
 struct CkPls_WidgetKit_ExtensionEntryView : View {
-
-    @Environment(\.widgetFamily) var widgetFamily
+    
     var entry: Provider.Entry
     
     var body: some View {
-//        Text(entry.date, style: .time)
-//        Text("Boo!")
-        Image("ComplicationIcon")
+        //        Text(entry.date, style: .time)
+        //        Text("Boo!")
+        Image("VectorComplication")
             .resizable()
             .scaledToFit()
+            .unredacted()
     }
 }
 
@@ -69,6 +69,6 @@ struct CkPls_WidgetKit_Extension: Widget {
 struct CkPls_WidgetKit_Extension_Previews: PreviewProvider {
     static var previews: some View {
         CkPls_WidgetKit_ExtensionEntryView(entry: SimpleEntry(date: Date()))
-            .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+            .previewContext(WidgetPreviewContext(family: .accessoryCircular))
     }
 }

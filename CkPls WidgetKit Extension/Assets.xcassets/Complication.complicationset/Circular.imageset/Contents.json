@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "CkPls Vector Complication.pdf",
       "idiom" : "watch"
     },
     {
@@ -8,7 +9,6 @@
       "screen-width" : "<=145"
     },
     {
-      "filename" : "Icon-App-40x40@1x.png",
       "idiom" : "watch",
       "screen-width" : ">183"
     }

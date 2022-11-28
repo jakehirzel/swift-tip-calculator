@@ -11,6 +11,11 @@
 		23342EC91D7654A600CF11A9 /* TipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23342EC81D7654A600CF11A9 /* TipData.swift */; };
 		23468E252933FBAE00EFAC3C /* TipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */; };
 		235CDC3E1D2AACC100E15F15 /* TipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */; };
+		23748D542934EC3700CB38AF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C03E8128E0B75100384C22 /* WidgetKit.framework */; };
+		23748D552934EC3700CB38AF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C03E8328E0B75100384C22 /* SwiftUI.framework */; };
+		23748D582934EC3700CB38AF /* CkPls_WidgetKit_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23748D572934EC3700CB38AF /* CkPls_WidgetKit_Extension.swift */; };
+		23748D5A2934EC3900CB38AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23748D592934EC3900CB38AF /* Assets.xcassets */; };
+		23748D5E2934EC3900CB38AF /* CkPls WidgetKit ExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 23748D532934EC3700CB38AF /* CkPls WidgetKit ExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		238BFE281D2813FE00C8B6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BFE271D2813FE00C8B6E8 /* AppDelegate.swift */; };
 		238BFE2A1D2813FE00C8B6E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BFE291D2813FE00C8B6E8 /* ViewController.swift */; };
 		238BFE2D1D2813FE00C8B6E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238BFE2B1D2813FE00C8B6E8 /* Main.storyboard */; };
@@ -23,30 +28,23 @@
 		23C947E229329516004177D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C947E129329516004177D9 /* ContentView.swift */; };
 		23C947E429329518004177D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C947E329329518004177D9 /* Assets.xcassets */; };
 		23C947E729329518004177D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C947E629329518004177D9 /* Preview Assets.xcassets */; };
-		23C947F029329AB3004177D9 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C03E8128E0B75100384C22 /* WidgetKit.framework */; };
-		23C947F129329AB3004177D9 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C03E8328E0B75100384C22 /* SwiftUI.framework */; };
-		23C947F429329AB3004177D9 /* CkPls_Widget_Complication_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C947F329329AB3004177D9 /* CkPls_Widget_Complication_Extension.swift */; };
-		23C947F729329AB6004177D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C947F629329AB6004177D9 /* Assets.xcassets */; };
-		23C947F929329AB6004177D9 /* CkPls_Widget_Complication_Extension.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 23C947F529329AB3004177D9 /* CkPls_Widget_Complication_Extension.intentdefinition */; };
-		23C947FA29329AB6004177D9 /* CkPls_Widget_Complication_Extension.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 23C947F529329AB3004177D9 /* CkPls_Widget_Complication_Extension.intentdefinition */; };
-		23C947FD29329AB6004177D9 /* CkPls Widget-Complication-ExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 23C947EF29329AB3004177D9 /* CkPls Widget-Complication-ExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		23C948032932B2DF004177D9 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C948022932B2DF004177D9 /* ModelData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		23748D5C2934EC3900CB38AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 238BFE1C1D2813FE00C8B6E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23748D522934EC3700CB38AF;
+			remoteInfo = "CkPls WidgetKit ExtensionExtension";
+		};
 		238BFE391D2813FE00C8B6E8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 238BFE1C1D2813FE00C8B6E8 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 238BFE231D2813FE00C8B6E8;
 			remoteInfo = CheckPlease;
-		};
-		23C947FB29329AB6004177D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 238BFE1C1D2813FE00C8B6E8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 23C947EE29329AB3004177D9;
-			remoteInfo = "CkPls Widget-Complication-ExtensionExtension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -77,7 +75,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				23C947FD29329AB6004177D9 /* CkPls Widget-Complication-ExtensionExtension.appex in Embed Foundation Extensions */,
+				23748D5E2934EC3900CB38AF /* CkPls WidgetKit ExtensionExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +86,10 @@
 		23342EC51D7631E600CF11A9 /* KeypadBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadBehavior.swift; sourceTree = "<group>"; };
 		23342EC81D7654A600CF11A9 /* TipData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipData.swift; sourceTree = "<group>"; };
 		235CDC3D1D2AACC100E15F15 /* TipCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculator.swift; sourceTree = "<group>"; };
+		23748D532934EC3700CB38AF /* CkPls WidgetKit ExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CkPls WidgetKit ExtensionExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23748D572934EC3700CB38AF /* CkPls_WidgetKit_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CkPls_WidgetKit_Extension.swift; sourceTree = "<group>"; };
+		23748D592934EC3900CB38AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23748D5B2934EC3900CB38AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		238A4B631D7112130067BCFA /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		238BFE241D2813FE00C8B6E8 /* CkPls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CkPls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238BFE271D2813FE00C8B6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,15 +110,19 @@
 		23C947E129329516004177D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23C947E329329518004177D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23C947E629329518004177D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		23C947EF29329AB3004177D9 /* CkPls Widget-Complication-ExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CkPls Widget-Complication-ExtensionExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		23C947F329329AB3004177D9 /* CkPls_Widget_Complication_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CkPls_Widget_Complication_Extension.swift; sourceTree = "<group>"; };
-		23C947F529329AB3004177D9 /* CkPls_Widget_Complication_Extension.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = CkPls_Widget_Complication_Extension.intentdefinition; sourceTree = "<group>"; };
-		23C947F629329AB6004177D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		23C947F829329AB6004177D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23C948022932B2DF004177D9 /* ModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelData.swift; path = "Check Please SwiftUI Watch App Watch App/Olde SwiftUI WatchApp Files/ModelData.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		23748D502934EC3700CB38AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23748D552934EC3700CB38AF /* SwiftUI.framework in Frameworks */,
+				23748D542934EC3700CB38AF /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		238BFE211D2813FE00C8B6E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,18 +144,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		23C947EC29329AB3004177D9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				23C947F129329AB3004177D9 /* SwiftUI.framework in Frameworks */,
-				23C947F029329AB3004177D9 /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23748D562934EC3700CB38AF /* CkPls WidgetKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				23748D572934EC3700CB38AF /* CkPls_WidgetKit_Extension.swift */,
+				23748D592934EC3900CB38AF /* Assets.xcassets */,
+				23748D5B2934EC3900CB38AF /* Info.plist */,
+			);
+			path = "CkPls WidgetKit Extension";
+			sourceTree = "<group>";
+		};
 		238A4B621D7112130067BCFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +174,7 @@
 				238BFE261D2813FE00C8B6E8 /* CheckPlease */,
 				238BFE3B1D2813FE00C8B6E8 /* CheckPleaseTests */,
 				23C947DE29329516004177D9 /* CkPls Watch App Watch App */,
-				23C947F229329AB3004177D9 /* CkPls Widget-Complication-Extension */,
+				23748D562934EC3700CB38AF /* CkPls WidgetKit Extension */,
 				238A4B621D7112130067BCFA /* Frameworks */,
 				238BFE251D2813FE00C8B6E8 /* Products */,
 			);
@@ -179,7 +186,7 @@
 				238BFE241D2813FE00C8B6E8 /* CkPls.app */,
 				238BFE381D2813FE00C8B6E8 /* CkPls.xctest */,
 				23C947DD29329516004177D9 /* CkPls Watch App Watch App.app */,
-				23C947EF29329AB3004177D9 /* CkPls Widget-Complication-ExtensionExtension.appex */,
+				23748D532934EC3700CB38AF /* CkPls WidgetKit ExtensionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,20 +237,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		23C947F229329AB3004177D9 /* CkPls Widget-Complication-Extension */ = {
-			isa = PBXGroup;
-			children = (
-				23C947F329329AB3004177D9 /* CkPls_Widget_Complication_Extension.swift */,
-				23C947F529329AB3004177D9 /* CkPls_Widget_Complication_Extension.intentdefinition */,
-				23C947F629329AB6004177D9 /* Assets.xcassets */,
-				23C947F829329AB6004177D9 /* Info.plist */,
-			);
-			path = "CkPls Widget-Complication-Extension";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		23748D522934EC3700CB38AF /* CkPls WidgetKit ExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23748D5F2934EC3900CB38AF /* Build configuration list for PBXNativeTarget "CkPls WidgetKit ExtensionExtension" */;
+			buildPhases = (
+				23748D4F2934EC3700CB38AF /* Sources */,
+				23748D502934EC3700CB38AF /* Frameworks */,
+				23748D512934EC3700CB38AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CkPls WidgetKit ExtensionExtension";
+			productName = "CkPls WidgetKit ExtensionExtension";
+			productReference = 23748D532934EC3700CB38AF /* CkPls WidgetKit ExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		238BFE231D2813FE00C8B6E8 /* CkPls */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 238BFE411D2813FE00C8B6E8 /* Build configuration list for PBXNativeTarget "CkPls" */;
@@ -293,29 +306,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				23C947FC29329AB6004177D9 /* PBXTargetDependency */,
+				23748D5D2934EC3900CB38AF /* PBXTargetDependency */,
 			);
 			name = "CkPls Watch App Watch App";
 			productName = "CkPls Watch App Watch App";
 			productReference = 23C947DD29329516004177D9 /* CkPls Watch App Watch App.app */;
 			productType = "com.apple.product-type.application";
-		};
-		23C947EE29329AB3004177D9 /* CkPls Widget-Complication-ExtensionExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 23C947FE29329AB6004177D9 /* Build configuration list for PBXNativeTarget "CkPls Widget-Complication-ExtensionExtension" */;
-			buildPhases = (
-				23C947EB29329AB3004177D9 /* Sources */,
-				23C947EC29329AB3004177D9 /* Frameworks */,
-				23C947ED29329AB3004177D9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "CkPls Widget-Complication-ExtensionExtension";
-			productName = "CkPls Widget-Complication-ExtensionExtension";
-			productReference = 23C947EF29329AB3004177D9 /* CkPls Widget-Complication-ExtensionExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -330,6 +326,11 @@
 				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = "Jake Hirzel";
 				TargetAttributes = {
+					23748D522934EC3700CB38AF = {
+						CreatedOnToolsVersion = 14.1;
+						DevelopmentTeam = BSAA9W64H3;
+						ProvisioningStyle = Automatic;
+					};
 					238BFE231D2813FE00C8B6E8 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = BSAA9W64H3;
@@ -342,11 +343,6 @@
 						TestTargetID = 238BFE231D2813FE00C8B6E8;
 					};
 					23C947DC29329516004177D9 = {
-						CreatedOnToolsVersion = 14.1;
-						DevelopmentTeam = BSAA9W64H3;
-						ProvisioningStyle = Automatic;
-					};
-					23C947EE29329AB3004177D9 = {
 						CreatedOnToolsVersion = 14.1;
 						DevelopmentTeam = BSAA9W64H3;
 						ProvisioningStyle = Automatic;
@@ -369,12 +365,20 @@
 				238BFE231D2813FE00C8B6E8 /* CkPls */,
 				238BFE371D2813FE00C8B6E8 /* CkPlsTests */,
 				23C947DC29329516004177D9 /* CkPls Watch App Watch App */,
-				23C947EE29329AB3004177D9 /* CkPls Widget-Complication-ExtensionExtension */,
+				23748D522934EC3700CB38AF /* CkPls WidgetKit ExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		23748D512934EC3700CB38AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23748D5A2934EC3900CB38AF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		238BFE221D2813FE00C8B6E8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -402,17 +406,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		23C947ED29329AB3004177D9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				23C947F729329AB6004177D9 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		23748D4F2934EC3700CB38AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23748D582934EC3700CB38AF /* CkPls_WidgetKit_Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		238BFE201D2813FE00C8B6E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -440,33 +444,23 @@
 			files = (
 				23C947E229329516004177D9 /* ContentView.swift in Sources */,
 				23C948032932B2DF004177D9 /* ModelData.swift in Sources */,
-				23C947FA29329AB6004177D9 /* CkPls_Widget_Complication_Extension.intentdefinition in Sources */,
 				23C947E029329516004177D9 /* CkPls_Watch_AppApp.swift in Sources */,
 				23468E252933FBAE00EFAC3C /* TipCalculator.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		23C947EB29329AB3004177D9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				23C947F929329AB6004177D9 /* CkPls_Widget_Complication_Extension.intentdefinition in Sources */,
-				23C947F429329AB3004177D9 /* CkPls_Widget_Complication_Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		23748D5D2934EC3900CB38AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23748D522934EC3700CB38AF /* CkPls WidgetKit ExtensionExtension */;
+			targetProxy = 23748D5C2934EC3900CB38AF /* PBXContainerItemProxy */;
+		};
 		238BFE3A1D2813FE00C8B6E8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 238BFE231D2813FE00C8B6E8 /* CkPls */;
 			targetProxy = 238BFE391D2813FE00C8B6E8 /* PBXContainerItemProxy */;
-		};
-		23C947FC29329AB6004177D9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 23C947EE29329AB3004177D9 /* CkPls Widget-Complication-ExtensionExtension */;
-			targetProxy = 23C947FB29329AB6004177D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -490,6 +484,72 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		23748D602934EC3900CB38AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BSAA9W64H3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CkPls WidgetKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CkPls WidgetKit Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Jake Hirzel. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks @executable_path/../../../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ".watchkitapp.CkPls-WidgetKit-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		23748D612934EC3900CB38AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BSAA9W64H3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CkPls WidgetKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CkPls WidgetKit Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Jake Hirzel. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks @executable_path/../../../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ".watchkitapp.CkPls-WidgetKit-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
 		238BFE3F1D2813FE00C8B6E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -748,75 +808,18 @@
 			};
 			name = Release;
 		};
-		23C947FF29329AB6004177D9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BSAA9W64H3;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CkPls Widget-Complication-Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "CkPls Widget-Complication-Extension";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Jake Hirzel. All rights reserved.";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks @executable_path/../../../../Frameworks";
-				MARKETING_VERSION = 1.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = ".watchkitapp.CkPls-Widget-Complication-Extension";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Debug;
-		};
-		23C9480029329AB6004177D9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BSAA9W64H3;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CkPls Widget-Complication-Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "CkPls Widget-Complication-Extension";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Jake Hirzel. All rights reserved.";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks @executable_path/../../../../Frameworks";
-				MARKETING_VERSION = 1.0;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = ".watchkitapp.CkPls-Widget-Complication-Extension";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		23748D5F2934EC3900CB38AF /* Build configuration list for PBXNativeTarget "CkPls WidgetKit ExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23748D602934EC3900CB38AF /* Debug */,
+				23748D612934EC3900CB38AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		238BFE1F1D2813FE00C8B6E8 /* Build configuration list for PBXProject "CkPls" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -849,15 +852,6 @@
 			buildConfigurations = (
 				23C947E929329518004177D9 /* Debug */,
 				23C947EA29329518004177D9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		23C947FE29329AB6004177D9 /* Build configuration list for PBXNativeTarget "CkPls Widget-Complication-ExtensionExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				23C947FF29329AB6004177D9 /* Debug */,
-				23C9480029329AB6004177D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

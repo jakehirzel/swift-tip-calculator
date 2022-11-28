@@ -61,8 +61,8 @@ struct CkPls_WidgetKit_Extension: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             CkPls_WidgetKit_ExtensionEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("CkPls Complication")
+        .description("Use for quick access to CkPls from your watch face.")
     }
 }
 

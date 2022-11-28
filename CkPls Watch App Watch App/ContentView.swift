@@ -27,8 +27,8 @@ struct ContentView: View {
             Text("Tip:")
                 .fontWeight(.black)
             Text("15% - " + String(format: "$%.2f", selectedMealTotal * 0.15))
-            Text("18% - " + String(format: "$%.2f", selectedMealTotal * 0.18))
             Text("20% - " + String(format: "$%.2f", selectedMealTotal * 0.20))
+            Text("25% - " + String(format: "$%.2f", selectedMealTotal * 0.25))
         }
         .padding()
     }

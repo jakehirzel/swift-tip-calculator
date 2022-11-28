@@ -47,10 +47,9 @@ struct CkPls_WidgetKit_ExtensionEntryView : View {
     var body: some View {
 //        Text(entry.date, style: .time)
 //        Text("Boo!")
-        Image("Graphic Extra Large")
+        Image("ComplicationIcon")
             .resizable()
             .scaledToFit()
-            .foregroundColor(.yellow)
     }
 }
 

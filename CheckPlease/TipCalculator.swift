@@ -29,8 +29,8 @@ class TipCalculator {
         
         // Initialize to recommended values, except for mealTotalArray which is blank
         self.tipPercentOne = 0.15
-        self.tipPercentTwo = 0.18
-        self.tipPercentThree = 0.20
+        self.tipPercentTwo = 0.20
+        self.tipPercentThree = 0.25
         self.mealTotalArray = []
         self.lowMealTotal = 1.00
         self.highMealTotal = 500.00

@@ -1,0 +1,19 @@
+{
+  "images" : [
+    {
+      "filename" : "Vector Watch App Icon 15px.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Vector Watch App Icon 15px 1.pdf",
+      "idiom" : "watch"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}

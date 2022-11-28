@@ -38,7 +38,7 @@
 		<key>CkPls Watch App Watch App.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>CkPls Widget ExtensionExtension.xcscheme_^#shared#^_</key>
 		<dict>
@@ -53,7 +53,7 @@
 		<key>CkPls WidgetKit ExtensionExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>5</integer>
 		</dict>
 		<key>CkPls iMessage App Extension.xcscheme</key>
 		<dict>
